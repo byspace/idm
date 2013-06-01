@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+<appender class="org.apache.log4j.rolling.RollingFileAppender" name="RootFileAppender">
+	<param name="Append" value="true"/>
+	<param name="Threshold" value="debug"/>
+	<rollingPolicy class="org.apache.log4j.rolling.TimeBasedRollingPolicy">
+		<param name="FileNamePattern" value="${project.root}/WEB-INF/logs/app.%d{yyyy-MM-dd}.gz"/>
+	</rollingPolicy>
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss},%p,%C{1},%m%n"/>
+	</layout>
+</appender>
+
+<appender class="org.apache.log4j.ConsoleAppender" name="RootConsoleAppender">
+	<param name="Threshold" value="debug"/>
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss},%p,%C{1},%m%n"/>
+	</layout>
+</appender>
+
+<root>
+	<level value="info"/>
+	<appender-ref ref="RootConsoleAppender"/>
+	<appender-ref ref="RootFileAppender"/>
+</root>
+
+</log4j:configuration>
