@@ -17,4 +17,5 @@
 
 	<import resource="context-i18n.xml" />
 	<import resource="context-jpa.xml" />
+    <!--<import resource="context-security.xml" />-->
 </beans>

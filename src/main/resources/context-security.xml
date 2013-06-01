@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+	<http>
+        <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		<!--<intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		<intercept-url pattern="/user/list*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+		<intercept-url pattern="/user/init*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+
+		<intercept-url pattern="/auth/getAuthorities/**" access="ROLE_ADMIN,ROLE_USER" requires-channel="http"/>
+		<intercept-url pattern="/auth/**" access="ROLE_ADMIN" requires-channel="http"/>
+		<intercept-url pattern="/user/**" access="ROLE_ADMIN" requires-channel="http"/>
+		<intercept-url pattern="/**" access="ROLE_ADMIN,ROLE_USER,ROLE_VIEWLOG" requires-channel="http"/>-->
+
+	</http>
+
+</beans:beans>
