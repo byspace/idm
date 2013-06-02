@@ -12,4 +12,6 @@ import com.byspace.test.entity.TestBean;
 public interface TestService {
 
     public void save(TestBean testBean);
+
+    public TestBean read(int id);
 }

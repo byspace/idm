@@ -5,8 +5,11 @@ import com.byspace.test.service.TestService;
 import com.byspace.util.CustomLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.Date;
 
 /**
@@ -29,11 +32,14 @@ public class TestController {
 
         CustomLogger.info("index", this);
 
-        TestBean testBean = new TestBean();
-        testBean.setName(new Date().toString());
-
-        testService.save(testBean);
-
         return "test/index";
+    }
+
+    @RequestMapping("read/{id}")
+    public String read(@PathVariable("id")int id, Model model) {
+
+        model.addAttribute("testBean", testService.read(id));
+
+        return "test/read";
     }
 }

@@ -14,15 +14,15 @@ import javax.persistence.*;
 public class TestBean {
     @Id
     @GeneratedValue
-    private long id;
+    private int id;
     @Column(name = "name")
     private String name;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -29,4 +29,10 @@ public class TestServiceImpl implements TestService {
 
         CustomLogger.info("save testbean", this);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public TestBean read(int id) {
+        return em.find(TestBean.class, id);
+    }
 }

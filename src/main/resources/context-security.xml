@@ -6,17 +6,17 @@
            http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
            http://www.springframework.org/schema/security
            http://www.springframework.org/schema/security/spring-security-3.1.xsd">
-	<http>
+
+    <http auto-config='true'>
+        <intercept-url pattern="/security/login/*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
+        <intercept-url pattern="/console/**" access="ROLE_ADMIN" />
         <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
-		<!--<intercept-url pattern="/login.jsp*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
-		<intercept-url pattern="/user/list*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
-		<intercept-url pattern="/user/init*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
 
-		<intercept-url pattern="/auth/getAuthorities/**" access="ROLE_ADMIN,ROLE_USER" requires-channel="http"/>
-		<intercept-url pattern="/auth/**" access="ROLE_ADMIN" requires-channel="http"/>
-		<intercept-url pattern="/user/**" access="ROLE_ADMIN" requires-channel="http"/>
-		<intercept-url pattern="/**" access="ROLE_ADMIN,ROLE_USER,ROLE_VIEWLOG" requires-channel="http"/>-->
+        <form-login login-page='/login/index'/>
+    </http>
 
-	</http>
+    <authentication-manager>
+        <authentication-provider user-service-ref='securityService'/>
+    </authentication-manager>
 
 </beans:beans>
