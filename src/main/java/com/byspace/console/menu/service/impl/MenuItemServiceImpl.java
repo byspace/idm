@@ -57,4 +57,10 @@ public class MenuItemServiceImpl implements MenuItemService {
 
 		return menuItemDataList;
 	}
+
+    @Override
+    @Transactional(readOnly = true)
+    public MenuItem readMenuItem(int menuItemId) {
+        return em.find(MenuItem.class, menuItemId);
+    }
 }

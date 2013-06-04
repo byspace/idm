@@ -1,5 +1,6 @@
 package com.byspace.console.menu.controller;
 
+import com.byspace.console.menu.entity.MenuItem;
 import com.byspace.console.menu.po.MenuItemData;
 import com.byspace.console.menu.service.MenuItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,4 +36,10 @@ public class MenuItemController {
 	public List<MenuItemData> getMenuItemDataByParentId(@PathVariable("parentMenuItemId")int parentMenuItemId) {
 		return menuItemService.getMenuItemDataListByParentId(parentMenuItemId);
 	}
+
+    @RequestMapping("readMenuItem/{menuItemId}")
+    @ResponseBody
+    public MenuItem readMenuItem(@PathVariable("menuItemId")int menuItemId) {
+        return menuItemService.readMenuItem(menuItemId);
+    }
 }

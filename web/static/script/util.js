@@ -1,9 +1,3 @@
-function log(log) {
-	if ($.browser.safari || $.browser.mozilla) {
-		console.log(log);
-	}
-}
-
 function getUrl(url) {
 	var root = $("#rootUrl").val();
 

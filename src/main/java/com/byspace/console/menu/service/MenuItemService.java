@@ -25,4 +25,11 @@ public interface MenuItemService {
 	 * @return
 	 */
 	public List<MenuItemData> getMenuItemDataListByParentId(int parentMenuItemId);
+
+    /**
+     * read menuitem by id
+     * @param menuItemId
+     * @return
+     */
+    public MenuItem readMenuItem(int menuItemId);
 }

@@ -5,21 +5,40 @@
 
 <body class="easyui-layout">
 
-	<div data-options="region:'west',split:true" title="菜单" style="width:200px;">
-		<div class="easyui-accordion" data-options="fit:true,border:false">
-
-		<c:forEach items="${firstLevelMenuItemList}" var="menuItem">
-		<div title="${menuItem.name}" style="padding:10px;">
-		<ul class="easyui-tree menutree" data-options="url:'<spring:url value="/console/menu/getMenuItemDataByParentId/${menuItem.id}" />',animate:true"></ul>
-		</div>
-		</c:forEach>
-
-		</div>
+	<div data-options="region:'west',split:true" title="菜单" style="width:400px;">
+		<ul class="easyui-tree menutree" data-options="url:'<spring:url value="/console/menu/getMenuItemDataByParentId/0" />',animate:true,dnd:true"></ul>
 	</div>
 
 	<div data-options="region:'center'" title="菜单编辑">
-
-	</div>
+        <form id="ff" method="post">
+            <table style="margin: 30px">
+                <tr>
+                    <td width="200px">菜单名称:</td>
+                    <td><input class="easyui-validatebox" type="text" name="name" data-options="required:true" /></td>
+                </tr>
+                <tr>
+                    <td>连接地址:</td>
+                    <td><input class="easyui-validatebox" type="text" name="link" data-options="required:true,validType:'email'"/></td>
+                </tr>
+                <tr>
+                    <td>图标:</td>
+                    <td><input class="" type="text" name="icon" data-options="required:true"/></td>
+                </tr>
+                <tr>
+                    <td>上级菜单:</td>
+                    <td>
+                        <input class="easyui-combotree" value="根目录" data-options="url:'<spring:url value="/console/menu/getMenuItemDataByParentId/0" />',required:true" style="width:200px;">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center">
+                        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">保存</a>
+                        <a href="#" class="easyui-linkbutton" data-options="iconCls:'icon-save'">重置</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 
 </body>
 </html>
