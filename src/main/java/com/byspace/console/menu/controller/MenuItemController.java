@@ -4,6 +4,7 @@ import com.byspace.console.menu.po.MenuItemData;
 import com.byspace.console.menu.service.MenuItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -24,7 +25,8 @@ public class MenuItemController {
 	private MenuItemService menuItemService;
 
 	@RequestMapping("index")
-	public String index() {
+	public String index(Model model) {
+		model.addAttribute("firstLevelMenuItemList", menuItemService.getFirstLevelMenuItems());
 		return "console/menu/index";
 	}
 

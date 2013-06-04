@@ -4,7 +4,6 @@
 <script type="text/javascript" src="<spring:url value="/static/script/console/index.js" />"></script>
 
 <body class="easyui-layout">
-${name}
 	<div data-options="region:'north'" style="height:100px"></div>
 	<div data-options="region:'south',split:true" style="height:50px;"></div>
 	<div data-options="region:'east',split:true" title="East" style="width:180px;">
