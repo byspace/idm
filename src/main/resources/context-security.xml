@@ -9,7 +9,7 @@
 
     <http auto-config='true'>
         <intercept-url pattern="/security/login/*" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
-        <intercept-url pattern="/console/**" access="ROLE_ADMIN" />
+        <!--<intercept-url pattern="/console/**" access="ROLE_ADMIN" />-->
         <intercept-url pattern="/**" access="IS_AUTHENTICATED_ANONYMOUSLY"/>
 
         <form-login login-page='/login/index'/>

@@ -7,10 +7,7 @@
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title><%--<spring:message code="system.name" />--%>idm</title>
 
-<!-- <script type="text/javascript">
-</script> -->
-
 </head>
-<body>
+
 
 
