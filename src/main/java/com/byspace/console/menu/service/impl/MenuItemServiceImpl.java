@@ -1,8 +1,13 @@
 package com.byspace.console.menu.service.impl;
 
+import com.byspace.common.po.TreePosition;
+import com.byspace.common.po.TreeRelationship;
+import com.byspace.common.service.TreeService;
 import com.byspace.console.menu.entity.MenuItem;
 import com.byspace.console.menu.po.MenuItemData;
 import com.byspace.console.menu.service.MenuItemService;
+import com.byspace.util.CustomLogger;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -24,6 +29,8 @@ public class MenuItemServiceImpl implements MenuItemService {
 
 	@PersistenceContext
 	private EntityManager em;
+	@Autowired
+	private TreeService treeService;
 
 	private static final int FIRST_LEVEL_MENUITEM_PARENT_ID = 0;
 
@@ -43,11 +50,7 @@ public class MenuItemServiceImpl implements MenuItemService {
 
 		List<MenuItemData> menuItemDataList = new ArrayList<MenuItemData>();
 
-		String hql = "from MenuItem as m where m.parentMenuItemId = :parentMenuItemId order by m.treeOrder asc";
-		Query query = em.createQuery(hql);
-		query.setParameter("parentMenuItemId", parentMenuItemId);
-
-		List<MenuItem> menuItemList = query.getResultList();
+		List<MenuItem> menuItemList = this.getMenuItemListByParentId(parentMenuItemId);
 		for (MenuItem menuItemEntity : menuItemList) {
 			MenuItemData menuItemData = MenuItemData.buildFormMenuItemEntity(menuItemEntity);
 			menuItemData.setChildren(this.getMenuItemDataListByParentId(menuItemEntity.getId()));
@@ -58,9 +61,88 @@ public class MenuItemServiceImpl implements MenuItemService {
 		return menuItemDataList;
 	}
 
-    @Override
+	private List<MenuItem> getMenuItemListByParentId(int parentMenuItemId) {
+		String hql = "from MenuItem as m where m.parentMenuItemId = :parentMenuItemId order by m.treeOrder asc";
+		Query query = em.createQuery(hql);
+		query.setParameter("parentMenuItemId", parentMenuItemId);
+		List<MenuItem> menuItemList = query.getResultList();
+
+		return menuItemList;
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public MenuItemData getMenuItemDataWithRoot() {
+
+		MenuItemData rootMenuItemData = new MenuItemData();
+		rootMenuItemData.setId(0);
+		rootMenuItemData.setText("根路径");
+		rootMenuItemData.setIconCls("");
+		rootMenuItemData.setChildren(this.getMenuItemDataListByParentId(0));
+
+		return rootMenuItemData;
+	}
+
+	@Override
     @Transactional(readOnly = true)
     public MenuItem readMenuItem(int menuItemId) {
-        return em.find(MenuItem.class, menuItemId);
+        MenuItem menuItem = em.find(MenuItem.class, menuItemId);
+		return menuItem;
     }
+
+	@Override
+	public void saveMenuItem(MenuItem menuItem) {
+		if (menuItem.getId() == 0) {
+			em.persist(menuItem);
+		} else {
+			em.merge(menuItem);
+		}
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public double getMaxChildTreeOrder(int parentMenuItemId) {
+
+		String hql = "from MenuItem m where m.parentMenuItemId=:parentMenuItemId order by m.treeOrder desc";
+		Query query = em.createQuery(hql);
+		query.setParameter("parentMenuItemId", parentMenuItemId);
+
+		List<MenuItem> menuItemList = query.getResultList();
+		if (menuItemList.size() == 0) {
+			return 1d;
+		} else {
+			return menuItemList.get(0).getTreeOrder();
+		}
+	}
+
+	@Override
+	public void deleteMenuItem(int menuItemId) {
+		MenuItem menuItem = em.find(MenuItem.class, menuItemId);
+		List<MenuItem> childrenMenuItem = this.getMenuItemListByParentId(menuItemId);
+
+		em.remove(menuItem);
+		for(MenuItem childMenuItem : childrenMenuItem) {
+			deleteMenuItem(childMenuItem.getId());
+		}
+	}
+
+	@Override
+	public void moveMenuItem(int sourceId, int targetId, String point) {
+		MenuItem menuItem = this.readMenuItem(sourceId);
+		MenuItem targetMenuItem = this.readMenuItem(targetId);
+
+		List brother = this.getMenuItemListByParentId(targetMenuItem.getParentMenuItemId());
+		List children = this.getMenuItemListByParentId(targetMenuItem.getId());
+
+		TreeRelationship treeRelationship = new TreeRelationship();
+		treeRelationship.setParentNode(this.readMenuItem(targetMenuItem.getParentMenuItemId()));
+		treeRelationship.setBrothers(brother);
+		treeRelationship.setChildren(children);
+
+		TreePosition treePosition = treeService.getPositionAfterDrag(menuItem, targetMenuItem, point, treeRelationship);
+		menuItem.setParentMenuItemId(treePosition.getParentNodeId());
+		menuItem.setTreeOrder(treePosition.getTreeOrder());
+
+		em.merge(menuItem);
+	}
 }

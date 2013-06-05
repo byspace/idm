@@ -1,6 +1,10 @@
 package com.byspace.console.menu.entity;
 
+import com.byspace.common.service.TreeMoveable;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,7 +15,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "csl_menuitem")
-public class MenuItem {
+public class MenuItem implements TreeMoveable {
 
 	@Id
 	@GeneratedValue
@@ -27,6 +31,7 @@ public class MenuItem {
 	@Column(name = "parent_menuitem_id")
 	private int parentMenuItemId;
 
+	@Override
 	public int getId() {
 		return id;
 	}

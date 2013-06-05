@@ -26,10 +26,45 @@ public interface MenuItemService {
 	 */
 	public List<MenuItemData> getMenuItemDataListByParentId(int parentMenuItemId);
 
+	/**
+	 * get menuitem json data with root
+	 * @return
+	 */
+	public MenuItemData getMenuItemDataWithRoot();
+
     /**
      * read menuitem by id
      * @param menuItemId
      * @return
      */
     public MenuItem readMenuItem(int menuItemId);
+
+	/**
+	 * save menuitem or create new menuitem
+	 * @param menuItem
+	 */
+	public void saveMenuItem(MenuItem menuItem);
+
+	/**
+	 * get max treeOrder under specified menuitem
+	 * @param parentMenuItemId
+	 * @return
+	 */
+	public double getMaxChildTreeOrder(int parentMenuItemId);
+
+	/**
+	 * delete menuitem and all children menuitem
+	 * @param menuItemId
+	 */
+	public void deleteMenuItem(int menuItemId);
+
+	/**
+	 * move menuitem
+	 * @param sourceId
+	 * @param targetId
+	 * @param point
+	 */
+	public void moveMenuItem(int sourceId, int targetId, String point);
+
+
 }
