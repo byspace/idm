@@ -1,5 +1,7 @@
 package com.byspace.common.service;
 
+import com.byspace.common.po.TreeData;
+
 import java.util.List;
 
 /**
@@ -13,5 +15,7 @@ public interface TreeMoveable {
 	public int getId();
 
 	public double getTreeOrder();
+
+	public TreeData buildTreeData();
 
 }

@@ -1,7 +1,7 @@
 package com.byspace.console.menu.service;
 
+import com.byspace.common.po.TreeData;
 import com.byspace.console.menu.entity.MenuItem;
-import com.byspace.console.menu.po.MenuItemData;
 
 import java.util.List;
 
@@ -24,13 +24,13 @@ public interface MenuItemService {
 	 * @param parentMenuItemId parent munuitem id
 	 * @return
 	 */
-	public List<MenuItemData> getMenuItemDataListByParentId(int parentMenuItemId);
+	public List<TreeData> getMenuItemDataListByParentId(int parentMenuItemId);
 
 	/**
 	 * get menuitem json data with root
 	 * @return
 	 */
-	public MenuItemData getMenuItemDataWithRoot();
+	public TreeData getMenuItemDataWithRoot();
 
     /**
      * read menuitem by id

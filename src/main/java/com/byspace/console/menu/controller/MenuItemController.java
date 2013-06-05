@@ -1,11 +1,10 @@
 package com.byspace.console.menu.controller;
 
 import com.byspace.common.po.JsonResult;
+import com.byspace.common.po.TreeData;
 import com.byspace.console.menu.entity.MenuItem;
-import com.byspace.console.menu.po.MenuItemData;
 import com.byspace.console.menu.service.MenuItemService;
 import com.byspace.util.CustomLogger;
-import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -37,14 +36,14 @@ public class MenuItemController {
 
 	@RequestMapping("getMenuItemDataByParentId/{parentMenuItemId}")
 	@ResponseBody
-	public List<MenuItemData> getMenuItemDataByParentId(@PathVariable("parentMenuItemId")int parentMenuItemId) {
+	public List<TreeData> getMenuItemDataByParentId(@PathVariable("parentMenuItemId")int parentMenuItemId) {
 		return menuItemService.getMenuItemDataListByParentId(parentMenuItemId);
 	}
 
 	@RequestMapping("getMenuItemDataWithRoot")
 	@ResponseBody
-	public List<MenuItemData> getMenuItemDataWithRoot() {
-		List<MenuItemData> list = new ArrayList<MenuItemData>();
+	public List<TreeData> getMenuItemDataWithRoot() {
+		List<TreeData> list = new ArrayList<TreeData>();
 		list.add(menuItemService.getMenuItemDataWithRoot());
 		return list;
 	}
@@ -68,7 +67,7 @@ public class MenuItemController {
 			savedMenuItem.setLink(menuItem.getLink());
 			savedMenuItem.setIcon(menuItem.getIcon());
 			savedMenuItem.setParentMenuItemId(menuItem.getParentMenuItemId());
-			savedMenuItem.setTreeOrder(menuItemService.getMaxChildTreeOrder(menuItem.getParentMenuItemId()));
+			savedMenuItem.setTreeOrder(menuItemService.getMaxChildTreeOrder(menuItem.getParentMenuItemId()) + 1d);
 
 			menuItemService.saveMenuItem(savedMenuItem);
 

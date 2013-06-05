@@ -8,9 +8,9 @@
 <%--<script type="text/javascript" src="<spring:url value="/static/script/jquery.fancybox.js?v=2.0.6" />"></script>--%>
 <%-- <script type="text/javascript" src="<spring:url value="/static/script/jquery.fancybox.pack.js?v=2.0.6" />"></script> --%>
 <%--<script type="text/javascript" src="<spring:url value="/static/script/ajaxfileupload.js" />"></script>--%>
-<%--<script type="text/javascript" src="<spring:url value="/static/script/main/nav.js" />"></script>--%>
+<%--<script type="text/javascript" src="<spring:url value="/static/script/portal/nav.js" />"></script>--%>
 <%--<script type="text/javascript" src="<spring:url value="/static/script/datatable/js/jquery.dataTables.js" />"></script>--%>
-<%--<script type="text/javascript" src="<spring:url value="/static/script/main/datatablefix.js" />"></script>--%>
+<%--<script type="text/javascript" src="<spring:url value="/static/script/portal/datatablefix.js" />"></script>--%>
 <%--<script type="text/javascript" src="<spring:url value="/static/script/jquery.msgbox.7.1/jquery.msgbox.js" />"></script>--%>
 <%--<script type="text/javascript" src="<spring:url value="/static/script/jquery.msgbox.7.1/jquery.dragndrop.min.js" />"></script>--%>
 <%--&lt;%&ndash; <script type="text/javascript" src="<spring:url value="/static/script/My97DatePicker/WdatePicker.js" />"></script> &ndash;%&gt;--%>

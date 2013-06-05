@@ -1,5 +1,6 @@
 package com.byspace.console.menu.entity;
 
+import com.byspace.common.po.TreeData;
 import com.byspace.common.service.TreeMoveable;
 
 import javax.persistence.*;
@@ -30,6 +31,16 @@ public class MenuItem implements TreeMoveable {
 	private double treeOrder;
 	@Column(name = "parent_menuitem_id")
 	private int parentMenuItemId;
+
+	public TreeData buildTreeData() {
+		TreeData menuItemData = new TreeData();
+		menuItemData.setId(this.getId());
+		menuItemData.setText(this.getName());
+		menuItemData.setIconCls(this.getIcon());
+		menuItemData.addAttribute("url", this.getLink());
+
+		return menuItemData;
+	}
 
 	@Override
 	public int getId() {

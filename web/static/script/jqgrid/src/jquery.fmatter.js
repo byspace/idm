@@ -48,7 +48,7 @@
 		}
 	});
 	$.fn.fmatter = function(formatType, cellval, opts, rwd, act) {
-		// build main options before element iteration
+		// build portal options before element iteration
 		var v=cellval;
 		opts = $.extend({}, $.jgrid.formatter, opts);
 

@@ -4562,7 +4562,7 @@ $.jgrid.extend({
 					}
 				});
 
-				// Set position of the sortable div (the main lable)
+				// Set position of the sortable div (the portal lable)
 				// with the column header text to the middle of the cell.
 				// One should not do this for hidden headers.
 				$htable.find("div.ui-jqgrid-sortable").each(function () {
@@ -5268,7 +5268,7 @@ var xmlJsonClass = {
 		}
 	});
 	$.fn.fmatter = function(formatType, cellval, opts, rwd, act) {
-		// build main options before element iteration
+		// build portal options before element iteration
 		var v=cellval;
 		opts = $.extend({}, $.jgrid.formatter, opts);
 

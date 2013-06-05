@@ -8,7 +8,7 @@
  * http://www.gnu.org/licenses/gpl-2.0.html
  *
  * This list of deprecated methods.
- * If you instead want to use them, please include this file after the grid main file.
+ * If you instead want to use them, please include this file after the grid portal file.
  * Some methods will be then overwritten.
  *
  */

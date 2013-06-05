@@ -1,12 +1,11 @@
 package com.byspace.console.menu.service.impl;
 
+import com.byspace.common.po.TreeData;
 import com.byspace.common.po.TreePosition;
 import com.byspace.common.po.TreeRelationship;
 import com.byspace.common.service.TreeService;
 import com.byspace.console.menu.entity.MenuItem;
-import com.byspace.console.menu.po.MenuItemData;
 import com.byspace.console.menu.service.MenuItemService;
-import com.byspace.util.CustomLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -46,13 +45,13 @@ public class MenuItemServiceImpl implements MenuItemService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public List<MenuItemData> getMenuItemDataListByParentId(int parentMenuItemId) {
+	public List<TreeData> getMenuItemDataListByParentId(int parentMenuItemId) {
 
-		List<MenuItemData> menuItemDataList = new ArrayList<MenuItemData>();
+		List<TreeData> menuItemDataList = new ArrayList<TreeData>();
 
 		List<MenuItem> menuItemList = this.getMenuItemListByParentId(parentMenuItemId);
 		for (MenuItem menuItemEntity : menuItemList) {
-			MenuItemData menuItemData = MenuItemData.buildFormMenuItemEntity(menuItemEntity);
+			TreeData menuItemData = menuItemEntity.buildTreeData();
 			menuItemData.setChildren(this.getMenuItemDataListByParentId(menuItemEntity.getId()));
 
 			menuItemDataList.add(menuItemData);
@@ -72,9 +71,9 @@ public class MenuItemServiceImpl implements MenuItemService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public MenuItemData getMenuItemDataWithRoot() {
+	public TreeData getMenuItemDataWithRoot() {
 
-		MenuItemData rootMenuItemData = new MenuItemData();
+		TreeData rootMenuItemData = new TreeData();
 		rootMenuItemData.setId(0);
 		rootMenuItemData.setText("根路径");
 		rootMenuItemData.setIconCls("");
@@ -109,7 +108,7 @@ public class MenuItemServiceImpl implements MenuItemService {
 
 		List<MenuItem> menuItemList = query.getResultList();
 		if (menuItemList.size() == 0) {
-			return 1d;
+			return 0d;
 		} else {
 			return menuItemList.get(0).getTreeOrder();
 		}
