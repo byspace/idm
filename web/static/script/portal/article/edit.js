@@ -1,13 +1,10 @@
 
 $(function(){
-	CKEDITOR.replace( 'content', {
-		toolbar: 'Basic',
-		customConfig: getUrl('/static/script/ckeditor/config.js')
-	} );
+	UE.getEditor('content');
 });
 
 function saveForm() {
-	ajaxSubmitForm($("#ff"), alertSaveResult, {content : CKEDITOR.instances.content.getData()});
+	//ajaxSubmitForm($("#ff"), alertSaveResult, {content : CKEDITOR.instances.content.getData()});
 }
 
 function alertSaveResult(data) {

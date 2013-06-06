@@ -1,15 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ include file="../../common/head.jsp" %>
 
+<script type="text/javascript" charset="utf-8">
+	window.UEDITOR_HOME_URL = getUrl("/static/script/ueditor/");
+</script>
+
+<script type="text/javascript" src="<spring:url value="/static/script/ueditor/ueditor.config.js" />"></script>
+<script type="text/javascript" src="<spring:url value="/static/script/ueditor/ueditor.all.min.js" />"></script>
 
 <script type="text/javascript" src="<spring:url value="/static/script/portal/article/edit.js" />"></script>
-<script type="text/javascript" src="<spring:url value="/static/script/ckeditor/ckeditor.js" />"></script>
 
 <body class="easyui-layout" style="overflow: scroll">
 <form id="ff" method="post" action="<spring:url value="/portal/article/save" />">
 	<table style="margin: 30px">
 		<tr>
-			<td width="200px">文章标题:</td>
+			<td width="20%">文章标题:</td>
 			<td>
 				<input type="hidden" name="id" id="id" value="<c:if test="${article == null}">0</c:if><c:if test="${article != null}">${article.id}</c:if>"/>
 				<input class="easyui-validatebox" type="text" value="${article.subject}" name="subject" id="subject" data-options="" style="width: 300px;"/>
@@ -58,7 +63,8 @@
 		<tr>
 			<td>内容:</td>
 			<td>
-				<textarea name="content" id="content">${article.content}</textarea>
+				<script id="content" type="text/plain" style="width:1024px;height:500px">
+				</script>
 			</td>
 		</tr>
 		<tr>
