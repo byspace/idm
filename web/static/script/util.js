@@ -35,7 +35,7 @@ function formatRootUrl() {
 	$("#rootUrl").val(root);
 }
 
-function ajaxSubmitForm(formObj) {
+function ajaxSubmitForm(formObj, callback, customData) {
 	var url = formObj.attr("action");
 	var data = new Object();
 	$("*[name]", formObj).each(function(){
@@ -44,6 +44,13 @@ function ajaxSubmitForm(formObj) {
 		
 		data[name] = value;
 	});
+
+	console.log(data);
+	console.log(customData);
+
+	$.extend(data, customData);
+
+	console.log(data);
 	
 	$.ajax({
 		url: url,
@@ -54,7 +61,7 @@ function ajaxSubmitForm(formObj) {
 		error: function() {
 		},
 		success: function(data) {
-			//fbalert(data.message);
+			callback(data);
 		}
 	});
 }

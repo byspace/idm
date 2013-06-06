@@ -62,12 +62,12 @@ public class MenuItemController {
 			MenuItem savedMenuItem = menuItemService.readMenuItem(menuItem.getId());
 			if (savedMenuItem == null) {
 				savedMenuItem = new MenuItem();
+				savedMenuItem.setTreeOrder(menuItemService.getMaxChildTreeOrder(menuItem.getParentMenuItemId()) + 1d);
 			}
 			savedMenuItem.setName(menuItem.getName());
 			savedMenuItem.setLink(menuItem.getLink());
 			savedMenuItem.setIcon(menuItem.getIcon());
 			savedMenuItem.setParentMenuItemId(menuItem.getParentMenuItemId());
-			savedMenuItem.setTreeOrder(menuItemService.getMaxChildTreeOrder(menuItem.getParentMenuItemId()) + 1d);
 
 			menuItemService.saveMenuItem(savedMenuItem);
 

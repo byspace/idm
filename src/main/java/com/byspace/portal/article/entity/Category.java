@@ -1,6 +1,11 @@
 package com.byspace.portal.article.entity;
 
+import com.byspace.common.service.SimpleDataGridRow;
+
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created with IntelliJ IDEA.
@@ -10,7 +15,7 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name = "ptl_article_category")
-public class Category {
+public class Category implements SimpleDataGridRow {
 
 	@Id
 	@GeneratedValue
@@ -20,6 +25,15 @@ public class Category {
 	@Column(name = "detail")
 	@Lob
 	private String detail;
+
+	@Override
+	public List<String> getFields() {
+		return Arrays.asList(
+			"id",
+			"name",
+			"detail"
+		);
+	}
 
 	public int getId() {
 		return id;

@@ -3,51 +3,62 @@
 
 
 <script type="text/javascript" src="<spring:url value="/static/script/portal/article/edit.js" />"></script>
+<script type="text/javascript" src="<spring:url value="/static/script/ckeditor/ckeditor.js" />"></script>
 
-<body class="easyui-layout">
-<form id="ff" method="post">
+<body class="easyui-layout" style="overflow: scroll">
+<form id="ff" method="post" action="<spring:url value="/portal/article/save" />">
 	<table style="margin: 30px">
 		<tr>
 			<td width="200px">文章标题:</td>
 			<td>
-				<input type="hidden" name="id" id="id" value="0"/>
-				<input class="easyui-validatebox" type="text" name="subject" id="subject" data-options="" style="width: 300px;"/>
+				<input type="hidden" name="id" id="id" value="<c:if test="${article == null}">0</c:if><c:if test="${article != null}">${article.id}</c:if>"/>
+				<input class="easyui-validatebox" type="text" value="${article.subject}" name="subject" id="subject" data-options="" style="width: 300px;"/>
 			</td>
 		</tr>
 		<tr>
 			<td>所属栏目:</td>
 			<td>
-				<input class="easyui-combotree" name="topic" id="topic" data-options="url:'<spring:url value="/portal/topic/getTopicTreeDataByParentId/0" />'" style="width:200px;">
+				<input class="easyui-combotree" name="topic" id="topic" value="${article.topic.id}" data-options="url:'<spring:url value="/portal/topic/getTopicTreeDataByParentId/0" />'" style="width:200px;">
 			</td>
 		</tr>
 		<tr>
 			<td>内容分类:</td>
 			<td>
-
+				<select class="easyui-combobox" name="category" id="category" style="width:200px;" value="${article.category.id}">
+					<option value="0">请选择</option>
+					<c:forEach items="${categories}" var="category">
+						<option <c:if test="${category.id == article.category.id}">selected</c:if> value="${category.id}">${category.name}</option>
+					</c:forEach>
+				</select>
 			</td>
 		</tr>
 		<tr>
 			<td>文章类型:</td>
 			<td>
-
+				<select class="easyui-combobox" name="articleType" id="articleType" style="width:200px;" value="${article.articleType.id}">
+					<option value="0">请选择</option>
+					<c:forEach items="${articleTypes}" var="articleType">
+						<option <c:if test="${articleType.id == article.articleType.id}">selected</c:if> value="${articleType.id}">${articleType.name}</option>
+					</c:forEach>
+				</select>
 			</td>
 		</tr>
 		<tr>
 			<td>文章来源:</td>
-			<td><input class="easyui-validatebox" type="text" name="source" id="source" data-options="" style="width: 300px;"/></td>
+			<td><input class="easyui-validatebox" type="text" value="${article.source}" name="source" id="source" data-options="" style="width: 300px;"/></td>
 		</tr>
 		<tr>
 			<td>发布时间:</td>
-			<td><input class="easyui-datetimebox" style="width:200px"></td>
+			<td><input class="easyui-datetimebox" name="publishDate" id="publishDate"  value="${article.publishDateStr}" style="width:200px"></td>
 		</tr>
 		<tr>
 			<td>文章摘要:</td>
-			<td><textarea id="summary" name="summary" style="width: 300px; height: 200px;"></textarea> </td>
+			<td><textarea id="summary" name="summary"  style="width: 500px; height: 100px;">${article.summary}</textarea> </td>
 		</tr>
 		<tr>
 			<td>内容:</td>
 			<td>
-				<textarea name="content" id="contentEditor"></textarea>
+				<textarea name="content" id="content">${article.content}</textarea>
 			</td>
 		</tr>
 		<tr>

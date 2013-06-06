@@ -1,9 +1,12 @@
 package com.byspace.portal.article.entity;
 
+import com.byspace.common.service.SimpleDataGridRow;
 import com.byspace.portal.topic.entity.Topic;
+import com.byspace.util.DateUtils;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -15,7 +18,7 @@ import java.util.List;
  */
 @Entity
 @Table(name = "ptl_article")
-public class Article {
+public class Article implements SimpleDataGridRow {
 
 	@Id
 	@GeneratedValue
@@ -24,20 +27,51 @@ public class Article {
 	private String subject;
 	@OneToMany
 	private List<KeyWord> keyWordList = new ArrayList<KeyWord>();
-	@OneToOne
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Category category;
-	@OneToOne
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	private ArticleType articleType;
 	@Column(name = "source")
 	private String source;
 	@Column(name = "publish_date")
 	private Date publishDate;
-	@OneToOne
+	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Topic topic;
 	@Column(name = "summary")
 	private String summary;
 	@Column(name = "content")
 	private String content;
+
+	@Override
+	public List<String> getFields() {
+		return Arrays.asList(
+				"id",
+				"subject",
+				"topicName",
+				"categoryName",
+				"articleTypeName",
+				"source",
+				"publishDateStr",
+				"summary"
+		);
+	}
+
+	public String getTopicName() {
+		return topic.getName();
+	}
+
+	public String getCategoryName() {
+		return topic.getName();
+	}
+
+	public String getArticleTypeName() {
+		return topic.getName();
+	}
+
+	public String getPublishDateStr() {
+		return DateUtils.dateToStr(publishDate, "MM/dd/yyyy HH:mm:ss");
+	}
+
 
 	public int getId() {
 		return id;
