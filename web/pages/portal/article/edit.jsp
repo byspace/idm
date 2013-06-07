@@ -63,7 +63,8 @@
 		<tr>
 			<td>内容:</td>
 			<td>
-				<script id="content" type="text/plain" style="width:1024px;height:500px">
+				<script id="content" type="text/plain" style="width:1024px;height:1000px">
+					${article.content}
 				</script>
 			</td>
 		</tr>

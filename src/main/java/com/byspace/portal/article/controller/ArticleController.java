@@ -52,6 +52,14 @@ public class ArticleController {
 		return "portal/article/edit";
 	}
 
+	@RequestMapping("view/{articleId}")
+	public String view(@PathVariable("articleId")int articleId, Model model) {
+		Article article = articleService.read(articleId);
+		model.addAttribute("article", article);
+		model.addAttribute("topicList", topicService.getTopicTree(article.getTopic()));
+		return "portal/article/view";
+	}
+
 	@RequestMapping("edit/{articleId}")
 	public String edit(@PathVariable("articleId")int articleId, Model model) {
 
@@ -86,6 +94,7 @@ public class ArticleController {
 			Article article = articleService.read(Integer.parseInt(request.getParameter("id")));
 			if (article == null) {
 				article = new Article();
+				this.setDefaultTitleImage(request, article);
 			}
 
 			article.setSubject(request.getParameter("subject"));
@@ -96,6 +105,8 @@ public class ArticleController {
 			article.setPublishDate(DateUtils.strToDate(request.getParameter("publishDate"), "MM/dd/yyyy HH:mm:ss"));
 			article.setSummary(request.getParameter("summary"));
 			article.setContent(request.getParameter("content"));
+			article.setImages(request.getParameter("images"));
+
 
 			articleService.saveArticle(article);
 
@@ -104,6 +115,14 @@ public class ArticleController {
 			CustomLogger.error(e, this);
 
 			return JsonResult.fail("保存失败");
+		}
+	}
+
+	private void setDefaultTitleImage(HttpServletRequest request, Article article) {
+		String images = request.getParameter("images");
+		String[] imageList = images.split("|%%|,|%%|");
+		if (imageList.length > 0) {
+			article.setTitleImage(imageList[0]);
 		}
 	}
 

@@ -14,6 +14,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -135,5 +136,23 @@ public class TopicServiceImpl implements TopicService {
 		topic.setTreeOrder(treePosition.getTreeOrder());
 
 		em.merge(topic);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Topic> getTopicTree(Topic topic) {
+		List<Topic> topicList = new ArrayList<Topic>();
+		addParentTopicToList(topicList, topic);
+		Collections.reverse(topicList);
+
+		return topicList;
+	}
+
+	private void addParentTopicToList(List<Topic> topicList, Topic currentTopic) {
+		if (currentTopic != null) {
+			topicList.add(currentTopic);
+			Topic parentTopic = em.find(Topic.class, currentTopic.getParentTopicId());
+			addParentTopicToList(topicList, parentTopic);
+		}
 	}
 }

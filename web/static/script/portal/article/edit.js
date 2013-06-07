@@ -1,10 +1,11 @@
-
+var editor;
 $(function(){
-	UE.getEditor('content');
+	editor = UE.getEditor('content');
 });
 
 function saveForm() {
-	//ajaxSubmitForm($("#ff"), alertSaveResult, {content : CKEDITOR.instances.content.getData()});
+	var images = getImages(editor.getContent());
+	ajaxSubmitForm($("#ff"), alertSaveResult, {content : editor.getContent(), images : images});
 }
 
 function alertSaveResult(data) {
@@ -15,4 +16,15 @@ function alertSaveResult(data) {
 	} else {
 		$.messager.alert("操作失败", data.message, "error");
 	}
+}
+
+function getImages(content) {
+	var contentObj = $(content);
+	var images = "";
+
+	$("img", contentObj).each(function(){
+		images += $(this).attr('src') + "|%%|,|%%|";
+	});
+
+	return images;
 }

@@ -38,9 +38,17 @@ public class Article implements SimpleDataGridRow {
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Topic topic;
 	@Column(name = "summary")
+	@Lob
 	private String summary;
+	@Lob
 	@Column(name = "content")
 	private String content;
+	@Column(name = "images")
+	@Lob
+	private String images;
+
+	@Column(name = "title_image")
+	private String titleImage;
 
 	@Override
 	public List<String> getFields() {
@@ -151,5 +159,21 @@ public class Article implements SimpleDataGridRow {
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+
+	public String getImages() {
+		return images;
+	}
+
+	public void setImages(String images) {
+		this.images = images;
+	}
+
+	public String getTitleImage() {
+		return titleImage;
+	}
+
+	public void setTitleImage(String titleImage) {
+		this.titleImage = titleImage;
 	}
 }

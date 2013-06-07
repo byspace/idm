@@ -45,13 +45,8 @@ function ajaxSubmitForm(formObj, callback, customData) {
 		data[name] = value;
 	});
 
-	console.log(data);
-	console.log(customData);
-
 	$.extend(data, customData);
 
-	console.log(data);
-	
 	$.ajax({
 		url: url,
 		dataType: "json",

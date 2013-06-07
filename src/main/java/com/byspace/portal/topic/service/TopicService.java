@@ -66,4 +66,11 @@ public interface TopicService {
 	 * @param point
 	 */
 	public void moveTopic(int sourceId, int targetId, String point);
+
+	/**
+	 * get topic tree list from root to current topic
+	 * @param topic
+	 * @return
+	 */
+	public List<Topic> getTopicTree(Topic topic);
 }

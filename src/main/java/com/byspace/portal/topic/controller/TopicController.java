@@ -2,11 +2,15 @@ package com.byspace.portal.topic.controller;
 
 import com.byspace.common.po.JsonResult;
 import com.byspace.common.po.TreeData;
+import com.byspace.portal.article.entity.Article;
+import com.byspace.portal.article.po.ArticleListPaginator;
+import com.byspace.portal.article.service.ArticleService;
 import com.byspace.portal.topic.entity.Topic;
 import com.byspace.portal.topic.service.TopicService;
 import com.byspace.util.CustomLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,6 +30,10 @@ public class TopicController {
 
 	@Autowired
 	private TopicService topicService;
+	@Autowired
+	private ArticleService articleService;
+
+	private static final int ARTICLE_NUM_PER_PAGE = 20;
 
 	@RequestMapping("index")
 	public String index() {
@@ -96,5 +104,27 @@ public class TopicController {
 			CustomLogger.error(e, this);
 			return JsonResult.fail("操作失败");
 		}
+	}
+
+	@RequestMapping("listArticle/{topicId}")
+	public String listArticle(@PathVariable("topicId")int topicId, Model model) {
+		return this.listArticle(topicId, 1, model);
+	}
+
+	@RequestMapping("listArticle/{topicId}/{pageNum}")
+	public String listArticle(@PathVariable("topicId")int topicId, @PathVariable("pageNum")int pageNum, Model model) {
+
+		ArticleListPaginator paginator = new ArticleListPaginator();
+		paginator.setPageNum(pageNum);
+		paginator.setLimit(ARTICLE_NUM_PER_PAGE);
+
+		List<Article> articleList = articleService.listArticleByTopic(topicId, paginator);
+		Topic topic = topicService.readTopic(topicId);
+		model.addAttribute("topicList", topicService.getTopicTree(topic));
+
+		model.addAttribute("articleList", articleList);
+		model.addAttribute("topic", topic);
+		model.addAttribute("paginator", paginator);
+		return "portal/topic/listArticle";
 	}
 }

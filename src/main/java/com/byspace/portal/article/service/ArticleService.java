@@ -1,6 +1,7 @@
 package com.byspace.portal.article.service;
 
 import com.byspace.portal.article.entity.Article;
+import com.byspace.portal.article.po.ArticleListPaginator;
 
 import java.util.List;
 
@@ -30,4 +31,12 @@ public interface ArticleService {
 	 * @param idList
 	 */
 	public void batchDelete(List<Integer> idList);
+
+	/**
+	 * get articles in specified topic
+	 * @param topicId
+	 * @param paginator
+	 * @return
+	 */
+	public List<Article> listArticleByTopic(int topicId, ArticleListPaginator paginator);
 }

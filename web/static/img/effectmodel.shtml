@@ -1,0 +1,1312 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>效果图模型</title>
+<link href="/css/top.css" rel="stylesheet" type="text/css" />
+<link href="/css/effectmodel.css" rel="stylesheet" type="text/css" />
+<link href="/css/effectmodel_base.css" rel="stylesheet" type="text/css" />
+<link href="/css/css.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery-1.2.6.min.js"></script>
+
+<script type="text/javascript" src="/js/infocenter_banner.js"></script>
+
+</head>
+
+<body>
+<!--#include virtual="/includes/top.shtml"-->
+<!--显示二级栏目,add by zjc 20130107 start-->
+<script type="text/javascript">
+	document.getElementById("nav_effectmodel").setAttribute('className', 'bottom_current');
+	document.getElementById("sub_nav_effectmodel").style.display="";
+</script>
+<script type="text/javascript">
+	document.getElementById("nav_effectmodel").setAttribute('class', 'bottom_current');
+	document.getElementById("sub_nav_effectmodel").style.display="";
+</script>
+<!--显示二级栏目,add by zjc 20130107 end-->
+<div class="model_waup">
+	<div class="model_b">
+		<div class="zs_left">
+		  <div class="left_banner">
+                <div class="indexCon fl">
+                         <div class="flashBanner">
+                            <a href="#"><img class="bigImg" width="290" height="290" /></a>
+                            <div class="mask">
+                                <img src="/img/001.png" uri="/img/001.png" link="#"  width="84" height="70"/>
+                                <img src="/img/001.png" uri="/img/001.png" link="#"  width="84" height="70"/>
+                                <img src="/img/001.png" uri="/img/001.png" link="#"  width="84" height="70"/>
+                            </div>
+                        </div>
+                    </div>
+	      </div>
+		  <div class="modeltitle">
+			  <p class="linkzx"><a href="#">
+			  <span class="spankzx">效果图</span><span class="zs">资讯</span></a><br /><span class="English">News information</span></p>
+			  <p  class="moer"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/effectmodel">更多.</a></p>
+	      </div>
+		  
+		  <div class="model_text">
+			  <dl>
+<dt class="fblack"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">设计前沿</a><span class="distance">|</span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000778.html">基金：调控有利房地产龙头公司</a></dt>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000811.html">乐众上品公寓酒店</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000775.html">房地产行业利空不断 警惕地产股下挫</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000452.html">最有艺术氛围的地下铁：瑞典斯德哥尔摩地铁</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000451.html">中国最美古村落之客家围龙屋</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000450.html">印度山站好风光　维多利亚式风情建筑</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000449.html">世界上第一座冰雕酒店 瑞士卡斯加维冰雕旅馆</a></dd> </dl>		
+  
+ <dl>
+<dt class="fblack"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">设计前沿</a><span class="distance">|</span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000448.html">塞纳河上有座充气蹦床桥</a></dt>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000447.html">日本现代禅风造景</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000446.html">扭曲的克莱因瓶宅</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000445.html">静思小居 绿色节能建筑典范</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000444.html">建筑师献给父母的礼物</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000443.html">古老而纯粹的爱情桥 陶塔曼湖乌木桥</a></dd>
+<dd><span class="lefjl"><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1">[设计前沿]</a></span><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000442.html">钢筋和混泥土搭配出奢华私人住宅</a></dd>
+</dl>
+	   </div>
+    </div>
+
+		<div class="zs_right">
+		 <div class="modeltitle">
+			  <p class="linkzx"><a href="#">
+			  <span class="spankzx">最新</span><span class="zs">走势</span></a><br /><span class="English">Video News</span></p>
+			  <p  class="moer"><a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000788.html">更多.</a></p>
+     	</div>	 
+  
+		<div class="mode_sie">
+		<dl>
+		<dt class="fblackone"><a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000792.html">2012效果图下载数量走势图</a>/dt>
+		<dd><a href="#"><img src="/img/szdcfx.png" /></a></dd>
+		<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000792.html">竹地板国内市场依旧低迷</a></dd>
+		<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000788.html">中国陶瓷转型升级盼能有好的政策</a></dd>
+		<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000787.html">新建项目环评 涂料使用有新规</a></dd>
+		<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000785.html">卫浴市场质量问题频现恐影响行业发展</a></dd>
+		<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000784.html">特高特新品木纹砖以高品质抢占终端市场</a></dd>
+
+		  </dl>
+		</div>
+	      
+	</div>
+	
+</div>
+ 
+	<div class="model_c">
+		 <div class="modeltitle">
+			  <p class="linkzx"><a href="#">
+			  <span class="spankzx">建筑</span><span class="zs">设计</span></a><br /><span class="English">Exigence Career</span></p>
+			  <p  class="moer"><a href="http://www.93idm.com/static/column/buildingdesign/citybuilding.html/1">更多.</a></p>
+	      </div>
+<div class="kon"></div>
+      <div class="jzdesign">
+		<dl>
+		
+		<dd><img src="/img/jzsjta.jpg" width="295" height="264" align="absmiddle" /></dd>
+		<dt class="line fblack"><a href="http://www.93idm.com/aarticle/buildingdesign/citybuilding/201302/20130200000327.html">青岛大剧院</a></dt>
+		</dl></div>
+       <div>
+       <ul class="jzdesign_limg">
+         <li>
+		     <a href="http://www.93idm.com/aarticle/buildingdesign/citybuilding/201302/20130200000305.html"><img src="/img/jasjtb.jpg" /></a>
+			<div class="name">文化艺术中心</div>
+			<p class="bg1">博远</p>
+     		<p class="bg2">110</p>
+          </li>
+        </ul>
+     <ul class="jzdesign_limg">
+         <li>
+		     <a href="http://www.93idm.com/aarticle/buildingdesign/citybuilding/201302/20130200000341.html"><img src="/img/jzsjtc.jpg" /></a>
+			<div class="name">大运会体育中心</div>
+			<p class="bg1">博远</p>
+     		<p class="bg2">130</p>
+          </li>
+        </ul>
+     <ul class="jzdesign_limg">
+         <li>
+		     <a href="http://www.93idm.com/aarticle/buildingdesign/citybuilding/201302/20130200000342.html"><img src="/img/jzsjtd.jpg" /></a>
+			<div class="name">越南河内博物馆</div>
+			<p class="bg1">博远</p>
+     		<p class="bg2">200</p>
+          </li>
+        </ul>   
+		 <ul class="jzdesign_limg">
+         <li>
+		     <a href="http://www.93idm.com/aarticle/buildingdesign/citybuilding/201302/20130200000337.html"><img src="/img/jzsjte.jpg" /></a>
+			<div class="name">台中图书馆</div>
+			<p class="bg1">博远</p>
+     		<p class="bg2">140</p>
+          </li>
+        </ul>
+      </div>
+	       <div>
+       <ul class="jzdesign_limg">
+         <li>
+		     <a href="http://www.93idm.com/aarticle/buildingdesign/citybuilding/201302/20130200000332.html"><img src="/img/jzsttf.jpg" /></a>
+			<div class="name">深圳宝安体育场</div>
+			<p class="bg1">博远</p>
+     		<p class="bg2">13</p>
+          </li>
+        </ul>
+     <ul class="jzdesign_limg">
+         <li>
+		     <a href="http://www.93idm.com/aarticle/buildingdesign/citybuilding/201302/20130200000330.html"><img src="/img/jzsttg.jpg" /></a>
+			<div class="name">艺术博物馆</div>
+			<p class="bg1">博远</p>
+     		<p class="bg2">140</p>
+          </li>
+        </ul>
+     <ul class="jzdesign_limg">
+         <li>
+		     <a href="http://www.93idm.com/aarticle/buildingdesign/citybuilding/201302/20130200000311.html"><img src="/img/jzstth.jpg" /></a>
+			<div class="name">音乐会议中心</div>
+			<p class="bg1">博远</p>
+     		<p class="bg2">1100</p>
+          </li>
+        </ul>     <ul class="jzdesign_limg">
+         <li>
+		     <a href="http://www.93idm.com/aarticle/buildingdesign/citybuilding/201302/20130200000310.html"><img src="/img/jzsttj.jpg" /></a>
+			<div class="name">文化场</div>
+			<p class="bg1">博远</p>
+     		<p class="bg2">150</p>
+          </li>
+        </ul>
+      </div>	  
+	</div>
+
+	<div class="model_d">
+		 <div class="modeltitle">
+			  <p class="linkzx"><a href="#">
+			  <span class="spankzx">影视</span><span class="zs">广告</span></a><br /><span class="English">Video News</span></p>
+			  <p  class="moer"><a href="#">更多.</a></p>
+	      </div>
+		  <div class="kon"></div>
+		  <div class="mid">
+          <div class="mid_ysgg">
+			<ul class="fn_left liste">   
+			<li><embed src="http://player.youku.com/player.php/sid/XMTYyNzMzMTY=/v.swf" width="110" height="77" /></li>
+            <li>建筑广告</li>
+			</ul>
+		<ul class="fn_left liste">   
+			<li><embed src="http://player.youku.com/player.php/sid/XMTI4MTI5NzY=/v.swf" width="110" height="77" /></li>
+            <li>建筑动画</li>
+			</ul>
+        </div>
+         
+      <div class="mid_text">
+	  
+		   <dl>
+			<dt class="fblackone"><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000441.html">非常古怪的健康部门总部设计</a></dt>
+			 <dd class="mid_dd">该建筑位于西班牙毕尔巴鄂（Bilbao），坐落在Ensanche最重要的两条大街的十字路口...</dd>
+			 <dd><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1"><span class="distance">[设计前沿]</span></a><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000440.html">德国福克艺术大学音乐学院图书馆</a></dd>
+			 <dd><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1"><span class="distance">[设计前沿]</span></a><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000439.html">创意的十字架摩天大楼</a></dd>
+			 <dd><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1"><span class="distance">[设计前沿]</span></a><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000438.html">超诱人的巧克力酒吧设计</a></dd>
+			 <dd><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1"><span class="distance">[设计前沿]</span></a><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000437.html">超个性开放式室内设计</a></dd>
+			 <dd><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1"><span class="distance">[设计前沿]</span></a><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000422.html">生命之树：杭州中国人寿大厦</a></dd>
+			 <dd><a href="http://www.93idm.com/static/column/effectmodel/edesignfront.html/1"><span class="distance">[设计前沿]</span></a><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000421.html">芬兰玻璃旅馆 “躺”享极光盛宴</a></dd>
+			</dl>
+       </div>
+	   
+	   
+</div>
+		  <div class="mida">
+
+			 <div class="mid_texta">
+		  
+			   <dl>
+				<dt class="fblackone"><a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201302/20130200000420.html">【推荐】全球最美大楼：跳舞的房子</a></dt>
+				 <dd class="mid_dd">墨尔本诵读中心和戏剧公司剧场旨在恢复墨尔本南岸的砂质住宅区。大楼的外部以多角结合为...</dd>
+				<dd style="padding-top:20px;">·<a href="http://www.93idm.com/aarticle/effectmodel/edesignfront/201301/20130100000150.html">昂贵的绿色建筑真的环保吗？</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000792.html">竹地板国内市场依旧低迷</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000788.html">中国陶瓷转型升级盼能有好的政策</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000787.html">新建项目环评 涂料使用有新规</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000785.html">卫浴市场质量问题频现恐影响行业发展</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000784.html">特高特新品木纹砖以高品质抢占终端市场</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000783.html">陶瓷卫浴商标侵权严重 多家知名品牌中枪</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000782.html">莱西大风雪降温 保温涂料成市民墙体...</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000781.html">金华儿童漆是真材实料还是玩概念？</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000780.html">节能为厨房橱柜电器行业带来新发展</a></dd>
+				<dd>·<a href="http://www.93idm.com/aarticle/effectmodel/eindudynamic/201302/20130200000773.html">家居卖场总店时代将来临</a></dd>
+
+
+				</dl>
+			
+        </div>
+     </div>
+	 <div class="mid_right">
+               <div class="video">
+			        <div class="recommend">
+					     <ul>
+					         <li>
+							    <embed src="http://player.youku.com/player.php/sid/XMTMwMTAxMDQ0/v.swf" width="210" height="171">
+							</li>
+							<li>
+							   <a href="#">LG Z IN建筑</a>
+							</li>
+						</ul>
+					</div>
+					<div class="small_video">
+					     <ul>
+						    <li><embed src="http://player.youku.com/player.php/sid/XMzk4NDY3NTU2/v.swf" width="80" height="60" /></li>
+							<li style="margin-top:3px;"><img src="/img/video_btn.png" /></li>
+							<li class="title" id="ie_title"><a href="#">《梦想一日行，奥妙来实现！》----小小建筑师</a></li>
+						 </ul>
+
+					<div class="more"><a href="#">更多精彩视频></a></div>
+			   </div>
+          </div>
+	 </div>
+  
+   </div>
+	<div class="model_e">
+			 <div class="modeltitle">
+			  <p class="linkzx"><a href="#">
+			  <span class="spankzx">多媒体</span><span class="zs">设计</span></a><br /><span class="English">Video News</span></p>
+			  <p  class="moer"><a href="#">更多.</a></p>
+	      </div>
+			
+		<div class="kon"></div>
+		<div class="media">
+			<dl>
+			<dd><img src="/img/Media.gif" width="234" height="173" align="absmiddle" /></dd>
+			<dt class="fblackonea"><a href="#">世界顶级建筑设计欣赏</a></dt>
+		   <dd class="media_dd">在品源新办公室的方案讨论板上新办公室的方案讨新办公室的方案讨新办公室的方案讨，全是分布在全国各地地的酒店项目。品源设计2011年地的酒店项目。品源设计2011年的酒店项目。品源设计2011年的业绩很好.</dd>
+
+			</dl>
+		</div>
+		<div style="float:left; width:410px;">
+      <div class="media_liing">
+	  
+	       <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>    
+		 <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+				 <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+		</div>
+		
+		      <div class="media_liing">
+	  
+	       <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>    
+		 <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+				 <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+		</div>
+		</div>
+             
+             <div class="media_list">
+			 <ul>
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国皇冠酒店</a></li>
+		<li>·<a href="#">中国北京云南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新国北京云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇店</a></li>
+		<li>·<a href="#">中国北京国北北京京新云</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇冠酒店</a></li>
+			</ul>
+          </div>
+	</div>
+	<div class="model_f">
+	
+				 <div class="modeltitle">
+			  <p class="linkzx"><a href="#">
+			  <span class="spankzx">城市</span><span class="zs">规划</span></a><br /><span class="English">Video News</span></p>
+			  <p  class="moer"><a href="#">更多.</a></p>
+	      </div>
+		  <div class="kon"></div>
+		  
+		  <div class="city">
+		  		      <div class="media_liing">
+	  
+	       <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/city.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>    
+		 <ul class="jzdesign_limg">
+         <li>
+				     <a href="#"><img src="/img/city.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+				 <ul class="jzdesign_limg">
+         <li>
+		 	<a href="#"><img src="/img/city.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+						 <ul class="jzdesign_limg">
+         <li>
+		 	<a href="#"><img src="/img/city.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+		</div>
+		
+		      <div class="media_liing">
+	  
+	       <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/city.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>    
+		 <ul class="jzdesign_limg">
+         <li>
+				     <a href="#"><img src="/img/city.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+				 <ul class="jzdesign_limg">
+         <li>
+		 	<a href="#"><img src="/img/city.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+						 <ul class="jzdesign_limg">
+         <li>
+		 	<a href="#"><img src="/img/city.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+		</div>
+			
+		  </div>
+		  
+		       <div class="city_list">
+			 <ul>
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国皇冠酒店</a></li>
+		<li>·<a href="#">中国北京云南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新国北京云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇店</a></li>
+		<li>·<a href="#">中国北京国北北京京新云</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇冠酒店</a></li>
+        <li>·<a href="#">中国北京新国北京云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇店</a></li>			</ul>
+          </div>
+	</div>
+
+	<div class="model_g">
+		<div class="modeltitle">
+		<p class="linkzx"><a href="#">
+		<span class="spankzx"><span>地产</span></span><span class="zs">宣传片</span></a><br /><span class="English">Video News</span></p>
+		<p  class="moer"><a href="#">更多.</a></p>
+		</div>
+							<div class="kon"></div>
+	               <div class="video">
+			        <div class="recommend">
+					     <ul>
+					         <li>
+							    <img src="/img/video.PNG" />
+							</li>
+							<li>
+							   <a href="">亚洲濒危物种，外国派外出高管</a>
+							</li>
+						</ul>
+					</div>
+					<div class="small_video">
+					     <ul>
+						    <li><img src="/img/video1.png" /></li>
+							<li style="margin-top:3px;"><img src="/img/video_btn.png" /></li>
+							<li class="title" id="ie_title"><a href="">如何成为一个成功的自由职业者 成为一个成功的自由职业者成为一个成功的自由职业者</a></li>
+						 </ul>
+					</div>
+					<div class="kon"></div>
+					<div class="small_video">
+					     <ul>
+						    <li><img src="/img/video1.png" /></li>
+							<li style="margin-top:3px;"><img src="/img/video_btn.png" /></li>
+							<li class="title" id="ie_title"><a href="">如何成为一个成功的自由职业者 成为一个成功的自由职业者成为一个成功的自由职业者</a></li>
+						 </ul><div class="clear"></div>
+					</div>
+					<div class="more"><a href="">更多精彩视频>></a></div>
+			   </div>
+                <div class="publicity">
+			   <dl>
+				<dt class="fblackone"><a href="#">【推荐】做具有品源特设的酒店设计</a></dt>
+	
+<dd class="pub_dd"><a href="#">在品源新办公室的方案讨论板上，全是分布在全国各地的酒店项目。品源设计2011年的业绩很好.</a></dd>
+            	<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+				<dd><span>2012-24-25</span><h1><a href="#">澳大利亚纯洁空间，打造温馨氛围</a></h1></dd>
+
+		 		</dl>
+			</div>
+			
+<div class="con_nav">
+					     <ul class="con_nav_head">
+						    <li><img src="/img/view-video.png" /></li>
+							<li class="text"><a href="">2012深圳保障房全年共竣工52546有1欠23</a></li>
+                            
+						 </ul>
+                         		<div class="clear"></div>
+
+									<dl>
+									<dt class="fblack"><a href="#">万科四季花城合唱团十周年新春音乐举办</a></dt>
+									   <dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+									   <dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+									   <dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+									   <dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+									   
+
+
+									
+									</dl>
+									
+									<dl>
+									<dt class="fblack"><a href="#">万科四季花城合唱团十周年新春音乐举办</a></dt>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+
+									
+									</dl>
+		
+		
+					</div>
+	</div>
+	<div class="model_d">
+			 <div class="modeltitle">
+			  <p class="linkzx"><a href="#">
+			  <span class="spankzx">主题</span><span class="zs">展厅</span></a><br /><span class="English">Exigence Career</span></p>
+			  <p  class="moer"><a href="#">更多.</a></p>
+	      </div>
+		  <div class="kon"></div>
+	
+	<div class="maincont fn_clear">
+		<div class="maincont_main2 height420">
+		
+			<div class="maincont_fourth maincont_fourth_a">
+			<dl>
+				<dd><a href="#"><img width="245" height="201" src="/img/imga.png"></a></dd>
+				<dt class="fblack"><a href="#">120平三居室欧式风格低调奢</a></dt>
+			    <dd class="txt"><a href="#">奢侈，华丽，如今，更多的代表一种生活的方式，在西方是被鼓励的，是每个人向往的，第一中解释是以金钱为基础的，什么都是最好的</a></dd>
+			</dl>
+		</div>
+			<ul class="newslist newslist_h fn_clear">
+					<li>·<a href="#">图解看房|实地考察新洲创意</a></li>
+					<li>·<a href="#">中深圳楼市|五福临门喜迎元</a></li>
+					<li>·<a href="#">中国北京新云南皇冠迎迎假</a></li>
+					<li>·<a href="#">中国北京新云南皇冠假日迎</a></li>
+					<li>·<a href="#">中国北京新云南皇冠假日迎</a></li>
+					<li>·<a href="#">中国北京新云南皇冠迎迎假</a></li>
+					<li>·<a href="#">图解看房|实地考察新洲创意</a></li>
+					<li>·<a href="#">中深圳楼市|五福临门喜迎元</a></li>
+					<li>·<a href="#">中国北京新云南皇冠迎迎假</a></li>
+					<li>·<a href="#">中国北京新云南皇冠假日迎</a></li>
+					<li>·<a href="#">中国北京新云南皇冠假日迎</a></li>
+					<li>·<a href="#">中国北京新云南皇冠迎迎假</a></li>
+			</ul>
+			<ul class="newsimglist fn_clear">
+				<li>
+					<a href="#"><img width="110" height="86" src="/img/imgb.png"></a>
+					<div class="name">星河国际</div>
+					<p class="bg1">AECOM 作品1</p>
+					<p class="bg2">1200</p>
+				</li>
+				<li>
+					<a href="#"><img width="110" height="86" src="/img/imgb.png"></a>
+					<div class="name">星河国际</div>
+					<p class="bg1">AECOM 作品1</p>
+					<p class="bg2">1200</p>
+				</li>
+				<li>
+					<a href="#"><img width="110" height="86" src="/img/imgb.png"></a>
+					<div class="name">星河国际</div>
+					<p class="bg1">AECOM 作品1</p>
+					<p class="bg2">1200</p>
+				</li>
+			</ul>
+		</div>
+		<div class="maincont_side2 height420">
+		
+			<ul class="newslist newslist_d">
+				<li>·<a href="#">图解看房|实地考察新洲创意变幻</a></li>
+				<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+				<li>·<a href="#">深圳楼市|五福临门喜迎元宵喜乐惠</a></li>
+				<li>·<a href="#">图解看房|实地考察新洲创意变幻</a></li>
+				<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+				<li>·<a href="#">深圳楼市|五福临门喜迎元宵喜乐惠</a></li>
+				<li>·<a href="#">图解看房|实地考察新洲创意变幻</a></li>
+				<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+				<li>·<a href="#">深圳楼市|五福临门喜迎元宵喜乐惠</a></li>
+				<li>·<a href="#">图解看房|实地考察新洲创意变幻</a></li>
+				
+			</ul>
+			<div class="imglist">
+				<a href="#"><img width="60" height="50" src="/img/imgb.png"></a>
+				<a href="#"><img width="60" height="50" src="/img/imgb.png"></a>
+				<a href="#"><img width="60" height="50" src="/img/imgb.png"></a>
+				<a href="#"><img width="60" height="50" src="/img/imgb.png"></a>
+				<a href="#"><img width="60" height="50" src="/img/imgb.png"></a>
+				<a href="#"><img width="60" height="50" src="/img/imgb.png"></a>
+			</div>
+		</div>
+	</div>
+
+	</div>
+<div class="model_e">
+			 <div class="modeltitle">
+			  <p class="linkzx"><a href="#">
+			  <span class="spankzx">数字</span><span class="zs">城市</span></a><br /><span class="English">Video News</span></p>
+			  <p  class="moer"><a href="#">更多.</a></p>
+	      </div>
+			
+		<div class="kon"></div>
+		<div class="media">
+			<dl>
+			<dd><img src="/img/Media.gif" width="234" height="173" align="absmiddle" /></dd>
+			<dt class="fblackonea"><a href="#">世界顶级建筑设计欣赏</a></dt>
+		   <dd class="media_dd"><a href="#">在品源新办公室的方案讨论板上新办公室的方案讨新办公室的方案讨新办公室的方案讨，全是分布在全国各地地的酒店项目。品源设计2011年地的酒店项目。品源设计2011年的酒店项目。品源设计2011年的业绩很好.</a></dd>
+
+			</dl>
+		</div>
+		           <div class="media_list szcs">
+			 <ul>
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国皇冠酒店</a></li>
+		<li>·<a href="#">中国北京云南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新国北京云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇店</a></li>
+		<li>·<a href="#">中国北京国北北京京新云</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇冠酒店</a></li>
+			</ul>
+          </div>
+		<div style="float:left; width:410px;">
+      <div class="media_liing">
+	  
+	       <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>    
+		 <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+				 <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+		</div>
+		
+		      <div class="media_liing">
+	  
+	       <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>    
+		 <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+				 <ul class="jzdesign_limg">
+         <li>
+		     <a href="#"><img src="/img/work1.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+		</div>
+		</div>
+             
+  
+	</div>
+	<div class="model_f">
+		<div class="modeltitle">
+			<p class="linkzx"><a href="#">
+			<span class="spankzx">设计</span><span class="zs">可视化</span></a><br /><span class="English">Video News</span></p>
+			<p  class="moer"><a href="#">更多.</a></p>
+		</div>
+		  <div class="kon"></div>
+		  <div class="deig_ksh">
+		  
+		  <dl class="deig_line">
+		  <dt class="fblack"><a href="#">在品源新办公室的方案讨论板上新办公室的方公室的</a></dt>
+				   <dd class="media_dd"><a href="#">在品源新办公室的方案讨论板上新办公室的方案讨新办公室的方案讨新办公室的方案讨，全是分布在全国各地.</a></dd>
+
+		  </dl>
+		  <div class="deig_dl">
+		  <div class="deig_left">
+		  <dl>
+		  <dt></dt>
+		  <dd>·<a href="#">设计领域博营销实战训练班了</a></dd>
+           <dd>·<a href="#">携手清华美院谱设艺术设计</a></dd>
+		   <dd>·<a href="#">携手清华美院谱设艺术设计</a></dd>
+		   
+		  
+		  </dl>
+		  
+		  </div>
+		  <div class="deig_right">
+		  
+		  	  <dl>
+		  <dt></dt>
+		  <dd>·<a href="#">设计领域博营销实战训练班了</a></dd>
+           <dd>·<a href="#">携手清华美院谱设艺术设计</a></dd>
+		   <dd>·<a href="#">携手清华美院谱设艺术设计</a></dd>
+		   
+		  
+		  </dl>
+		  
+		  </div>
+		  
+		  </div>
+		  
+		  		      <div class="media_liing deig_tl">
+	  
+	       <ul class="jzdesign_limg  deig_tl">
+         <li>
+		     <a href="#"><img src="/img/zz.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>    
+		 <ul class="jzdesign_limg">
+         <li>
+		      <a href="#"><img src="/img/zz.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+				 <ul class="jzdesign_limg">
+         <li>
+		      <a href="#"><img src="/img/zz.png" /></a>
+			<div class="name">星河国际</div>
+			<p class="bg1">AECOM 作品1</p>
+     		<p class="bg2">1200</p>
+          </li>
+        </ul>
+		</div>
+		  </div>
+		  
+		  <div class="deig_center">
+		  
+		  <ul class="deig_ul">
+		  <li class="deig_lia"><a href="#"><img src="/img/centerimg.gif"  width="105" height="78" align="absbottom"/></a></li>
+		  <li class="deig_li">2012深圳保障房全年供</li>
+		  </ul>
+		
+				  <ul class="deig_ul">
+		  <li class="deig_lia"><a href="#"><img src="/img/centerimg.gif"  width="105" height="78" align="absbottom"/></a></li>
+		  <li class="deig_li">2012深圳保障房全年供</li>
+		  </ul>
+		   
+		   			 <ul class="deig_list">
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国皇冠酒店</a></li>
+		<li>·<a href="#">中国北京云南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新国北京云南皇冠酒店</a></li>
+			</ul>
+		  
+		  </div>
+		  
+		  
+		  		           <div class="deig_listszcs">
+			 <ul>
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国皇冠酒店</a></li>
+		<li>·<a href="#">中国北京云南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北南皇新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新国北京云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇店</a></li>
+		<li>·<a href="#">中国北京国北北京京新云</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京新云南皇冠酒店</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇店</a></li>
+		<li>·<a href="#">中国北京国北北京京新云</a></li>
+		<li>·<a href="#">中国北京国北京新云南皇冠酒店</a></li>
+
+
+			</ul>
+          </div>
+	</div>
+	
+	
+	<div class="model_k">
+	
+		<div class="modeltitle">
+		<p class="linkzx"><a href="#">
+		<span class="spankzx">效果图</span><span class="zs">赏析</span></a><br /><span class="English">Video News</span></p>
+		<p  class="moer"><a href="#">更多.</a></p>
+		</div>
+		  
+		  <div class="kon"></div>
+		  
+		  <div class="enjoy_center">
+			  <div class="enjoy_left">
+				  <dl>
+					<dd><a href="#"><img src="/img/ewi.png" width="297" height="99" /></a></dd>
+				  <dt class="fblackonea"><a href="#">[公园1872]900万元的加芝哥</a></dt>
+				  <dd class="media_dd enjoy_dd">在品源新办公室的方案讨论板上新办公室的方案讨新办公室的方案讨新办公室的方案讨，全是分布在全国各地地的酒店项目。品源设计2011年地的酒店项目。品源设计2011年的酒店项目。品源设计2011年的业绩很好.</dd>
+				  <p class="enjoy_xq"><a href="#">[详情]</a></p>
+				  </dl>
+			  </div>
+		  <div class="enjoy_right">
+					  <dl>
+				<dd><a href="#"><img src="/img/ewi.png" width="297" height="99" /></a></dd>
+			  <dt class="fblackonea"><a href="#">[公园1872]900万元的加芝哥</a></dt>
+			  <dd class="media_dd enjoy_dd">在品源新办公室的方案讨论板上新办公室的方案讨新办公室的方案讨新办公室的方案讨，全是分布在全国各地地的酒店项目。品源设计2011年地的酒店项目。品源设计2011年的酒店项目。品源设计2011年的业绩很好.</dd>
+			  <p class="enjoy_xq"><a href="#">[详情]</a></p>
+			  </dl>
+			  
+			  </div>
+		  </div>
+		  
+		   
+		  <div class="enjoy_list">
+		  
+					  <ul class="deig_ul">
+					  <li class="deig_lia"><a href="#"><img src="/img/view-video.png" width="88" height="65" align="absbottom"/></a></li>
+					  <li class="deig_li"><a href="#">2012深圳保保障保障保障障房全年供</a></li>
+					  </ul>
+	
+		  
+		                             <div class="enjoy_text">
+									<dl>
+									<dt><a href="#">万科四季花城合唱团十周年新春音</a></dt>
+									   <dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+									   <dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+									   <dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+									   <dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+									   
+
+
+									
+									</dl>
+									
+									<dl style="padding-top:15px;">
+									<dt><a href="#">万科四季花城合唱团十周年新春音</a></dt>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+								<dd class="media_dd"><a href="#">季花城合唱团十周年新春音</a></dd>
+
+									
+									</dl>
+		
+		                  </div>
+   
+		      </div>
+		  
+		  
+	
+		  
+	</div>
+	<div class="model_m">
+	
+	<div class="mzpp_left">
+	<div class="modeltitle">
+<p class="linkzx"><a href="#">
+<span class="spankzx">名作</span><span class="zs">品评</span></a><br /><span class="English">Video News</span></p>
+<p  class="moer"><a href="#">更多.</a></p>
+	      </div>
+		  
+		  <div class="kon"></div>
+				<p class="mzpp_t"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000453.html"><img src="/img/de01.png"  width="170" height="112"/></a></p>
+				<p class="mzpp_text">
+				<span class="text_span"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000453.html">本房屋主人是受过高等教育的一对年轻夫妇。他们走在时代的前端，容易接纳新事物，也别富品味，看重生活享受，所以要求这所房子的设计既时尚又具备生活情趣。<a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000453.html">[详情]</a></p>
+				<div class="kon"></div>
+	
+	<div class="mzpp_li"  style="border-right:1px dotted #666;">
+	<ul>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+		<li>
+	<span><a href="#">易居空</a></span><span style="padding:0 10px 0 10px;">|</span><a href="#">设计作品穿越老房改造</a><span style="padding-left:10px;"><img src="/img/icon2.PNG" /></span><span style="padding-left:4px;"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	</ul>
+	
+	
+	</div>
+	
+	
+	
+		<div class="mzpp_li">
+	<ul>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+
+	<li>
+	<span><a href="#">易居空</a></span><span class="mzpp_spana">|</span><a href="#">设计作品穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+	</ul>
+	
+	
+	</div>
+	
+	
+	
+</div>
+
+	
+	
+	
+	<div class="mzpp_right">
+    <h4 class="sjmb"><p class="title_sjmb"><a href="#">设计名博</a></p><p class="title_moer"><a href="#">+更多</a></p></h4>
+		  
+	<div class="con_nav sjs">
+
+					     <ul class="con_nav_head">
+						    <li><img src="/img/sjmb.png" width="89" height="113" /></li>
+							<li class="text"><a href="">2012深圳保障房全年共竣工52546有1欠23</a></li>
+                            
+						 </ul>
+                         		<div class="kon"></div>
+
+									<dl>
+									<dt class="fblack"><a href="#">深业紫麟山业主推140平3房均价13000元（图）</a></dt>
+									   <dd class="media_dd"><a href="#">
+									   季花城合唱团十周年新春音
+									  季花城合唱团十周年新春音
+									  季花城合唱团十周年新春音
+									  季花城合唱团十周年新春音</a></dd>
+									   
+
+
+									
+									</dl>
+									
+									<dl>
+									<dt class="fblack"><a href="#">深业紫麟山业主推140平3房均价13000元（图）</a></dt>
+				<dd class="media_dd"><a href="#">季花城合唱团十周年新春音
+					季花城合唱团十周年新春音
+					季花城合唱团十周年新春音
+							季花城合唱团十周年新春音</a>
+	                     </dd>
+                                     <dd class="sjmb_xq"><a href="#">[详情]</a></dd>
+									
+									</dl>
+		
+		
+					</div>
+	
+	
+	
+	
+	</div>
+	
+	
+	</div>
+	
+	<div class="mode_h">
+	<div class="bbs_left">
+		<div class="modeltitle">
+<p class="linkzx"><a href="#">
+<span class="spankzx">论坛</span><span class="zs">推荐</span></a><br /><span class="English">Video News</span></p>
+<p  class="moer"><a href="#">更多.</a></p>
+	      </div>
+	
+	<div class="kon"></div>
+	<div class="con_nav bbs_list">
+
+	
+	</dl>
+
+
+									<dl>
+									<dd><a href="#"><img src="/img/bbs.gif" width="239" height="138" /></a></dd>
+									<dt class="fblack"><a href="#">深业紫麟山业主推140平3房均价13000元</a></dt>
+									   <dd class="media_dd">
+									   <a href="#">季花城合唱团十周年新春音
+									  季花城合唱团十周年新春音
+									  季花城合唱团十周年新春音
+									  季花城合唱团十周年新春音</a></dd>
+									   
+
+
+									
+									</dl>
+									
+									<dl>
+									<dt class="fblack"><a href="#">深业紫麟山业主推140平3房均价13000元</a></dt>
+				<dd class="media_dd"><a href="#">季花城合唱团十周年新春音
+					季花城合唱团十周年新春音
+					季花城合唱团十周年新春音</a>
+							</dd>
+										<dd class="media_dd"><a href="#">季花城合唱团十周年新春音
+							季花城合唱团十周年新春音</a></dd>
+	                     
+                                     <dd class="sjmb_xq"><a href="#">[详情]</a></dd>
+									
+									</dl>
+		
+		
+					</div>
+	
+	
+	
+	
+			<div class="bbs_li">
+			<p><strong style=" color:#000;"><a href="#">在品源新办公室的方案</a></strong><a href="#">在品源新办公室的新办公室的方案讨论板上，全是分布在全国各地的酒店项目。品源设计2011年的业绩很好方案讨论板上，全是分布在全国各地的酒店项目。品源设计2011年的业绩很好.</a></p>
+	<ul>
+	
+	
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li><li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+<li><span class="tj_red"><a href="#">[推荐]</a></span><a href="#">设计作品计作品穿越老房改造穿越老房改造</a><span class="mzpp_spanc"><img src="/img/icon2.PNG" /></span><span  class="mzpp_spanb"><a href="#">88</a></span></li>
+
+	
+
+	</ul>
+	
+	
+	</div>
+	
+	</div>
+		<div class="bbs_right">
+		
+		    <h4 class="sjmb"><p class="title_sjmb"><a href="#">业主之家</a></p><p class="title_moer"><a href="#">+更多</a></p></h4>
+		  
+					<div class="bbs_li">	<ul>
+	
+	
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000458.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000458.html">恩爱80后晒小小婚房 88平米时尚...</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000457.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000457.html">打造122平温馨小家 超强装...</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000456.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000456.html">100平梦想之家 缔造蓝白配轻盈...</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000455.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000455.html">35平温馨小居 年轻小夫妻精心布置</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000454.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000454.html">10万家装打造：设计我的时尚简约...</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000453.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000453.html">5万神奇58平变112平复式</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000459.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000459.html">二手房翻新 打造幸福小窝</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000463.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000463.html">夫妻装修省钱典范 打造70平温馨...</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000471.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000471.html">简约展示生命力 三种户型各自精彩</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000482.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000482.html">空间利用 小户型客厅收纳五步走</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000491.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000491.html">美丽白领的精致时尚公寓装修实景</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000499.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000499.html">自然写意 90平浪漫爱琴海之家</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000516.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000516.html">优雅气质小户型 北京人的品质生活</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000520.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000520.html">小萝莉的梦想卧室 超唯美公主房大赏</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000521.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000521.html">时尚家居 居室空间的华贵之美</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000522.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000522.html">十步让浴室变清爽洁净</a></li>
+<li><span class="tj_red"><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000539.html">[推荐]</a></span><a href="http://preview.93idm.com/aarticle/effectmodel/eownershouse/201302/20130200000539.html">收藏爱好者的蜗居世界 48平米...</a></li>
+
+	
+
+	</ul>
+	
+	
+	</div>
+		</div>
+	
+	</div>
+	<div class="model_n">
+	<div class="co_recommend">
+		       <ul>
+			       <li class="head"><a href="">业主之家</a></li>
+				   <li>
+				       <ul class="co_logo">
+					      <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+					   </ul>
+				   </li>
+				   
+				   		   <li>
+				       <ul class="co_logo">
+					      <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+						  <li><img src="/img/co_logo.png" /></li>
+					   </ul>
+				   </li>
+				   
+			   </ul>
+			   
+			   
+		  </div>
+	
+	</div>
+<div class="model_O">
+  <div class="shoot_left">
+    <div class="modeltitle">
+      <p class="linkzx">
+        <a href="#">
+          <span class="spankzx">
+            建筑
+          </span>
+          <span class="zs">
+           摄影
+          </span>
+        </a>
+        <br>
+        <span class="English">
+          Video News
+        </span>
+      </p>
+      <p class="moer">
+        <a href="#">
+          更多.
+        </a>
+      </p>
+    </div>
+    <div class="kon">
+    </div>
+    <div class="shoot_photo">
+      <ul class="shoot_ul">
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+      </ul>
+      <ul class="shoot_ul">
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+      </ul>
+      <ul class="shoot_ul">
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+        <li><img src="/img/desighner.png"><br><span class="liu_name">老刘</span></li>
+      </ul>
+    </div>
+    <div class="shoot_list">
+      <ul>
+        <li>•<a href="#">中国北京国北京新云南皇店</a> </li>
+        <li>•<a href="#">中国北京国北京新云南皇店</a> </li>
+        <li>•<a href="#">中国北京国北京新云南皇店</a> </li>
+      </ul>
+    </div>
+    <div class="shoot_list linenone">
+      <ul>
+        <li>•<a href="#">中国北京国北京新云南皇店</a> </li>
+        <li>•<a href="#">中国北京国北京新云南皇店</a> </li>
+        <li>•<a href="#">中国北京国北京新云南皇店</a> </li>
+      </ul>
+    </div>
+  </div>
+  <div class="shoot_right">
+    <h4 class="sjmba">
+      <p class="title_sjmba"><a href="#">培训</a></p>
+      <p class="titlea_moer"><a href="#">更多.</a></p>
+    </h4>
+    <div class="psms">
+      <div class="kon">
+      </div>
+      <div>
+        <p class="photo">
+          <img width="75" height="90" src="/img/kloi.png">
+        </p>
+        <ul>
+		 <li class="text">
+          <strong>stephen Apking</strong><br>
+          <a href="#">外派来上海米狄兰，接触许多高端时尚品牌，更了解高端品.</a>
+	     </li> 
+      </ul>
+      </div>
+      <div class="kon"></div>
+      <div>
+        <dl>
+          <dt class="works">代表作</dt>
+          <dd><a href="#">金地湖山大境大山期空间结构</a></dd>
+          <dd><a href="#">金地湖山大境大山期空间结构</a></dd>
+          <dd><a href="#">金地湖山大境大山期空间结构</a></dd>
+        </dl>
+      </div>
+      <div class="works_ak">
+        <p class="works_tu">
+          <img src="/img/works.png" width="87" height="56" >
+        </p>
+        <ul class="works_list">
+          <li>带大阳台的香港半山区公寓</li>
+          <li class="works_xq"><a href="#">&gt;&gt;详细</a></li>
+        </ul>
+      </div>
+      <div class="kon">
+      </div>
+      <div class="works_ak">
+        <p class="works_tu">
+        <img src="/img/works.png" width="87" height="56" >
+        </p>
+        <ul class="works_list">
+          <li>带大阳台的香港半山区公寓</li>
+          <li class="works_xq"><a href="#">&gt;&gt;详细</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<!--#include virtual="/includes/bottom.shtml"-->
+</body>
+</html>
