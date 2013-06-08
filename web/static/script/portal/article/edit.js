@@ -23,7 +23,13 @@ function getImages(content) {
 	var images = "";
 
 	$("img", contentObj).each(function(){
-		images += $(this).attr('src') + "|%%|,|%%|";
+
+		var src = $(this).attr('src') + "|%%|,|%%|";
+		if (src.indexOf('/static/') != -1) {
+			src = src.substr(src.indexOf('/static/'));
+		}
+
+		images += src;
 	});
 
 	return images;

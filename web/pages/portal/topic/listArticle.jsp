@@ -15,7 +15,7 @@
 
 			<c:forEach items="${topicList}" var="topic" varStatus="status">
 				<a class="listhomepage" href="<spring:url value="/portal/topic/listArticle/${topic.id}" />">${topic.name}</a>
-				<c:if test="!${status.last}">
+				<c:if test="${!status.last}">
 					&nbsp;&gt;&nbsp;
 				</c:if>
 			</c:forEach>
@@ -30,9 +30,9 @@
 					<a href="<spring:url value="/portal/article/view/${article.id}" />"><img src="<spring:url value="${article.titleImage}" />" width="100" height="80"></a>
 				</p>
 				<dl>
-					<dt><span class="date">${article.publishDate}</span><a href="<spring:url value="/portal/article/view/${article.id}" />">${article.subject}</a>
+					<dt><span class="date"><fmt:formatDate value="${article.publishDate}" pattern="yyyy-MM-dd HH:mm"/></span><a href="<spring:url value="/portal/article/view/${article.id}" />">${article.subject}</a>
 					</dt>
-					<dd><a href="<spring:url value="/portal/article/view/${article.id}" />">content</a></dd>
+					<dd><a href="<spring:url value="/portal/article/view/${article.id}" />">${article.summary}</a></dd>
 				</dl>
 			</div>
 		</c:forEach>

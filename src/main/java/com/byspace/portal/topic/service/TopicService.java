@@ -73,4 +73,5 @@ public interface TopicService {
 	 * @return
 	 */
 	public List<Topic> getTopicTree(Topic topic);
+
 }

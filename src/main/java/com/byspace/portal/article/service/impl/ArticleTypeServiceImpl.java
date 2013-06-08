@@ -33,4 +33,10 @@ public class ArticleTypeServiceImpl implements ArticleTypeService {
 	public ArticleType read(int articleTypeId) {
 		return em.find(ArticleType.class, articleTypeId);
 	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public ArticleType fileByName(String name) {
+		return (ArticleType) em.createQuery("from ArticleType at where at.name=:articleTypeName").setParameter("articleTypeName", name).getSingleResult();
+	}
 }

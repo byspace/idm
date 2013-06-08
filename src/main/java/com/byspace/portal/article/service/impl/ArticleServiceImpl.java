@@ -3,6 +3,7 @@ package com.byspace.portal.article.service.impl;
 import com.byspace.portal.article.entity.Article;
 import com.byspace.portal.article.po.ArticleListPaginator;
 import com.byspace.portal.article.service.ArticleService;
+import com.byspace.portal.topic.service.TopicService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -68,4 +69,5 @@ public class ArticleServiceImpl implements ArticleService {
 
 		return query.getResultList();
 	}
+
 }

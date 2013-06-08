@@ -5,6 +5,7 @@ import com.byspace.portal.article.entity.Article;
 import com.byspace.portal.article.service.ArticleService;
 import com.byspace.portal.article.service.ArticleTypeService;
 import com.byspace.portal.article.service.CategoryService;
+import com.byspace.portal.topic.entity.Topic;
 import com.byspace.portal.topic.service.TopicService;
 import com.byspace.util.CustomLogger;
 import com.byspace.util.DateUtils;
@@ -56,7 +57,12 @@ public class ArticleController {
 	public String view(@PathVariable("articleId")int articleId, Model model) {
 		Article article = articleService.read(articleId);
 		model.addAttribute("article", article);
-		model.addAttribute("topicList", topicService.getTopicTree(article.getTopic()));
+		List<Topic> topicList = topicService.getTopicTree(article.getTopic());
+		model.addAttribute("topicList", topicList);
+		if (topicList.size() > 0) {
+			model.addAttribute("firstLevelTopic", topicList.get(0));
+			model.addAttribute("secondLevelTopicList", topicService.getTopicListByParentId(topicList.get(0).getId()));
+		}
 		return "portal/article/view";
 	}
 

@@ -2,6 +2,17 @@
 
 <link rel="stylesheet" href="<spring:url value="/static/css/portal/top.css"/>" type="text/css" />
 
+<script type="text/javascript">
+	$(function(){
+		$("#dvMainNavb li a").each(function(){
+			console.log($(this).html() == $("#firstLevelTopicName").val());
+			if ($(this).html() == $("#firstLevelTopicName").val()) {
+				$(this).attr("style", "background:url(" + getUrl("/static/img/index_03.gif") + ") repeat-x 0 2px; margin:0 1px 0 1px;");
+			}
+		});
+	});
+</script>
+
 <div class="bottom_headbg" style="background: url(<spring:url value="/static/img/topbg.png" />)">
 	<div class="bottom_header" style="background: url(<spring:url value="/static/img/logobg.png" />)">
 		<p class="bottom_header_top">
@@ -26,3 +37,14 @@
 		</div>
 	</div>
 </div>
+
+<c:if test="${secondLevelTopicList != null}">
+	<div class="bottom_sec_nav" id="sub_nav_landscapedesign" style="">
+		<c:forEach items="${secondLevelTopicList}" var="topic">
+			<a href="<spring:url value="/portal/topic/listArticle/${topic.id}" />" onclick="">${topic.name}</a>
+		</c:forEach>
+	</div>
+</c:if>
+
+<input type="hidden" id="firstLevelTopicId" value="${firstLevelTopic.id}" />
+<input type="hidden" id="firstLevelTopicName" value="${firstLevelTopic.name}" />

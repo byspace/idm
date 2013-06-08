@@ -36,4 +36,11 @@ public interface CategoryService {
 	 * @return
 	 */
 	public List<Category> getAllCategories();
+
+	/**
+	 * get category by name
+	 * @param name
+	 * @return
+	 */
+	public Category findCategoryByName(String name);
 }

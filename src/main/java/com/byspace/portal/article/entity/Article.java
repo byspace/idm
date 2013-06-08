@@ -25,7 +25,7 @@ public class Article implements SimpleDataGridRow {
 	private int id;
 	@Column(name = "subject")
 	private String subject;
-	@OneToMany
+	@OneToMany(cascade = CascadeType.ALL)
 	private List<KeyWord> keyWordList = new ArrayList<KeyWord>();
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Category category;

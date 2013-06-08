@@ -120,7 +120,12 @@ public class TopicController {
 
 		List<Article> articleList = articleService.listArticleByTopic(topicId, paginator);
 		Topic topic = topicService.readTopic(topicId);
-		model.addAttribute("topicList", topicService.getTopicTree(topic));
+		List<Topic> topicList = topicService.getTopicTree(topic);
+		model.addAttribute("topicList", topicList);
+		if (topicList.size() > 0) {
+			model.addAttribute("firstLevelTopic", topicList.get(0));
+			model.addAttribute("secondLevelTopicList", topicService.getTopicListByParentId(topicList.get(0).getId()));
+		}
 
 		model.addAttribute("articleList", articleList);
 		model.addAttribute("topic", topic);

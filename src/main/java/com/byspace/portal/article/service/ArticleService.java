@@ -39,4 +39,5 @@ public interface ArticleService {
 	 * @return
 	 */
 	public List<Article> listArticleByTopic(int topicId, ArticleListPaginator paginator);
+
 }

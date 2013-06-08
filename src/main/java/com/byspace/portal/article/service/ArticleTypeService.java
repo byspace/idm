@@ -24,4 +24,11 @@ public interface ArticleTypeService {
 	 * @return
 	 */
 	public ArticleType read(int articleTypeId);
+
+	/**
+	 * fine article type by name
+	 * @param name
+	 * @return
+	 */
+	public ArticleType fileByName(String name);
 }

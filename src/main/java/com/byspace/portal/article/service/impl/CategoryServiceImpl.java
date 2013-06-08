@@ -52,4 +52,10 @@ public class CategoryServiceImpl implements CategoryService {
 		String hql = "from Category";
 		return em.createQuery(hql).getResultList();
 	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Category findCategoryByName(String name) {
+		return (Category) em.createQuery("from Category c where c.name=:categoryName").setParameter("categoryName", name).getSingleResult();
+	}
 }
