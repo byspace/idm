@@ -70,4 +70,14 @@ public class ArticleServiceImpl implements ArticleService {
 		return query.getResultList();
 	}
 
+	@Override
+	@Transactional(readOnly = true)
+	public List<Article> listArticleByTopic(int topicId, int size) {
+		String hql = "from Article a where a.topic.id=:topicId order by a.publishDate desc";
+		Query query = em.createQuery(hql);
+		query.setParameter("topicId", topicId);
+		query.setMaxResults(size);
+
+		return query.getResultList();
+	}
 }

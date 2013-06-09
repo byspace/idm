@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+
+TD { FONT-SIZE: 14px;  FONT-FAMILY: '宋体'}
+SELECT { FONT-SIZE: 12px}
+INPUT { FONT-SIZE: 12px}
+
+
+BODY #search #left {FLOAT: left}
+BODY #search #searchleft {PADDING-LEFT: 30px; FLOAT: left; PADDING-TOP: 12px; HEIGHT: 35px; TEXT-ALIGN: left}
+BODY #search #searchleft1 {PADDING-LEFT: 30px; PADDING-TOP: 12px; HEIGHT: 35px; TEXT-ALIGN: left}
+FORM { PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px}
+BODY #newsearch {HEIGHT:530px}
+BODY #newsearchtop { HEIGHT: 25px; TEXT-ALIGN: right; margin-top:10px; font-size:16px;cursor:pointer }
+BODY #newsearchtop LI {FONT-SIZE: 12px; FLOAT: left}
+.newsearchinsidew {  MARGIN-TOP: 2px; WIDTH: 70px; CURSOR: hand; border-top: 2px solid white; LINE-HEIGHT: 21px;  HEIGHT: 30px; TEXT-ALIGN: center; font-size:14px;}
+.newsearchinsider {   FONT-WEIGHT: bold; WIDTH: 70px;  HEIGHT:32px; border-top: 2px solid #399b9a; TEXT-ALIGN: center; line-height:28px; font-size:14px; cursor:pointer}
+BODY #newsearchbottom {POSITION: relative; margin-top:20px; +margin-top:10px; font-size:14px;}
+BODY #newsearchbottom #e1 { Z-INDEX: 0; LEFT: 0px; VISIBILITY: visible;  POSITION: absolute; TOP: 0px; HEIGHT: 30px; }
+BODY #newsearchbottom #e2 { Z-INDEX: 0; LEFT: 0px; VISIBILITY: hidden;  POSITION: absolute; TOP: 0px; HEIGHT: 30px}
+BODY #newsearchbottom #e3 { Z-INDEX: 2; LEFT: 0px; VISIBILITY: hidden;POSITION: absolute; TOP: 0px; HEIGHT: 30px}
+BODY #newsearchbottom #e4 { Z-INDEX: 2; LEFT: 0px; VISIBILITY: hidden; POSITION: absolute; TOP: 0px; HEIGHT: 30px}
+
+

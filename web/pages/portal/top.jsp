@@ -4,9 +4,14 @@
 
 <script type="text/javascript">
 	$(function(){
+
+		var topicName = $("#currentTopic").val();
+		if (topicName == undefined || topicName == "") {
+			topicName = $("#firstLevelTopicName").val();
+		}
+
 		$("#dvMainNavb li a").each(function(){
-			console.log($(this).html() == $("#firstLevelTopicName").val());
-			if ($(this).html() == $("#firstLevelTopicName").val()) {
+			if ($(this).html() == topicName) {
 				$(this).attr("style", "background:url(" + getUrl("/static/img/index_03.gif") + ") repeat-x 0 2px; margin:0 1px 0 1px;");
 			}
 		});
@@ -20,7 +25,7 @@
 		<h1 class="bottom_logo"  style="background: url(<spring:url value="/static/img/logo.png" />)"><a href="#" name="top"><span class="bottom_fn_hide"></span></a></h1>
 		<div class="bottom_nav"  style="background: url(<spring:url value="/static/img/nav.png" />)">
 			<ul class="bottom_fn_clear" id="dvMainNavb">
-				<li><a href="/index.shtml" onclick="" id="nav_index">首页</a></li>
+				<li><a href="<spring:url value="/portal/index"/>" onclick="" id="nav_index">首页</a></li>
 				<li><a href="/column/infocenter.shtml" onclick="" id="nav_infocenter">资讯中心</a></li>
 				<li><a href="/column/buildingdesign.shtml" onclick="" id="nav_buildingdesign">建筑设计</a></li>
 				<li><a href="/column/landscapedesign.shtml" onclick="" id="nav_landscapedesign">景观设计</a></li>

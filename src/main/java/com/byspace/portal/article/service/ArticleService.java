@@ -40,4 +40,11 @@ public interface ArticleService {
 	 */
 	public List<Article> listArticleByTopic(int topicId, ArticleListPaginator paginator);
 
+	/**
+	 * get articles in specified topic
+	 * @param topic
+	 * @param size
+	 * @return
+	 */
+	public List<Article> listArticleByTopic(int topicId, int size);
 }
