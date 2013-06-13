@@ -26,7 +26,7 @@
 		<div class="bottom_nav"  style="background: url(<spring:url value="/static/img/nav.png" />)">
 			<ul class="bottom_fn_clear" id="dvMainNavb">
 				<li><a href="<spring:url value="/portal/index"/>" onclick="" id="nav_index">首页</a></li>
-				<li><a href="/column/infocenter.shtml" onclick="" id="nav_infocenter">资讯中心</a></li>
+				<li><a href="<spring:url value="/portal/newscenter/index"/>" onclick="" id="nav_infocenter">资讯中心</a></li>
 				<li><a href="/column/buildingdesign.shtml" onclick="" id="nav_buildingdesign">建筑设计</a></li>
 				<li><a href="/column/landscapedesign.shtml" onclick="" id="nav_landscapedesign">景观设计</a></li>
 				<li><a href="/column/roomdesign.shtml" onclick="" id="nav_roomdesign">室内设计</a></li>

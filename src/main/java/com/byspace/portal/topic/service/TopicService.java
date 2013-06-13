@@ -1,6 +1,7 @@
 package com.byspace.portal.topic.service;
 
 import com.byspace.common.po.TreeData;
+import com.byspace.portal.article.entity.Article;
 import com.byspace.portal.topic.entity.Topic;
 
 import java.util.List;
@@ -73,5 +74,13 @@ public interface TopicService {
 	 * @return
 	 */
 	public List<Topic> getTopicTree(Topic topic);
+
+	/**
+	 *
+	 * @param topicId
+	 * @param size
+	 * @return
+	 */
+	public List<Article> getArticleListUnderTopic(int topicId, int size);
 
 }

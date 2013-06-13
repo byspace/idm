@@ -3,6 +3,7 @@
 <script type="text/javascript" src="<spring:url value="/static/script/jquery.timers-1.2.js" />"></script>--%>
 <script type="text/javascript" src="<spring:url value="/static/script/util.js" />"></script>
 <script type="text/javascript" src="<spring:url value="/static/script/jquery-easyui-1.3.3/jquery.easyui.min.js" />"></script>
+<script type="text/javascript" src="<spring:url value="/static/script/FlexSlider/jquery.flexslider-min.js" />"></script>
 <%--<script type="text/javascript" src="<spring:url value="/static/script/json2.js" />"></script>--%>
 <%--<script type="text/javascript" src="<spring:url value="/static/script/jquery.base64.min.js" />"></script>--%>
 <%--<script type="text/javascript" src="<spring:url value="/static/script/jquery.fancybox.js?v=2.0.6" />"></script>--%>
@@ -24,6 +25,7 @@
 <link rel="stylesheet" href="<spring:url value="/static/css/style.css"/>" type="text/css" />
 <link rel="stylesheet" href="<spring:url value="/static/script/jquery-easyui-1.3.3/themes/bootstrap/easyui.css"/> " type="text/css" />
 <link rel="stylesheet" href="<spring:url value="/static/script/jquery-easyui-1.3.3/themes/icon.css"/> " type="text/css" />
+<link rel="stylesheet" href="<spring:url value="/static/script/FlexSlider/flexslider.css"/> " type="text/css" />
 <%--
 <link rel="stylesheet" href="<spring:url value="/static/css/fancybox/jquery.fancybox.css?v=2.0.6"/>" type="text/css" />
 <link rel="stylesheet" href="<spring:url value="/static/css/style.css"/>" type="text/css" />

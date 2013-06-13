@@ -1,4 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
+
+<%--主页 - 建筑设计--%>
+
 <div class="archtect">
 	<div class="left">
 		<ul>
@@ -26,7 +29,7 @@
 				<div class="classy">
 
 					<ul>
-						<c:forEach items="${childrenTopic}" var="topic">
+						<c:forEach items="${archtectChildrenTopic}" var="topic">
 							<li><a href="<spring:url value="/portal/topic/listArticle/${topic.id}" />">${topic.name}</a></li>
 						</c:forEach>
 					</ul>

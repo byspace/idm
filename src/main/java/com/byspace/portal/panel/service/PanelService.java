@@ -17,5 +17,21 @@ public interface PanelService {
 	 */
 	public Panel read(int panelId);
 
+	/**
+	 * find panel by code
+	 * @param code
+	 * @return
+	 */
 	public Panel findByCode(String code);
+
+	/**
+	 * update specified panel
+	 * @param code
+	 */
+	public void updatePanelArticles(String code);
+
+	/**
+	 * update all panel
+	 */
+	public void updateAllPanelArticles();
 }

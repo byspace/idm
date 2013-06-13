@@ -31,6 +31,9 @@ public class Panel {
 	@ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
 	private List<Article> articleList = new ArrayList<Article>();
 
+	@Embedded
+	private PanelConfig panelConfig;
+
 	public int getId() {
 		return id;
 	}
@@ -77,5 +80,13 @@ public class Panel {
 
 	public void setArticle(Article article) {
 		this.article = article;
+	}
+
+	public PanelConfig getPanelConfig() {
+		return panelConfig;
+	}
+
+	public void setPanelConfig(PanelConfig panelConfig) {
+		this.panelConfig = panelConfig;
 	}
 }

@@ -33,6 +33,10 @@ public class PortalController {
 		setDevelopPanel(model);
 		setArchtectPanel(model);
 		setViewPanel(model);
+		setRoomPanel(model);
+		setPhotoPanel(model);
+		setEffectPanel(model);
+		setDeveloperPanel(model);
 		return "portal/index";
 	}
 
@@ -52,11 +56,34 @@ public class PortalController {
 
 	private void setArchtectPanel(Model model) {
 		model.addAttribute("archtectPanel", panelService.findByCode("MP0005"));
-		model.addAttribute("childrenTopic", topicService.getTopicListByParentId(2));
+		model.addAttribute("archtectChildrenTopic", topicService.getTopicListByParentId(2));
 	}
 
 	private void setViewPanel(Model model) {
 		model.addAttribute("viewPanel", panelService.findByCode("MP0006"));
-		model.addAttribute("childrenTopic", topicService.getTopicListByParentId(3));
+		model.addAttribute("viewChildrenTopic", topicService.getTopicListByParentId(3));
+
+		model.addAttribute("archtectTab", topicService.getArticleListUnderTopic(2, 10));
+		model.addAttribute("viewTab", topicService.getArticleListUnderTopic(3, 10));
+		model.addAttribute("roomTab", topicService.getArticleListUnderTopic(4, 10));
+	}
+
+	private void setRoomPanel(Model model) {
+		model.addAttribute("roomArticles", topicService.getArticleListUnderTopic(4, 8));
+		model.addAttribute("roomChildrenTopic", topicService.getTopicListByParentId(4));
+
+		model.addAttribute("developArticles", topicService.getArticleListUnderTopic(6, 10));
+	}
+
+	private void setPhotoPanel(Model model) {
+		model.addAttribute("photoArticles", topicService.getArticleListUnderTopic(44, 12));
+	}
+
+	private void setEffectPanel(Model model) {
+		model.addAttribute("effectArticles", topicService.getArticleListUnderTopic(5, 12));
+	}
+
+	private void setDeveloperPanel(Model model) {
+		model.addAttribute("developerArticles", topicService.getArticleListUnderTopic(6, 15));
 	}
 }

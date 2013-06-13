@@ -4,6 +4,7 @@ import com.byspace.common.po.TreeData;
 import com.byspace.common.po.TreePosition;
 import com.byspace.common.po.TreeRelationship;
 import com.byspace.common.service.TreeService;
+import com.byspace.portal.article.entity.Article;
 import com.byspace.portal.topic.entity.Topic;
 import com.byspace.portal.topic.service.TopicService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -148,11 +149,46 @@ public class TopicServiceImpl implements TopicService {
 		return topicList;
 	}
 
+	@Override
+	@Transactional(readOnly = true)
+	public List<Article> getArticleListUnderTopic(int topicId, int size) {
+
+		List<Topic> topicList = new ArrayList<Topic>();
+		Topic currentTopic = readTopic(topicId);
+
+		addChildrenTopicToList(topicList, currentTopic);
+
+		List<Integer> queryList = new ArrayList<Integer>();
+		for (Topic topic : topicList) {
+			queryList.add(topic.getId());
+		}
+
+		String hql = "from Article a where a.topic.id in (:list) order by a.publishDate desc";
+		Query query = em.createQuery(hql);
+		query.setParameter("list", queryList);
+		query.setMaxResults(size);
+
+		List<Article> articleList = query.getResultList();
+
+		return articleList;
+	}
+
 	private void addParentTopicToList(List<Topic> topicList, Topic currentTopic) {
 		if (currentTopic != null) {
 			topicList.add(currentTopic);
 			Topic parentTopic = em.find(Topic.class, currentTopic.getParentTopicId());
 			addParentTopicToList(topicList, parentTopic);
+		}
+	}
+
+	private void addChildrenTopicToList(List<Topic> topicList, Topic curretnTopic) {
+		if (curretnTopic != null) {
+			topicList.add(curretnTopic);
+			List<Topic> childrenTopic = em.createQuery("from Topic t where t.parentTopicId=:id").setParameter("id", curretnTopic.getId()).getResultList();
+
+			for (Topic topic : childrenTopic) {
+				addChildrenTopicToList(topicList, topic);
+			}
 		}
 	}
 }

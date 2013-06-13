@@ -1,0 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body{ margin:0; padding:0;}
+li{ list-style:none;  margin:0px; padding:0px;}
+ul{margin:0px; padding:0px; list-style:none;}
+a{ text-decoration:none; color:#000}
+.clear{ clear:both; _display:none;}
+
+html{ background:#d4d6d5; }
+.container{padding-top:12px;}
+.body{ width:960px; margin:auto;}
+

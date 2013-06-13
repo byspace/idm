@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 
+<%--主页 - 重点推荐企业--%>
+
 <div class="co_recommend">
 	<ul>
 		<li>

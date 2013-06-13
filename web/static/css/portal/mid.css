@@ -178,6 +178,17 @@ img{ border:none;}
 .show_banner_up .btn span {display:inline-block; _display:inline; _zoom:1; width:18px; height:18px; line-height:18px; text-align:center; font-size:10px; font-family:"Microsoft YaHei",SimHei; margin-right:10px; cursor:pointer; color:#666; background:#FFF; border:#009990 solid 1px; left:90px;}
 .show_banner_up .btn span.on {background:#009990; color:#fff;}
 
+.photo_show .show_banner, .photo_show .show_banner_up_photos { float:left; margin-top:20px;}
+.show_banner_up_photos { overflow:hidden; position:relative;  width:294px; height:264px; display:inline-block;}
+.show_banner_up_photos ul{height:264px; position:absolute;}/*一定要设置这个值，否则，鼠标banner就不能相应的轮播*/
+.show_banner_up_photos ul li{overflow:hidden;  float:left; width:294px; height:264px;}
+.show_banner_up_photos ul li img{ border:none;}
+.show_banner_up_photos ul li .text{overflow:hidden;}
+.show_banner_up_photos .btnBg {position:absolute; width:294px; height:40px; left:0;}
+.show_banner_up_photos .btn {position:absolute; height:24px; left:160px; bottom:5px; }
+.show_banner_up_photos .btn span {display:inline-block; _display:inline; _zoom:1; width:18px; height:18px; line-height:18px; text-align:center; font-size:10px; font-family:"Microsoft YaHei",SimHei; margin-right:10px; cursor:pointer; color:#666; background:#FFF; border:#009990 solid 1px; left:90px;}
+.show_banner_up_photos .btn span.on {background:#009990; color:#fff;}
+
 /*develope*/
 .develope{ margin:auto; width:960px; height:330px; }
 .develope .left{ width:658px; margin:auto; background:#FFFFFF;  margin-top:12px; padding:10px; float:left; height:298px; }
