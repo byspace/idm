@@ -19,6 +19,12 @@
 						<input class="easyui-validatebox" type="text" name="name" id="name" data-options="" style="width: 200px;"/>
 					</td>
                 </tr>
+				<tr>
+					<td width="200px">编码:</td>
+					<td>
+						<input class="easyui-validatebox" type="text" name="code" id="code" data-options="" style="width: 200px;"/>
+					</td>
+				</tr>
                 <tr>
                     <td>上级栏目:</td>
                     <td>

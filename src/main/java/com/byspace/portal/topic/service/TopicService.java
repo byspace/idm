@@ -83,4 +83,17 @@ public interface TopicService {
 	 */
 	public List<Article> getArticleListUnderTopic(int topicId, int size);
 
+	/**
+	 * read topic by topic code
+	 * @param code
+	 * @return
+	 */
+	public Topic readTopicByCode(String code);
+
+	/**
+	 * read all children topic by code
+	 * @param code
+	 * @return
+	 */
+	public List<Topic> getChildrenTopicByCode(String code);
 }

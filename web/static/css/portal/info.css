@@ -101,7 +101,7 @@ a:hover{ text-decoration:underline}
 .main_box03 .shadow{ margin-left:25px;}
 .main_box03 .main_box03_body_mid{ width:300px;}
 .main_box03 .main_box03_body_mid .left_list .left_list_top #body_mid{ width:160px; margin:0 0 0 10px; line-height:18px; max-height:95px; _height:95px; overflow:hidden; display:block; text-overflow:ellipsis; text-overflow:ellipsis; }
-.left_list .left_list_top  #body_mid span{ margin-bottom:-12px; display:block; width:140px; _ width:140px;overflow:hidden; display:block; text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;}
+.left_list .left_list_top  #body_mid span{ margin-bottom:-12px; display:block; width:140px; width:140px;overflow:hidden; display:block; text-overflow:ellipsis; text-overflow:ellipsis; white-space:nowrap;}
 .main_box03 .main_box03_body_mid .left_list #body_mid_text_hide a{ font-size:12px; color:#000000; overflow:hidden; display:block; text-overflow:ellipsis; margin-top:10px; _margin-top:10px; max-width:250px; width:250px; word-break:keep-all; white-space:nowrap;}
 .main_box03 .main_box03_body_mid .left_list #body_mid_text_hide{ display:inline; }
 .main_box03_body_mid .work .title a{ color:#333333; max-width:78px; width:78px; overflow:hidden;/*  border:#999 1px solid;*/ word-break:keep-all; white-space:nowrap;  display:block;}
@@ -147,7 +147,7 @@ a:hover{ text-decoration:underline}
 .main_box05_body_left .main_box05_body_text .con_news .heading{ margin:0px 0;}
 .main_box05_body_left .main_box05_body_text{ float:left;}
 .main_box05_body_left .main_box05_body_text ul{ float:left;}
-.main_box05_body_left .main_box05_body_text #con_news_right{ margin-left:70px; margin-left:85px\9; *margin-left:50px; _margin-left:50px;}
+.main_box05_body_left .main_box05_body_text #con_news_right{ margin-left:70px; margin-left:85px; *margin-left:50px; _margin-left:50px;}
 .main_box05_body_right{ height:190px; width:250px;float:left; margin-left:100px; }
 
 /*js*/

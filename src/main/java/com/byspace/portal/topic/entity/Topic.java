@@ -28,6 +28,8 @@ public class Topic implements TreeMoveable {
 	@Column(name = "detail")
 	@Lob
 	private String detail;
+	@Column(name = "code")
+	private String code;
 
 	@Override
 	public TreeData buildTreeData() {
@@ -77,5 +79,13 @@ public class Topic implements TreeMoveable {
 
 	public void setDetail(String detail) {
 		this.detail = detail;
+	}
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
 	}
 }

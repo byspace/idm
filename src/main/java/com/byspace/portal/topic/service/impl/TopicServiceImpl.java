@@ -173,6 +173,30 @@ public class TopicServiceImpl implements TopicService {
 		return articleList;
 	}
 
+	@Override
+	@Transactional(readOnly = true)
+	public Topic readTopicByCode(String code) {
+		String hql = "from Topic t where t.code = :code";
+		Query query = em.createQuery(hql);
+		query.setParameter("code", code);
+		List<Topic> topicList = query.getResultList();
+		if (topicList.size() > 0) {
+			return topicList.get(0);
+		}
+		return null;
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public List<Topic> getChildrenTopicByCode(String code) {
+		Topic currentTopic = this.readTopicByCode(code);
+		List<Topic> topicList = new ArrayList<Topic>();
+
+		this.addChildrenTopicToList(topicList, currentTopic);
+
+		return topicList;
+	}
+
 	private void addParentTopicToList(List<Topic> topicList, Topic currentTopic) {
 		if (currentTopic != null) {
 			topicList.add(currentTopic);

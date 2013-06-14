@@ -66,6 +66,7 @@ public class TopicController {
 			topic.setName(request.getParameter("name"));
 			topic.setDetail(request.getParameter("detail"));
 			topic.setParentTopicId(Integer.parseInt(request.getParameter("parentTopicId")));
+			topic.setCode(request.getParameter("code"));
 
 			topicService.saveTopic(topic);
 			return JsonResult.success("保存成功");
@@ -104,6 +105,12 @@ public class TopicController {
 			CustomLogger.error(e, this);
 			return JsonResult.fail("操作失败");
 		}
+	}
+
+	@RequestMapping("list/{topicCode}")
+	public String listArticle(@PathVariable("topicCode")String code, Model model) {
+		Topic topic = topicService.readTopicByCode(code);
+		return this.listArticle(topic.getId(), model);
 	}
 
 	@RequestMapping("listArticle/{topicId}")

@@ -5,6 +5,7 @@ $(function(){
 			ajaxSubmit(getUrl("/portal/topic/read/" + node.id), {}, function(data) {
 				$("#id").val(data.id);
 				$("#name").val(data.name);
+				$("#code").val(data.code);
 				$("#detail").val(data.detail);
 				$("#parentTopic").combotree("setValue", data.parentTopicId);
 
@@ -39,6 +40,7 @@ function saveTopic() {
 	ajaxSubmit(getUrl("/portal/topic/save"), {
 		"id" : $("#id").val(),
 		"name" : $("#name").val(),
+		"code" : $("#code").val(),
 		"detail" : $("#detail").val(),
 		"parentTopicId" : $("#parentTopic").combotree("getValue")
 	}, function(data) {
