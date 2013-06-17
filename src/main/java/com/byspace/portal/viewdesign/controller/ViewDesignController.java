@@ -1,4 +1,4 @@
-package com.byspace.portal.buildingdesign.controller;
+package com.byspace.portal.viewdesign.controller;
 
 import com.byspace.portal.topic.entity.Topic;
 import com.byspace.portal.topic.service.TopicService;
@@ -12,12 +12,12 @@ import java.util.List;
 /**
  * Created with IntelliJ IDEA.
  * User: Yangxu
- * Date: 13-6-14
- * Time: 下午2:29
+ * Date: 13-6-15
+ * Time: 上午10:33
  */
 @Controller
-@RequestMapping("/portal/buildingdesign")
-public class BuildingDesignController {
+@RequestMapping("/portal/viewdesign")
+public class ViewDesignController {
 
 	@Autowired
 	private TopicService topicService;
@@ -25,25 +25,14 @@ public class BuildingDesignController {
 	@RequestMapping("index")
 	public String index(Model model) {
 
-		Topic parentTopic = topicService.readTopicByCode("TP0002");
+		Topic parentTopic = topicService.readTopicByCode("TP0003");
 		model.addAttribute("secondLevelTopicList", topicService.getTopicListByParentId(parentTopic.getId()));
 
-		List<Topic> topicList = topicService.getChildrenTopicByCode("TP0002");
+		List<Topic> topicList = topicService.getChildrenTopicByCode("TP0003");
 		for (Topic topic : topicList) {
 			model.addAttribute(topic.getCode() + "List", topicService.getArticleListUnderTopic(topic.getId(), 50));
 		}
 
-		setPhotos(model);
-		setThesis(model);
-
-		return "portal/buildingdesign/index";
-	}
-
-	private void setPhotos(Model model) {
-		model.addAttribute("photoList", topicService.getArticleListUnderTopic(44, 20));
-	}
-
-	private void setThesis(Model model) {
-		model.addAttribute("thesisList", topicService.getArticleListUnderTopic(43, 15));
+		return "portal/viewdesign/index";
 	}
 }

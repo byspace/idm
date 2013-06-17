@@ -37,6 +37,22 @@ public class DirectoryUtil {
 			return null;
 		}
 	}
+
+	public static String getRootDir() {
+		String url;
+		try {
+			url = URLDecoder.decode(DirectoryUtil.class
+					.getProtectionDomain().getCodeSource().getLocation()
+					.getFile(), "UTF-8");
+			url = url.substring(0, url.indexOf("/WEB-INF/"));
+			url += "/";
+			initDirectory(url);
+			return url;
+		} catch (UnsupportedEncodingException e) {
+			CustomLogger.error(e, DirectoryUtil.class);
+			return null;
+		}
+	}
 	
 	private static void initDirectory(String dir) {
 		File dirname = new File(dir); 

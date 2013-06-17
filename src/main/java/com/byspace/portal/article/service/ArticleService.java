@@ -42,7 +42,7 @@ public interface ArticleService {
 
 	/**
 	 * get articles in specified topic
-	 * @param topic
+	 * @param topicId
 	 * @param size
 	 * @return
 	 */

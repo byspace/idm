@@ -96,4 +96,13 @@ public interface TopicService {
 	 * @return
 	 */
 	public List<Topic> getChildrenTopicByCode(String code);
+
+	/**
+	 * read article list by topicCode and key
+	 * @param topicCode
+	 * @param key
+	 * @param size
+	 * @return
+	 */
+	public List<Article> getArticleListByTopicAndKey(String topicCode, String key, int size);
 }

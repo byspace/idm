@@ -46,6 +46,8 @@ public class Article implements SimpleDataGridRow {
 	@Column(name = "images")
 	@Lob
 	private String images;
+	@Column(name = "custom_key")
+	private String customKey;
 
 	@Column(name = "title_image")
 	private String titleImage;
@@ -175,5 +177,13 @@ public class Article implements SimpleDataGridRow {
 
 	public void setTitleImage(String titleImage) {
 		this.titleImage = titleImage;
+	}
+
+	public String getCustomKey() {
+		return customKey;
+	}
+
+	public void setCustomKey(String customKey) {
+		this.customKey = customKey;
 	}
 }

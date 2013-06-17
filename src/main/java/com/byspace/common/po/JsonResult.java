@@ -27,6 +27,22 @@ public class JsonResult {
 		return jsonResult;
 	}
 
+	public static JsonResult saveSuccess() {
+		return success("保存成功");
+	}
+
+	public static JsonResult saveFail() {
+		return fail("保存失败");
+	}
+
+	public static JsonResult deleteSuccess() {
+		return success("删除成功");
+	}
+
+	public static JsonResult deleteFail() {
+		return fail("删除失败");
+	}
+
 	public boolean isResult() {
 		return result;
 	}

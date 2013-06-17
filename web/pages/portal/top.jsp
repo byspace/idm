@@ -15,6 +15,13 @@
 				$(this).attr("style", "background:url(" + getUrl("/static/img/index_03.gif") + ") repeat-x 0 2px; margin:0 1px 0 1px;");
 			}
 		});
+
+
+		$("li.nav_left_top").attr("style", "background:url('" + getUrl("/static/img/icon01.png") + "') no-repeat top left;");
+		$("li.nav_left_bottom").attr("style", "background:url('" + getUrl("/static/img/icon02.png") + "') no-repeat;");
+		$("li.nav_right").attr("style", "background:url('" + getUrl("/static/img/btn_bg01.png") + "') no-repeat;");
+		$("li.title_left").attr("style", "background:url('" + getUrl("/static/img/icon01.png") + "') no-repeat top left;;");
+		$("li.title_right").attr("style", "background:url('" + getUrl("/static/img/btn_bg01.png") + "') no-repeat;");
 	});
 </script>
 
@@ -28,7 +35,7 @@
 				<li><a href="<spring:url value="/portal/index"/>" onclick="" id="nav_index">首页</a></li>
 				<li><a href="<spring:url value="/portal/newscenter/index"/>" onclick="" id="nav_infocenter">资讯中心</a></li>
 				<li><a href="<spring:url value="/portal/buildingdesign/index"/>" onclick="" id="nav_buildingdesign">建筑设计</a></li>
-				<li><a href="/column/landscapedesign.shtml" onclick="" id="nav_landscapedesign">景观设计</a></li>
+				<li><a href="<spring:url value="/portal/viewdesign/index"/>" onclick="" id="nav_landscapedesign">景观设计</a></li>
 				<li><a href="/column/roomdesign.shtml" onclick="" id="nav_roomdesign">室内设计</a></li>
 				<li><a href="/column/effectmodel.shtml" onclick="" id="nav_effectmodel">效果图模型</a></li>
 				<li><a href="/column/developer.shtml" onclick="" id="nav_developers">开发商</a></li>

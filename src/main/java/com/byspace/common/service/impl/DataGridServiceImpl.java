@@ -33,6 +33,7 @@ public class DataGridServiceImpl implements DataGridService {
 	static {
 		classMap.put("Category", "com.byspace.portal.article.entity.Category");
 		classMap.put("Article", "com.byspace.portal.article.entity.Article");
+		classMap.put("PanelTemplate", "com.byspace.console.template.entity.PanelTemplate");
 	};
 
 	@PersistenceContext

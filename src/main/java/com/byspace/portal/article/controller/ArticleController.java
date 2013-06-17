@@ -84,10 +84,10 @@ public class ArticleController {
 
 			articleService.batchDelete(idList);
 
-			return JsonResult.success("删除操作成功");
+			return JsonResult.deleteSuccess();
 		} catch (Exception e) {
 			CustomLogger.error(e, this);
-			return JsonResult.fail("删除操作失败");
+			return JsonResult.deleteFail();
 		}
 	}
 
@@ -116,11 +116,11 @@ public class ArticleController {
 
 			articleService.saveArticle(article);
 
-			return JsonResult.success("保存成功");
+			return JsonResult.saveSuccess();
 		} catch (Exception e) {
 			CustomLogger.error(e, this);
 
-			return JsonResult.fail("保存失败");
+			return JsonResult.saveFail();
 		}
 	}
 
