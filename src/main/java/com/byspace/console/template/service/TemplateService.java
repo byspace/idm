@@ -22,13 +22,6 @@ public interface TemplateService {
 	public PanelInstance readPanelInstanceByCode(String code);
 
 	/**
-	 * read view item by code
-	 * @param code
-	 * @return
-	 */
-	public ViewItem readViewItemByCode(String code);
-
-	/**
 	 * read view item by id
 	 * @param id
 	 * @return

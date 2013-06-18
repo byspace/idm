@@ -40,15 +40,9 @@ public class TemplateServiceImpl implements TemplateService {
 		Query query = em.createQuery("from PanelInstance pi where pi.code = :code");
 		query.setParameter("code", code);
 
-		return (PanelInstance) query.getSingleResult();
-	}
+		PanelInstance panelInstance = (PanelInstance) query.getSingleResult();
 
-	@Override
-	@Transactional(readOnly = true)
-	public ViewItem readViewItemByCode(String code) {
-		Query query = em.createQuery("from ViewItem vi where vi.code = :code");
-		query.setParameter("code", code);
-		return (ViewItem) query.getSingleResult();
+		return panelInstance;
 	}
 
 	@Override
@@ -89,7 +83,6 @@ public class TemplateServiceImpl implements TemplateService {
 	@Transactional(readOnly = true)
 	public PanelInstance readPanelInstanceById(int id) {
 		PanelInstance panelInstance = em.find(PanelInstance.class, id);
-		fillViewItemFilter(panelInstance);
 
 		return panelInstance;
 	}
@@ -110,23 +103,4 @@ public class TemplateServiceImpl implements TemplateService {
 		}
 	}
 
-	private void fillViewItemFilter(List<PanelInstance> panelInstanceList) {
-		for (PanelInstance panelInstance : panelInstanceList) {
-			fillViewItemFilter(panelInstance);
-		}
-	}
-
-	private void fillViewItemFilter(PanelInstance panelInstance) {
-		for (ViewItemFilter viewItemFilter : panelInstance.getViewItemFilterList()) {
-			fillViewItemFilter(viewItemFilter);
-		}
-	}
-
-	private void fillViewItemFilter(ViewItemFilter viewItemFilter) {
-		Topic topic = topicService.readTopicByCode(viewItemFilter.getTopicCode());
-		ViewItem viewItem = readViewItemByCode(viewItemFilter.getViewItemCode());
-
-		viewItemFilter.setTopic(topic);
-		viewItemFilter.setViewItem(viewItem);
-	}
 }

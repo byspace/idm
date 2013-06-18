@@ -19,10 +19,7 @@ import javax.persistence.PersistenceContext;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -131,7 +128,7 @@ public class ImportServiceImpl implements ImportService {
 
 	private void setKeyWords(Article article, String keyWordString) {
 
-		List<KeyWord> list = new ArrayList<KeyWord>();
+		Set<KeyWord> list = new TreeSet<KeyWord>();
 
 		for (String keyWordStr : keyWordString.split(",")) {
 			KeyWord keyWord = new KeyWord();

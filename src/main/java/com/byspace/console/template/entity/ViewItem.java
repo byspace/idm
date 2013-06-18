@@ -15,8 +15,6 @@ public class ViewItem implements Comparable {
 	@Id
 	@GeneratedValue
 	private int id;
-	@Column(name = "code")
-	private String code;
 	@Column(name = "type")
 	private String type;
 	@Column(name = "size")
@@ -44,14 +42,6 @@ public class ViewItem implements Comparable {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public String getCode() {
-		return code;
-	}
-
-	public void setCode(String code) {
-		this.code = code;
 	}
 
 	public String getType() {

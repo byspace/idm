@@ -83,7 +83,7 @@ public class TemplateController {
 
 			JSONObject jsonObject = (JSONObject) object;
 
-			if (jsonObject.getString("id").equals("")) {
+			if (!jsonObject.containsKey("id")) {
 				ViewItem viewItem = new ViewItem();
 				updateViewItem(viewItem, jsonObject, i);
 
@@ -103,7 +103,6 @@ public class TemplateController {
 	}
 
 	private void updateViewItem(ViewItem viewItem, JSONObject jsonObject, int order) {
-		viewItem.setCode(jsonObject.getString("code"));
 		viewItem.setType(jsonObject.getString("type"));
 		viewItem.setDetail(jsonObject.getString("detail"));
 		viewItem.setSize(jsonObject.getInt("size"));

@@ -9,10 +9,9 @@
 	</div>
 	<div class='content'>
 		<ul class="list">
-			<#list titleList as article>
+			<#list vi23 as article>
 				<li><a href="${ROOT_URL}/portal/article/view/${article.id}" target="_blank">${article.subject}</a></li>
 			</#list>
 		</ul>
-
 	</div>
 </div>

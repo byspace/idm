@@ -1,25 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
 
-<%@ page import="java.util.*" %>
-
-<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
-<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
-<%@ taglib prefix="portal" uri="/tags/portalTag.tld" %>
-
-<html>
-<head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-	<title>国际设计传媒</title>
+<%@include file="../common/head.jsp"%>
 
 	<style>
 		.panel {
 			background: #FFF;
 			padding: 10px;
 			float: left;
+			margin: 5px;
 		}
 		.panel .top {
 			height: 30px;
@@ -78,9 +66,15 @@
 	</style>
 
 </head>
-<body>
+<body style="background-color: #d4d5d6">
 
-     <portal:panel panelCode="MP0001" width="338" height="462"></portal:panel>
+	<div>
+		<portal:panel panelCode="NC0001" width="300" height="380"></portal:panel>
+
+		<portal:panel panelCode="NC0002" width="338" height="380"></portal:panel>
+	</div>
+
+
 
 </body>
 </html>

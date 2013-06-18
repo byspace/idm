@@ -110,8 +110,9 @@ public class PanelInstanceController {
 		for (Object object : jsonArray) {
 			JSONObject jsonObject = (JSONObject) object;
 
-			if (jsonObject.getString("id").equals("")) {
+			if (!jsonObject.containsKey("id")) {
 				ViewItemFilter viewItemFilter = new ViewItemFilter();
+				updateViewItemFilter(viewItemFilter, jsonObject);
 				viewItemFilterList.add(viewItemFilter);
 			} else {
 				for (ViewItemFilter savedViewItemFilter : panelInstance.getViewItemFilterList()) {
@@ -128,8 +129,8 @@ public class PanelInstanceController {
 	private void updateViewItemFilter(ViewItemFilter viewItemFilter, JSONObject jsonObject) {
 		viewItemFilter.setKey(jsonObject.getString("key"));
 		Topic topic = topicService.readTopic(jsonObject.getInt("topic"));
-		viewItemFilter.setTopicCode(topic.getCode());
-		viewItemFilter.setViewItemCode(jsonObject.getString("code"));
+		viewItemFilter.setTopic(topic);
+		viewItemFilter.setViewItem(templateService.readViewItemById(jsonObject.getInt("viewItemId")));
 
 	}
 }

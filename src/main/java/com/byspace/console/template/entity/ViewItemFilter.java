@@ -17,17 +17,12 @@ public class ViewItemFilter {
 	@Id
 	@GeneratedValue
 	private int id;
-	@Column(name = "view_item_code")
-	private String viewItemCode;
-
-	@Column(name = "topic_code")
-	private String topicCode;
 	@Column(name = "filter_key")
 	private String key;
 
-	@Transient
+	@ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
 	private ViewItem viewItem;
-	@Transient
+	@ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
 	private Topic topic;
 
 	public int getId() {
@@ -36,14 +31,6 @@ public class ViewItemFilter {
 
 	public void setId(int id) {
 		this.id = id;
-	}
-
-	public String getTopicCode() {
-		return topicCode;
-	}
-
-	public void setTopicCode(String topicCode) {
-		this.topicCode = topicCode;
 	}
 
 	public ViewItem getViewItem() {
@@ -60,14 +47,6 @@ public class ViewItemFilter {
 
 	public void setKey(String key) {
 		this.key = key;
-	}
-
-	public String getViewItemCode() {
-		return viewItemCode;
-	}
-
-	public void setViewItemCode(String viewItemCode) {
-		this.viewItemCode = viewItemCode;
 	}
 
 	public Topic getTopic() {

@@ -14,7 +14,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td>编码:</td>
+			<td>模板文件:</td>
 			<td>
 				<input class="easyui-validatebox" type="text" value="${panelTemplate.code}" name="code" id="code" data-options="" style="width: 300px;"/>
 			</td>
@@ -25,6 +25,8 @@
 				<select class="easyui-combobox" name="type" id="type" style="width:200px;" value="${panelTemplate.type}">
 					<option value="">请选择</option>
 					<option <c:if test="${panelTemplate.type == 'titleList'}">selected</c:if> value="titleList">标题列表</option>
+					<option <c:if test="${panelTemplate.type == 'pictureList'}">selected</c:if> value="pictureList">图片列表</option>
+					<option <c:if test="${panelTemplate.type == 'pictureAndTitle'}">selected</c:if> value="pictureAndTitle">图片文字混排列表</option>
 				</select>
 			</td>
 		</tr>
@@ -48,7 +50,6 @@
 					<thead>
 						<tr>
 							<th data-options="field:'id',width:25">ID</th>
-							<th data-options="field:'code',width:100,editor:'text'">编码</th>
 							<th data-options="field:'type',width:150,
 								formatter:function(value,row){
 
@@ -72,7 +73,6 @@
 						<c:forEach items="${panelTemplate.viewItemList}" var="viewItem">
 							<tr>
 								<td>${viewItem.id}</td>
-								<td>${viewItem.code}</td>
 								<td>${viewItem.type}</td>
 								<td>${viewItem.size}</td>
 								<td>${viewItem.detail}</td>

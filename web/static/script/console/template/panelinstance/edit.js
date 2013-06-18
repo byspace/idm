@@ -98,7 +98,16 @@ function changeTemplate(newValue) {
 			var viewItemList = data.viewItemList;
 			for (var i = 0; i < viewItemList.length; i++) {
 				var viewItem = viewItemList[i];
-				$("#viewItemFilterDg").datagrid("appendRow", viewItem);
+
+				var data = {
+					"tag": "vi" + viewItem.id,
+					"type" : viewItem.type,
+					"size" : viewItem.size,
+					"viewItemId" : viewItem.id,
+					"detail" : viewItem.detail
+				};
+
+				$("#viewItemFilterDg").datagrid("appendRow", data);
 			}
 
 			$("#viewItemFilterDg").datagrid("resize");

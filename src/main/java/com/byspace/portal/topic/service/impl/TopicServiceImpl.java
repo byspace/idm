@@ -200,9 +200,20 @@ public class TopicServiceImpl implements TopicService {
 	@Override
 	@Transactional(readOnly = true)
 	public List<Article> getArticleListByTopicAndKey(String topicCode, String key, int size) {
-		String hql = "from Article a where a.topic.code=:topicCode and a.customKey like :key order by a.publishDate desc";
+
+		List<Topic> topicList = new ArrayList<Topic>();
+		Topic currentTopic = readTopicByCode(topicCode);
+
+		addChildrenTopicToList(topicList, currentTopic);
+
+		List<Integer> queryList = new ArrayList<Integer>();
+		for (Topic topic : topicList) {
+			queryList.add(topic.getId());
+		}
+
+		String hql = "from Article a where a.topic.id in (:list) and a.customKey like :key order by a.publishDate desc";
 		Query query = em.createQuery(hql);
-		query.setParameter("topicCode", topicCode);
+		query.setParameter("list", queryList);
 		query.setParameter("key", "%" + key + "%");
 		query.setMaxResults(size);
 

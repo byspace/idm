@@ -60,12 +60,13 @@
 						<tr>
 							<th data-options="field:'id',width:80">ID</th>
 							<th data-options="field:'topic',width:150,editor:{type:'combotree',options:{
-								url:'<spring:url value="/portal/topic/getTopicTreeDataByParentId/0" />'
-							}},formatter:function(value,row){
-								return row.topicName;
-							},">栏目</th>
+									url:'<spring:url value="/portal/topic/getTopicTreeDataByParentId/0" />'
+								}},formatter:function(value,row){
+									return row.topicName;
+								},">栏目</th>
 							<th data-options="field:'key',width:200,editor:'text'">关键字</th>
-							<th data-options="field:'code',width:80">编码</th>
+							<th data-options="field:'viewItemId',width:0,hidden:true"></th>
+							<th data-options="field:'tag',width:100">标签</th>
 							<th data-options="field:'type',width:80">类型</th>
 							<th data-options="field:'size',width:60,align:'right'">内容数量</th>
 							<th data-options="field:'detail',width:100">描述</th>
@@ -78,7 +79,8 @@
 								<td>${viewItemFilter.id}</td>
 								<td>${viewItemFilter.topic.id}</td>
 								<td>${viewItemFilter.key}</td>
-								<td>${viewItemFilter.viewItem.code}</td>
+								<td>${viewItemFilter.viewItem.id}</td>
+								<td>vi${viewItemFilter.viewItem.id}</td>
 								<td>${viewItemFilter.viewItem.type}</td>
 								<td>${viewItemFilter.viewItem.size}</td>
 								<td>${viewItemFilter.viewItem.detail}</td>

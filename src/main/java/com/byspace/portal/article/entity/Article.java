@@ -5,10 +5,7 @@ import com.byspace.portal.topic.entity.Topic;
 import com.byspace.util.DateUtils;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -25,8 +22,9 @@ public class Article implements SimpleDataGridRow {
 	private int id;
 	@Column(name = "subject")
 	private String subject;
-	@OneToMany(cascade = CascadeType.ALL)
-	private List<KeyWord> keyWordList = new ArrayList<KeyWord>();
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OrderBy("id ASC")
+	private Set<KeyWord> keyWordList = new TreeSet<KeyWord>();
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	private Category category;
 	@ManyToOne(cascade = CascadeType.REFRESH)
@@ -99,11 +97,11 @@ public class Article implements SimpleDataGridRow {
 		this.subject = subject;
 	}
 
-	public List<KeyWord> getKeyWordList() {
+	public Set<KeyWord> getKeyWordList() {
 		return keyWordList;
 	}
 
-	public void setKeyWordList(List<KeyWord> keyWordList) {
+	public void setKeyWordList(Set<KeyWord> keyWordList) {
 		this.keyWordList = keyWordList;
 	}
 

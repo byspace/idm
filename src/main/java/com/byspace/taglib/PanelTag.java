@@ -5,6 +5,9 @@ import com.byspace.console.template.entity.PanelInstance;
 import com.byspace.console.template.entity.ViewItem;
 import com.byspace.console.template.entity.ViewItemFilter;
 import com.byspace.util.CustomLogger;
+import com.byspace.util.DateUtils;
+import com.byspace.util.Md5Utils;
+import net.sf.json.JSONObject;
 
 import javax.servlet.jsp.JspTagException;
 import java.io.IOException;
@@ -39,14 +42,12 @@ public class PanelTag extends BasicTag {
 
 			for (ViewItemFilter viewItemFilter : panelInstance.getViewItemFilterList()) {
 				ViewItem viewItem = viewItemFilter.getViewItem();
-				String topicCode = viewItemFilter.getTopicCode();
-				String key = viewItemFilter.getKey();
 
-				List<Article> articleList = topicService.getArticleListByTopicAndKey(topicCode, key, viewItem.getSize());
-				variables.put(viewItem.getCode(), articleList);
+				List<Article> articleList = topicService.getArticleListByTopicAndKey(viewItemFilter.getTopic().getCode(), viewItemFilter.getKey(), viewItem.getSize());
+				variables.put("vi" + viewItem.getId(), articleList);
 			}
 
-			String path = "/pages/portal/panel/template/" + panelInstance.getPanelTemplate().getType() + ".jsp";
+			String path = "/pages/portal/panel/template/" + panelInstance.getPanelTemplate().getCode() + ".jsp";
 			write(path);
 
 		} catch (IOException e) {
@@ -55,6 +56,7 @@ public class PanelTag extends BasicTag {
 
 		return EVAL_PAGE;
 	}
+
 
 	public String getPanelCode() {
 		return panelCode;
