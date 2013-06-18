@@ -40,7 +40,6 @@
 			<td>
 				<table id="viewItemDg" class="easyui-datagrid" style="width:700px;height:auto"
 					   data-options="
-					   		rownumbers:true,
 					   		toolbar: '#tb',
 							iconCls: 'icon-edit',
 							singleSelect: true,
@@ -48,6 +47,7 @@
 						">
 					<thead>
 						<tr>
+							<th data-options="field:'id',width:25">ID</th>
 							<th data-options="field:'code',width:100,editor:'text'">编码</th>
 							<th data-options="field:'type',width:150,
 								formatter:function(value,row){
@@ -64,13 +64,14 @@
 									textField: 'detail',
 									data: viewItemTypes
 							}}">类别</th>
-							<th data-options="field:'size',width:80,editor:{type:'numberbox',options:{precision:0}}">数量</th>
+							<th data-options="field:'size',width:80,align:'right',editor:{type:'numberbox',options:{precision:0}}">数量</th>
 							<th data-options="field:'detail',width:250,editor:'text'">描述</th>
 						</tr>
 					</thead>
 					<tbody>
 						<c:forEach items="${panelTemplate.viewItemList}" var="viewItem">
 							<tr>
+								<td>${viewItem.id}</td>
 								<td>${viewItem.code}</td>
 								<td>${viewItem.type}</td>
 								<td>${viewItem.size}</td>

@@ -1,5 +1,7 @@
 package com.byspace.console.template.entity;
 
+import com.byspace.portal.topic.entity.Topic;
+
 import javax.persistence.*;
 
 /**
@@ -17,10 +19,16 @@ public class ViewItemFilter {
 	private int id;
 	@Column(name = "view_item_code")
 	private String viewItemCode;
+
 	@Column(name = "topic_code")
 	private String topicCode;
-	@Column(name = "key")
+	@Column(name = "filter_key")
 	private String key;
+
+	@Transient
+	private ViewItem viewItem;
+	@Transient
+	private Topic topic;
 
 	public int getId() {
 		return id;
@@ -38,12 +46,12 @@ public class ViewItemFilter {
 		this.topicCode = topicCode;
 	}
 
-	public String getViewItemCode() {
-		return viewItemCode;
+	public ViewItem getViewItem() {
+		return viewItem;
 	}
 
-	public void setViewItemCode(String viewItemCode) {
-		this.viewItemCode = viewItemCode;
+	public void setViewItem(ViewItem viewItem) {
+		this.viewItem = viewItem;
 	}
 
 	public String getKey() {
@@ -52,5 +60,21 @@ public class ViewItemFilter {
 
 	public void setKey(String key) {
 		this.key = key;
+	}
+
+	public String getViewItemCode() {
+		return viewItemCode;
+	}
+
+	public void setViewItemCode(String viewItemCode) {
+		this.viewItemCode = viewItemCode;
+	}
+
+	public Topic getTopic() {
+		return topic;
+	}
+
+	public void setTopic(Topic topic) {
+		this.topic = topic;
 	}
 }

@@ -38,7 +38,7 @@ public class PanelTag extends BasicTag {
 			variables.put("moreLink", getUrl(panelInstance.getMoreLink()));
 
 			for (ViewItemFilter viewItemFilter : panelInstance.getViewItemFilterList()) {
-				ViewItem viewItem = templateService.readViewItemByCode(viewItemFilter.getViewItemCode());
+				ViewItem viewItem = viewItemFilter.getViewItem();
 				String topicCode = viewItemFilter.getTopicCode();
 				String key = viewItemFilter.getKey();
 

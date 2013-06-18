@@ -64,24 +64,7 @@ public class TemplateController {
 			panelTemplate.setType(request.getParameter("type"));
 			panelTemplate.setDetail(request.getParameter("detail"));
 
-			Set<ViewItem> viewItemList = new TreeSet<ViewItem>();
-
-			JSONArray jsonArray = JSONArray.fromObject(request.getParameter("viewItems"));
-			int i = 0;
-			for (Object object : jsonArray) {
-				JSONObject jsonObject = (JSONObject) object;
-				ViewItem viewItem = new ViewItem();
-				viewItem.setCode(jsonObject.getString("code"));
-				viewItem.setType(jsonObject.getString("type"));
-				viewItem.setDetail(jsonObject.getString("detail"));
-				viewItem.setSize(jsonObject.getInt("size"));
-				viewItem.setOrder(i);
-
-				viewItemList.add(viewItem);
-				i++;
-			}
-
-			panelTemplate.setViewItemList(viewItemList);
+			updateViewItemList(panelTemplate, request);
 
 			templateService.savePanelTemplate(panelTemplate);
 
@@ -90,6 +73,41 @@ public class TemplateController {
 			CustomLogger.error(e, this);
 			return JsonResult.saveFail();
 		}
+	}
+
+	private void updateViewItemList(PanelTemplate panelTemplate, HttpServletRequest request) {
+		Set<ViewItem> viewItemList = panelTemplate.getViewItemList();
+		JSONArray jsonArray = JSONArray.fromObject(request.getParameter("viewItems"));
+		int i = 0;
+		for (Object object : jsonArray) {
+
+			JSONObject jsonObject = (JSONObject) object;
+
+			if (jsonObject.getString("id").equals("")) {
+				ViewItem viewItem = new ViewItem();
+				updateViewItem(viewItem, jsonObject, i);
+
+				viewItemList.add(viewItem);
+
+			} else {
+				for (ViewItem savedViewItem : panelTemplate.getViewItemList()) {
+					if (savedViewItem.getId() == jsonObject.getInt("id")) {
+						updateViewItem(savedViewItem, jsonObject, i);
+					}
+				}
+			}
+			i++;
+		}
+
+		panelTemplate.setViewItemList(viewItemList);
+	}
+
+	private void updateViewItem(ViewItem viewItem, JSONObject jsonObject, int order) {
+		viewItem.setCode(jsonObject.getString("code"));
+		viewItem.setType(jsonObject.getString("type"));
+		viewItem.setDetail(jsonObject.getString("detail"));
+		viewItem.setSize(jsonObject.getInt("size"));
+		viewItem.setOrder(order);
 	}
 
 	@RequestMapping("delete")
@@ -106,5 +124,11 @@ public class TemplateController {
 			CustomLogger.error(e, this);
 			return JsonResult.deleteFail();
 		}
+	}
+
+	@RequestMapping("readTemplate/{id}")
+	@ResponseBody
+	public PanelTemplate readTemplate(@PathVariable("id") int id) {
+		return templateService.readPanelTemplateById(id);
 	}
 }

@@ -43,6 +43,12 @@ public interface TemplateService {
 	public PanelTemplate readPanelTemplateById(int id);
 
 	/**
+	 * read panel template list
+	 * @return
+	 */
+	public List<PanelTemplate> readPanelTemplateList();
+
+	/**
 	 * save panel template
 	 * @param panelTemplate
 	 */
@@ -53,4 +59,23 @@ public interface TemplateService {
 	 * @param idList
 	 */
 	public void batchDeletePanelTemplate(List<Integer> idList);
+
+	/**
+	 * read panel instance by id
+	 * @param id
+	 * @return
+	 */
+	public PanelInstance readPanelInstanceById(int id);
+
+	/**
+	 * save panel instance
+	 * @param panelInstance
+	 */
+	public void savePanelInstance(PanelInstance panelInstance);
+
+	/**
+	 * batch delete panel instance
+	 * @param idList
+	 */
+	public void batchDeletePanelInstance(List<Integer> idList);
 }
