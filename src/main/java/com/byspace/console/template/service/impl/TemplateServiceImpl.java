@@ -83,7 +83,6 @@ public class TemplateServiceImpl implements TemplateService {
 	@Transactional(readOnly = true)
 	public PanelInstance readPanelInstanceById(int id) {
 		PanelInstance panelInstance = em.find(PanelInstance.class, id);
-
 		return panelInstance;
 	}
 

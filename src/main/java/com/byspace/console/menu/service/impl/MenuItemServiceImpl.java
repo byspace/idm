@@ -77,6 +77,7 @@ public class MenuItemServiceImpl implements MenuItemService {
 		rootMenuItemData.setId(0);
 		rootMenuItemData.setText("根路径");
 		rootMenuItemData.setIconCls("");
+		rootMenuItemData.setState("open");
 		rootMenuItemData.setChildren(this.getMenuItemDataListByParentId(0));
 
 		return rootMenuItemData;

@@ -71,7 +71,7 @@ function saveForm() {
 		"viewItems" : JSON.stringify($("#viewItemDg").datagrid("getRows"))
 	}, function(data) {
 		if (data.result) {
-			//window.location.reload();
+			window.location.reload();
 		}
 
 		$.messager.alert("操作结果", data.message, "info");

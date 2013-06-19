@@ -10,7 +10,7 @@
 	<div class='content'>
 		<ul class="list">
 			<#list vi23 as article>
-				<li><a href="${ROOT_URL}/portal/article/view/${article.id}" target="_blank">${article.subject}</a></li>
+				<li><a href="${ROOT_URL}/portal/article/view/${article.id}" title="${article.subject}" target="_blank">${article.subject}</a></li>
 			</#list>
 		</ul>
 	</div>

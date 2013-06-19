@@ -1,12 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ include file="../../common/head.jsp" %>
 
-<script type="text/javascript" src="<spring:url value="/static/script/portal/infocenter_banner.js"/>"></script>
-<script type="text/javascript" src="<spring:url value="/static/script/portal/infocenter_box.js"/>"></script>
-
-<link rel="stylesheet" href="<spring:url value="/static/css/portal/mid.css"/>" type="text/css" />
-<link rel="stylesheet" href="<spring:url value="/static/css/portal/info.css"/>" type="text/css" />
-<link rel="stylesheet" href="<spring:url value="/static/css/portal/public.css"/>" type="text/css" />
+<link rel="stylesheet" href="<spring:url value="/static/css/portal.css"/>" type="text/css" />
 
 <body>
 
@@ -14,53 +9,64 @@
 <input type="hidden" id="currentTopic" value="资讯中心"/>
 
 <div class="container">
-<div class="body">
-<div class="main_box01">
+	<table cellpading=0 cellspacing=0 style="padding: 0px; margin: 0px;" >
+		<tr>
+			<td><portal:panel panelCode="NC0001" width="300" height="323"></portal:panel></td>
+			<td><portal:panel panelCode="NC0002" width="325" height="323"></portal:panel></td>
+			<td><portal:panel panelCode="NC0003" width="240" height="323"></portal:panel></td>
+		</tr>
 
-	<%@include file="panel/NC0001.jsp"%>
+		<tr>
+			<td colspan="3">
+				<portal:panel panelCode="NC0004" width="940" height="300"></portal:panel>
+			</td>
+		</tr>
 
-	<%@include file="panel/NC0002.jsp"%>
+		<tr>
+			<td colspan="3">
+				<portal:panel panelCode="NC0005" width="940" height="400"></portal:panel>
+			</td>
+		</tr>
 
-</div>
+		<tr>
+			<td colspan="2">
+				<portal:panel panelCode="NC0006" width="665" height="380"></portal:panel>
+			</td>
+			<td>
+				<portal:panel panelCode="NC0007" width="240" height="380"></portal:panel>
+			</td>
+		</tr>
 
-<%@include file="panel/NC0003.jsp"%>
+		<tr>
+			<td colspan="3">
+				<portal:panel panelCode="NC0008" width="940" height="380"></portal:panel>
+			</td>
+		</tr>
 
-<%@include file="panel/NC0004.jsp"%>
+		<tr>
+			<td colspan="2">
+				<portal:panel panelCode="NC0009" width="665" height="380"></portal:panel>
+			</td>
+			<td>
+				<portal:panel panelCode="NC0010" width="240" height="380"></portal:panel>
+			</td>
+		</tr>
 
-<div class="main_box04">
+		<tr>
+			<td colspan="2">
+				<portal:panel panelCode="NC0011" width="665" height="380"></portal:panel>
+			</td>
+			<td>
+				<portal:panel panelCode="NC0012" width="240" height="380"></portal:panel>
+			</td>
+		</tr>
 
-	<%@include file="panel/NC0005.jsp"%>
-
-	<%@include file="panel/NC0006.jsp"%>
-
-</div>
-
-<%@include file="panel/NC0007.jsp"%>
-
-<div class="main_box06">
-
-	<%@include file="panel/NC0008.jsp"%>
-
-	<%@include file="panel/NC0009.jsp"%>
-
-
-	<div class="clear"></div>
-</div>
-
-<div class="main_box07">
-	<%@include file="panel/NC0010.jsp"%>
-
-	<%@include file="panel/NC0011.jsp"%>
-</div>
-
-	<div class="main_box08">
-
-	<%@include file="panel/NC0012.jsp"%>
-
-	<%@include file="panel/NC0013.jsp"%>
-
-</div>
-</div>
+		<tr>
+			<td colspan="3">
+				<portal:panel panelCode="NC0013" width="940" height="380"></portal:panel>
+			</td>
+		</tr>
+	</table>
 </div>
 
 

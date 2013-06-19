@@ -18,7 +18,7 @@
 
 	#panel${UNIQUE_TAG} .pika-thumbs li {
 		width: 55px;
-		height: 75px;
+		height: 55px;
 	}
 
 	#panel${UNIQUE_TAG} .pika-stage {
@@ -55,7 +55,7 @@
 			<#list vi24 as article>
 				<li>
 					<a href="${ROOT_URL}/portal/article/view/${article.id}" target="_blank">
-						<img src="${ROOT_URL}${article.titleImage}"/>
+						<img src="<#if article.titleImage?index_of('http') == -1>${ROOT_URL}</#if>${article.titleImage}"/>
 					</a>
 					<span>${article.subject}</span>
 				</li>

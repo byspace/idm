@@ -16,6 +16,7 @@ public class TreeData {
 	private int id;
 	private String text;
 	private String iconCls;
+	private String state;
 	private Map<String, String> attributes = new HashMap<String, String>();
 	private List<TreeData> children = new ArrayList<TreeData>();
 
@@ -33,6 +34,14 @@ public class TreeData {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public void setState(String state) {
+		this.state = state;
 	}
 
 	public String getText() {

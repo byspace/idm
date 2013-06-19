@@ -22,6 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -105,18 +106,18 @@ public class PanelInstanceController {
 	}
 
 	private void updateViewItemFilterList(PanelInstance panelInstance, HttpServletRequest request) {
-		List<ViewItemFilter> viewItemFilterList = panelInstance.getViewItemFilterList();
+		Set<ViewItemFilter> viewItemFilterList = panelInstance.getViewItemFilterList();
 		JSONArray jsonArray = JSONArray.fromObject(request.getParameter("viewItems"));
 		for (Object object : jsonArray) {
 			JSONObject jsonObject = (JSONObject) object;
-
-			if (!jsonObject.containsKey("id")) {
+			System.out.println(jsonObject.toString());
+			if (!hasDefineViewItem(panelInstance, jsonObject)) {
 				ViewItemFilter viewItemFilter = new ViewItemFilter();
 				updateViewItemFilter(viewItemFilter, jsonObject);
 				viewItemFilterList.add(viewItemFilter);
 			} else {
 				for (ViewItemFilter savedViewItemFilter : panelInstance.getViewItemFilterList()) {
-					if (savedViewItemFilter.getId() == jsonObject.getInt("id")) {
+					if (savedViewItemFilter.getViewItem().getId() == jsonObject.getInt("viewItemId")) {
 						updateViewItemFilter(savedViewItemFilter, jsonObject);
 					}
 				}
@@ -124,6 +125,17 @@ public class PanelInstanceController {
 		}
 
 		panelInstance.setViewItemFilterList(viewItemFilterList);
+	}
+
+	private boolean hasDefineViewItem(PanelInstance panelInstance, JSONObject jsonObject) {
+		for (ViewItemFilter viewItemFilter : panelInstance.getViewItemFilterList()) {
+			System.out.println(viewItemFilter.getViewItem().getId() + "-" + jsonObject.getInt("viewItemId"));
+			if (viewItemFilter.getViewItem().getId() == jsonObject.getInt("viewItemId")) {
+				return true;
+			}
+		}
+
+		return false;
 	}
 
 	private void updateViewItemFilter(ViewItemFilter viewItemFilter, JSONObject jsonObject) {

@@ -3,6 +3,11 @@
 <%@include file="../common/head.jsp"%>
 
 	<style>
+
+		body {
+			font-family: "Microsoft YaHei","Microsoft JhengHei",STHeiti,MingLiu;
+		}
+
 		.panel {
 			background: #FFF;
 			padding: 10px;
@@ -12,6 +17,7 @@
 		.panel .top {
 			height: 30px;
 			border-bottom: #209fa9 dotted 1px;
+			margin-bottom: 15px;
 		}
 		.panel .top .title {
 			float: left;
@@ -63,18 +69,67 @@
 			text-decoration: none;
 			color: #000;
 		}
+
+		.panel ul.list li a:hover {
+			text-decoration:underline;
+		}
+
+		.panel img {
+			cursor: pointer;
+		}
+		a {
+			color: black;
+		}
+
+		.imageContainer {
+		}
+
+		.imageContainer ul {
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+
+		.imageContainer li {
+			float: left;
+			margin: 10px;
+		}
+
+		.imageContainer ul li a {
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			text-decoration: none;
+			display: block;
+		}
+
+		.imageContainer ul li a:hover {
+			text-decoration: underline;
+
+		}
+
+
 	</style>
 
 </head>
 <body style="background-color: #d4d5d6">
 
-	<div>
-		<portal:panel panelCode="NC0001" width="300" height="380"></portal:panel>
+	<table cellpading=0 cellspacing=0 style="padding: 0px; margin: 0px;" >
+		<tr>
+			<td><portal:panel panelCode="BD0001" width="300" height="323"></portal:panel></td>
+			<td><portal:panel panelCode="BD0002" width="335" height="323"></portal:panel></td>
+			<td><portal:panel panelCode="BD0003" width="240" height="323"></portal:panel></td>
+		</tr>
 
-		<portal:panel panelCode="NC0002" width="338" height="380"></portal:panel>
-	</div>
-
-
+		<tr>
+			<td colspan="2">
+				<portal:panel panelCode="BD0004" width="665" height="380"></portal:panel>
+			</td>
+			<td>
+				<portal:panel panelCode="BD0005" width="240" height="380"></portal:panel>
+			</td>
+		</tr>
+	</table>
 
 </body>
 </html>

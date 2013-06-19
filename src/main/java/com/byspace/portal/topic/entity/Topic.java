@@ -37,6 +37,7 @@ public class Topic implements TreeMoveable {
 		treeData.setId(this.getId());
 		treeData.setText(this.getName());
 		treeData.setIconCls("");
+		treeData.setState("closed");
 
 		return treeData;
 	}

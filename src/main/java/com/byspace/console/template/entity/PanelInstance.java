@@ -3,9 +3,7 @@ package com.byspace.console.template.entity;
 import com.byspace.common.service.SimpleDataGridRow;
 
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -30,7 +28,8 @@ public class PanelInstance implements SimpleDataGridRow {
 	@ManyToOne(cascade = CascadeType.REFRESH)
 	private PanelTemplate panelTemplate;
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-	private List<ViewItemFilter> viewItemFilterList = new ArrayList<ViewItemFilter>();
+	@OrderBy("id ASC")
+	private Set<ViewItemFilter> viewItemFilterList = new TreeSet<ViewItemFilter>();
 	@Column(name = "detail")
 	@Lob
 	private String detail;
@@ -80,11 +79,11 @@ public class PanelInstance implements SimpleDataGridRow {
 		this.panelTemplate = panelTemplate;
 	}
 
-	public List<ViewItemFilter> getViewItemFilterList() {
+	public Set<ViewItemFilter> getViewItemFilterList() {
 		return viewItemFilterList;
 	}
 
-	public void setViewItemFilterList(List<ViewItemFilter> viewItemFilterList) {
+	public void setViewItemFilterList(Set<ViewItemFilter> viewItemFilterList) {
 		this.viewItemFilterList = viewItemFilterList;
 	}
 

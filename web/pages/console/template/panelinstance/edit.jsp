@@ -35,7 +35,7 @@
 		<tr>
 			<td>"更多"按钮链接:</td>
 			<td>
-				<input class="easyui-validatebox" type="text" value="${panelInstance.moreLink}" name="moreLink" id="moreLink" data-options="" style="width: 300px;"/>
+				<input class="easyui-validatebox" type="text" value="<c:if test="${panelInstance == null}">/portal/topic/list/TP</c:if><c:if test="${panelInstance != null}">${panelInstance.moreLink}</c:if>" name="moreLink" id="moreLink" data-options="" style="width: 300px;"/>
 			</td>
 		</tr>
 

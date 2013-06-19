@@ -42,7 +42,7 @@ function endEditing(){
 	if ($('#viewItemFilterDg').datagrid('validateRow', editIndex)){
 		var ed = $('#viewItemFilterDg').datagrid('getEditor', {index:editIndex,field:'topic'});
 		var type = $(ed.target).combotree('getText');
-		$('#viewItemFilterDg').datagrid('getRows')[editIndex]['typeName'] = type;
+		$('#viewItemFilterDg').datagrid('getRows')[editIndex]['topicName'] = type;
 		$('#viewItemFilterDg').datagrid('endEdit', editIndex);
 		editIndex = undefined;
 		return true;
@@ -80,7 +80,7 @@ function saveForm() {
 		"viewItems" : JSON.stringify($("#viewItemFilterDg").datagrid("getRows"))
 	}, function(data) {
 		if (data.result) {
-			//window.location.reload();
+			window.location.reload();
 		}
 
 		$.messager.alert("操作结果", data.message, "info");
