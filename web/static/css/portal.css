@@ -45,6 +45,9 @@ body {
 	margin-left: 6px;
 	line-height: 14px;
 	text-decoration: none;
+	overflow: hidden;
+	display: block;
+	text-overflow: ellipsis;
 }
 
 .panel ul.list {

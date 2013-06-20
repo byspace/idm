@@ -43,7 +43,7 @@
 		<tr>
 			<td>描述:</td>
 			<td>
-				<textarea id="detail" name="detail"  style="width: 300px; height: 200px;">${panelInstance.detail}</textarea>
+				<textarea id="detail" name="detail"  style="width: 300px; height: 70px;">${panelInstance.detail}</textarea>
 			</td>
 		</tr>
 
@@ -96,7 +96,7 @@
 		<tr>
 			<td>模板样式：</td>
 			<td>
-				<img id="templateImage" style="max-width: 400px; max-height: 300px;" src="<spring:url value="/static/images/template/${panelInstance.panelTemplate.code}.png"/>"/>
+				<img id="templateImage" style="max-width: 400px; max-height: 300px;" src="<c:if test="${panelInstance != null}"><spring:url value="/static/images/template/${panelInstance.panelTemplate.code}.png"/></c:if>"/>
 			</td>
 		</tr>
 		<tr>

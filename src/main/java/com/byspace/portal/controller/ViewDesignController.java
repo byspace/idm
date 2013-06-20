@@ -1,4 +1,4 @@
-package com.byspace.portal.viewdesign.controller;
+package com.byspace.portal.controller;
 
 import com.byspace.portal.topic.entity.Topic;
 import com.byspace.portal.topic.service.TopicService;
@@ -28,11 +28,7 @@ public class ViewDesignController {
 		Topic parentTopic = topicService.readTopicByCode("TP0003");
 		model.addAttribute("secondLevelTopicList", topicService.getTopicListByParentId(parentTopic.getId()));
 
-		List<Topic> topicList = topicService.getChildrenTopicByCode("TP0003");
-		for (Topic topic : topicList) {
-			model.addAttribute(topic.getCode() + "List", topicService.getArticleListUnderTopic(topic.getId(), 50));
-		}
 
-		return "portal/viewdesign/index";
+		return "portal/viewdesign";
 	}
 }

@@ -44,6 +44,11 @@ public class TopicServiceImpl implements TopicService {
 			TreeData treeData = topic.buildTreeData();
 			List<TreeData> childrenTreeDataList = this.getTopicTreeDataByParentId(topic.getId());
 			treeData.setChildren(childrenTreeDataList);
+
+			if (childrenTreeDataList.size() == 0) {
+				treeData.setState("open");
+			}
+
 			treeDataList.add(treeData);
 		}
 
@@ -60,6 +65,7 @@ public class TopicServiceImpl implements TopicService {
 		treeData.setText("根目录");
 		treeData.setIconCls("");
 		treeData.setChildren(this.getTopicTreeDataByParentId(0));
+		treeData.setState("open");
 
 		treeDataList.add(treeData);
 
