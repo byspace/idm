@@ -37,8 +37,8 @@
 				<li><a href="<spring:url value="/portal/buildingdesign/index"/>" onclick="" id="nav_buildingdesign">建筑设计</a></li>
 				<li><a href="<spring:url value="/portal/viewdesign/index"/>" onclick="" id="nav_landscapedesign">景观设计</a></li>
 				<li><a href="<spring:url value="/portal/roomdesign/index"/>" onclick="" id="nav_roomdesign">室内设计</a></li>
-				<li><a href="/column/effectmodel.shtml" onclick="" id="nav_effectmodel">效果图模型</a></li>
-				<li><a href="/column/developer.shtml" onclick="" id="nav_developers">开发商</a></li>
+				<li><a href="<spring:url value="/portal/effectmodel/index"/>" onclick="" id="nav_effectmodel">效果图模型</a></li>
+				<li><a href="<spring:url value="/portal/developer/index"/>" onclick="" id="nav_developers">开发商</a></li>
 				<li><a href="/membercenter/jobindex.shtml" onclick="" id="nav_job" target="_blank">人才招聘</a></li>
 				<li><a href="#" onclick="" id="nav_forum">论坛</a></li>
 			</ul>

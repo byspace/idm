@@ -11,20 +11,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created with IntelliJ IDEA.
  * User: Yangxu
  * Date: 13-6-20
- * Time: 下午3:18
+ * Time: 下午3:55
  */
 @Controller
-@RequestMapping("/portal/roomdesign")
-public class RoomDesignController {
+@RequestMapping("/portal/effectmodel")
+public class EffectModelController {
 
 	@Autowired
 	private TopicService topicService;
 
 	@RequestMapping("index")
 	public String index(Model model) {
-		Topic parentTopic = topicService.readTopicByCode("TP0004");
+
+		Topic parentTopic = topicService.readTopicByCode("TP0005");
 		model.addAttribute("secondLevelTopicList", topicService.getTopicListByParentId(parentTopic.getId()));
 
-		return "portal/roomdesign";
+		return "portal/effectmodel";
 	}
 }

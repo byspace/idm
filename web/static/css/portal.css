@@ -28,7 +28,9 @@ body {
 .panel .top .title span {
 	margin: 5px 0 0 10px;
 	display: inline-block;
-	font-weight: bold;
+	font-weight: bolder;
+	font-family: "黑体";
+	font-size: 15px;
 }
 
 .panel .top .more {

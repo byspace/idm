@@ -1,4 +1,4 @@
-<#assign leftImageWidth = width / 3 - 20 />
+<#assign leftImageWidth = width / 3 - 40 />
 
 <div class='panel' id="panel${UNIQUE_TAG}" style='width: ${width}px; height: ${height}px;'>
 	<div class='top'>
@@ -14,7 +14,7 @@
 		<table celpadding=0 cellspacing=0>
 			<tr>
 				<td rowspan="2" style="padding: 0px;">
-					<div class="imageContainer" style="width: ${width / 3 - 20}px; float: left; border-right: #CCC dotted 1px; padding: 0px 10px;">
+					<div class="imageContainer" style="width: ${leftImageWidth}px; float: left; border-right: #CCC dotted 1px; padding: 0px 10px;">
 						<ul>
 							<#list vi51 as article>
 								<li style="margin: 0px; padding-bottom: 5px;">
@@ -31,7 +31,7 @@
 				<td>
 					<div class="imageContainer" style="text-align: center">
 
-						<#assign imageWidth = width / 3 * 2 / 3 - 25 />
+						<#assign imageWidth = width / 3 * 2 / 3 - 15 />
 
 						<ul>
 							<#list vi52 as article>
@@ -50,7 +50,7 @@
 			<tr>
 
 				<td>
-					<div style="width: ${width * 2 / 3 - 30}px; float: left; padding: 0px 10px;">
+					<div style="width: ${width * 2 / 3 - 20}px; float: left; padding: 0px 10px;">
 
 						<ul class="list" style="float: left; width: ${width / 3 - 25}px; border-right: #CCC dotted 1px;">
 							<#list vi53 as article>
@@ -62,7 +62,7 @@
 							</#list>
 						</ul>
 
-						<ul class="list" style="float: left;  width: ${width / 3 - 25}px; margin-left: 10px">
+						<ul class="list" style="float: left;  width: ${width * 2 / 3 - 20}px; margin-left: 10px">
 							<#list vi53 as article>
 								<#if article_index gt 9>
 									<li>
