@@ -88,10 +88,7 @@ function saveForm() {
 }
 
 function changeTemplate(newValue) {
-	var rows = $("#viewItemFilterDg").datagrid("getRows");
-	for (var i = 0; i < rows.length; i++) {
-		$("#viewItemFilterDg").datagrid("deleteRow", $("#viewItemFilterDg").datagrid("getRowIndex", rows[i]));
-	}
+	$('#viewItemFilterDg').datagrid('loadData',{total:0,rows:[]});
 
 	if (newValue != 0) {
 		ajaxSubmit(getUrl("/console/template/readTemplate/" + newValue), {}, function(data){

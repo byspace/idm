@@ -102,4 +102,10 @@ public class TemplateServiceImpl implements TemplateService {
 		}
 	}
 
+	@Override
+	public void removeViewItemFilter(Set<ViewItemFilter> viewItemFilterSet) {
+		for (ViewItemFilter viewItemFilter : viewItemFilterSet) {
+			em.remove(viewItemFilter);
+		}
+	}
 }

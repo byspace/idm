@@ -3,8 +3,10 @@ package com.byspace.console.template.service;
 import com.byspace.console.template.entity.PanelInstance;
 import com.byspace.console.template.entity.PanelTemplate;
 import com.byspace.console.template.entity.ViewItem;
+import com.byspace.console.template.entity.ViewItemFilter;
 
 import java.util.List;
+import java.util.Set;
 
 /**
  * Created with IntelliJ IDEA.
@@ -71,4 +73,10 @@ public interface TemplateService {
 	 * @param idList
 	 */
 	public void batchDeletePanelInstance(List<Integer> idList);
+
+	/**
+	 * remove view item filter list
+	 * @param viewItemFilterSet
+	 */
+	public void removeViewItemFilter(Set<ViewItemFilter> viewItemFilterSet);
 }

@@ -19,10 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -94,6 +91,8 @@ public class PanelInstanceController {
 			panelInstance.setPanelTemplate(templateService.readPanelTemplateById(Integer.parseInt(request.getParameter("templateId"))));
 			panelInstance.setDetail(request.getParameter("detail"));
 
+			Set<ViewItemFilter> oldViewItemFilterSet = panelInstance.getViewItemFilterList();
+
 			updateViewItemFilterList(panelInstance, request);
 
 			templateService.savePanelInstance(panelInstance);
@@ -106,7 +105,18 @@ public class PanelInstanceController {
 	}
 
 	private void updateViewItemFilterList(PanelInstance panelInstance, HttpServletRequest request) {
-		Set<ViewItemFilter> viewItemFilterList = panelInstance.getViewItemFilterList();
+
+		Set<ViewItemFilter> viewItemFilterList = new TreeSet<ViewItemFilter>();
+		JSONArray jsonArray = JSONArray.fromObject(request.getParameter("viewItems"));
+		for (Object object : jsonArray) {
+			JSONObject jsonObject = (JSONObject) object;
+			ViewItemFilter viewItemFilter = new ViewItemFilter();
+			updateViewItemFilter(viewItemFilter, jsonObject);
+			viewItemFilterList.add(viewItemFilter);
+		}
+
+
+		/*Set<ViewItemFilter> viewItemFilterList = panelInstance.getViewItemFilterList();
 		JSONArray jsonArray = JSONArray.fromObject(request.getParameter("viewItems"));
 		for (Object object : jsonArray) {
 			JSONObject jsonObject = (JSONObject) object;
@@ -122,7 +132,7 @@ public class PanelInstanceController {
 					}
 				}
 			}
-		}
+		}*/
 
 		panelInstance.setViewItemFilterList(viewItemFilterList);
 	}
