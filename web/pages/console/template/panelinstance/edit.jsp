@@ -31,6 +31,12 @@
 				</select>
 			</td>
 		</tr>
+		<tr>
+			<td>模板样式：</td>
+			<td>
+				<img id="templateImage" style="max-width: 400px; max-height: 300px;" src="<spring:url value="/static/images/template/${panelInstance.panelTemplate.code}.png"/>"/>
+			</td>
+		</tr>
 
 		<tr>
 			<td>"更多"按钮链接:</td>

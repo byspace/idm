@@ -95,6 +95,10 @@ function changeTemplate(newValue) {
 
 	if (newValue != 0) {
 		ajaxSubmit(getUrl("/console/template/readTemplate/" + newValue), {}, function(data){
+
+			$("#templateImage").attr("src", getUrl("/static/images/template/" + data.code + ".png"));
+			console.log(getUrl("/static/images/template/" + data.code + ".png"));
+
 			var viewItemList = data.viewItemList;
 			for (var i = 0; i < viewItemList.length; i++) {
 				var viewItem = viewItemList[i];

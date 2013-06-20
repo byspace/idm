@@ -1,4 +1,4 @@
-package com.byspace.portal.buildingdesign.controller;
+package com.byspace.portal.controller;
 
 import com.byspace.portal.topic.entity.Topic;
 import com.byspace.portal.topic.service.TopicService;
@@ -28,22 +28,6 @@ public class BuildingDesignController {
 		Topic parentTopic = topicService.readTopicByCode("TP0002");
 		model.addAttribute("secondLevelTopicList", topicService.getTopicListByParentId(parentTopic.getId()));
 
-		List<Topic> topicList = topicService.getChildrenTopicByCode("TP0002");
-		for (Topic topic : topicList) {
-			model.addAttribute(topic.getCode() + "List", topicService.getArticleListUnderTopic(topic.getId(), 50));
-		}
-
-		setPhotos(model);
-		setThesis(model);
-
-		return "portal/buildingdesign/index";
-	}
-
-	private void setPhotos(Model model) {
-		model.addAttribute("photoList", topicService.getArticleListUnderTopic(44, 20));
-	}
-
-	private void setThesis(Model model) {
-		model.addAttribute("thesisList", topicService.getArticleListUnderTopic(43, 15));
+		return "portal/buildingdesign";
 	}
 }
