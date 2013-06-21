@@ -27,6 +27,7 @@
 					<option <c:if test="${panelTemplate.type == 'titleList'}">selected</c:if> value="titleList">标题列表</option>
 					<option <c:if test="${panelTemplate.type == 'pictureList'}">selected</c:if> value="pictureList">图片列表</option>
 					<option <c:if test="${panelTemplate.type == 'pictureAndTitle'}">selected</c:if> value="pictureAndTitle">图片文字混排列表</option>
+					<option <c:if test="${panelTemplate.type == 'tabs'}">selected</c:if> value="tabs">标签页</option>
 				</select>
 			</td>
 		</tr>

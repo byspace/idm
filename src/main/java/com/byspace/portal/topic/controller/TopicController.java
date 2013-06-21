@@ -40,6 +40,15 @@ public class TopicController {
 		return "portal/topic/index";
 	}
 
+	@RequestMapping("topicIndex/{code}")
+	public String topicIndex(@PathVariable("code")String code, Model model) {
+
+		Topic parentTopic = topicService.readTopicByCode(code);
+		model.addAttribute("secondLevelTopicList", topicService.getTopicListByParentId(parentTopic.getId()));
+
+		return "portal/topic/" + code;
+	}
+
 	@RequestMapping("getTopicTreeDataByParentId/{parentTopicId}")
 	@ResponseBody
 	public List<TreeData> getTopicTreeDataByParentId(@PathVariable("parentTopicId")int parentTopicId) {

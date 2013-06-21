@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ include file="../common/head.jsp" %>
+<%@ include file="../common/portal_head.jsp" %>
 
+<%--
 <script type="text/javascript" src="<spring:url value="/static/script/portal/index.js" />"></script>
 <script type="text/javascript" src="<spring:url value="/static/script/portal/tab_nav.js" />"></script>
 <script type="text/javascript" src="<spring:url value="/static/script/portal/javaScrip.js" />"></script>
@@ -10,6 +11,10 @@
 
 <link rel="stylesheet" href="<spring:url value="/static/css/portal/mid.css"/>" type="text/css" />
 <link rel="stylesheet" href="<spring:url value="/static/css/portal/tab.css"/>" type="text/css" />
+--%>
+
+
+<link rel="stylesheet" href="<spring:url value="/static/css/portal.css"/>" type="text/css" />
 
 <body>
 
@@ -18,8 +23,61 @@
 <input type="hidden" id="currentTopic" value="首页"/>
 
 <div class="container">
-	<div class="main">
-		<%--<div id="flash01">
+
+	<table cellpadding=0 cellspacint=0>
+		<tr>
+			<td>
+				<portal:panel panelCode="MP0001" width="300" height="323"></portal:panel>
+			</td>
+			<td>
+				<portal:panel panelCode="MP0002" width="325" height="323"></portal:panel>
+			</td>
+			<td></td>
+		</tr>
+
+		<tr>
+			<td colspan="2">
+				<portal:panel panelCode="MP0004" width="665" height="265"></portal:panel>
+			</td>
+			<td>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">
+				<portal:panel panelCode="MP0006" width="665" height="265"></portal:panel>
+			</td>
+			<td>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">
+				<portal:panel panelCode="MP0008" width="665" height="265"></portal:panel>
+			</td>
+			<td>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">
+				<portal:panel panelCode="MP0010" width="665" height="265"></portal:panel>
+			</td>
+			<td>
+			</td>
+		</tr>
+
+		<tr>
+			<td colspan="2">
+				<portal:panel panelCode="MP0012" width="665" height="265"></portal:panel>
+			</td>
+			<td>
+			</td>
+		</tr>
+	</table>
+
+<%--	<div class="main">
+		&lt;%&ndash;<div id="flash01">
 			<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" id="zishu" style="RIGHT: -310px; POSITION: absolute; TOP: 0px" align="center" src="flash674.swf" width="300" height="800 ">
 				<param name="movie" value="flash674.swf"> <!-- ie读取-->
 				<param name="quality" value="high">
@@ -32,7 +90,7 @@
 				<param name="quality" value="high">
 				<embed align="center" src="flash673.swf" width="300" height="800 " type="application/x-shockwave-flash" wmode="transparent" quality="high">
 			</object>
-		</div>--%>
+		</div>&ndash;%&gt;
 
 
 		<div class="con_top">
@@ -645,7 +703,7 @@
 		</ul>
 	</div>
 </div>
-</div>
+</div>--%>
 </div>
 
 <%@ include file="bottom.jsp"%>

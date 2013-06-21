@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ include file="../../common/head.jsp" %>
+<%@ include file="../../common/portal_head.jsp" %>
 
 <script type="text/javascript" src="<spring:url value="/static/script/portal/topic/listArticle.js" />"></script>
 <link rel="stylesheet" href="<spring:url value="/static/css/portal/sub.css"/>" type="text/css" />

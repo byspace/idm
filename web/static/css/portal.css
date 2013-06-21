@@ -31,6 +31,7 @@ body {
 	font-weight: bolder;
 	font-family: "黑体";
 	font-size: 15px;
+	color: #399b9a;
 }
 
 .panel .top .more {
@@ -40,11 +41,13 @@ body {
 	display: block;
 	padding-top: 3px;
 	padding-left: 5px;
+
 }
 .panel .top .more a {
 	font-size: 12px;
-	color: #FFFFFF;
+	color: #399b9a;
 	margin-left: 6px;
+	margin-top: 5px;
 	line-height: 14px;
 	text-decoration: none;
 	overflow: hidden;
@@ -112,4 +115,24 @@ a {
 .imageContainer ul li a:hover {
 	text-decoration: underline;
 
+}
+
+.panel .tabs .tabTitles li {
+	list-style: none;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.panel .tabs .tabTitles li a {
+	padding: 5px 15px;
+
+	text-decoration: none;
+}
+
+.panel .tabs > div {
+	clear: left;
+}
+
+.panel .tabTitles .selected {
+	border-top: 2px solid #206F96;
 }

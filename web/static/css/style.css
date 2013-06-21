@@ -2,3 +2,12 @@ body {
 	font-family: "Microsoft YaHei","Microsoft JhengHei",STHeiti,MingLiu;
 	font-size: 12px;
 }
+
+input {
+	font-family: "Microsoft YaHei","Microsoft JhengHei",STHeiti,MingLiu;
+}
+
+textarea {
+	font-family: "Microsoft YaHei","Microsoft JhengHei",STHeiti,MingLiu;
+	font-size: 12px;
+}

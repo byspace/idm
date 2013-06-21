@@ -8,6 +8,9 @@ var viewItemTypes = [{
 },{
 	label: 'picture-list',
 	detail: '图片列表'
+},{
+	label: 'topic-list',
+	detail: '栏目列表'
 }];
 
 function onClickRow(index){

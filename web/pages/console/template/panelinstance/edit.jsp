@@ -61,7 +61,7 @@
 						<tr>
 							<th data-options="field:'id',width:80">ID</th>
 							<th data-options="field:'topic',width:150,editor:{type:'combotree',options:{
-									url:'<spring:url value="/portal/topic/getTopicTreeDataByParentId/0" />'
+									url:'<spring:url value="/portal/topic/getTopicTreeDataWithRoot" />'
 								}},formatter:function(value,row){
 									return row.topicName;
 								},">栏目</th>

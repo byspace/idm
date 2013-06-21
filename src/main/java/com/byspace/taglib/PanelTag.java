@@ -4,6 +4,7 @@ import com.byspace.portal.article.entity.Article;
 import com.byspace.console.template.entity.PanelInstance;
 import com.byspace.console.template.entity.ViewItem;
 import com.byspace.console.template.entity.ViewItemFilter;
+import com.byspace.portal.topic.entity.Topic;
 import com.byspace.util.CustomLogger;
 import com.byspace.util.DateUtils;
 import com.byspace.util.Md5Utils;
@@ -41,10 +42,24 @@ public class PanelTag extends BasicTag {
 			variables.put("moreLink", getUrl(panelInstance.getMoreLink()));
 
 			for (ViewItemFilter viewItemFilter : panelInstance.getViewItemFilterList()) {
+
 				ViewItem viewItem = viewItemFilter.getViewItem();
 
-				List<Article> articleList = topicService.getArticleListByTopicAndKey(viewItemFilter.getTopic().getCode(), viewItemFilter.getKey(), viewItem.getSize());
-				variables.put("vi" + viewItem.getId(), articleList);
+				if (viewItem.getType().equals("topic-list")) {
+					List<Topic> topicList = topicService.getTopicListByParentId(viewItemFilter.getTopic().getId());
+					variables.put("vi" + viewItem.getId(), topicList);
+				} else {
+					List<Article> articleList = topicService.getArticleListByTopicAndKey(viewItemFilter.getTopic().getCode(), viewItemFilter.getKey(), viewItem.getSize());
+					variables.put("vi" + viewItem.getId(), articleList);
+				}
+
+
+
+				if (panelInstance.getPanelTemplate().getType().equals("tabs")) {
+					variables.put("vi" + viewItem.getId() + "_title", viewItemFilter.getTopic().getName());
+				}
+
+
 			}
 
 			String path = "/pages/portal/panel/template/" + panelInstance.getPanelTemplate().getCode() + ".jsp";

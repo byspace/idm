@@ -1,0 +1,4 @@
+
+function submit() {
+	registerForm.submit();
+}

@@ -5,8 +5,8 @@
 		<div class='title' style="background: url('${ROOT_URL}/static/img/icon01.png') no-repeat top left;">
 			<span>${title}</span>
 		</div>
-		<div class='more' style="background: url('${ROOT_URL}/static/img/btn_bg01.png') no-repeat;">
-			<a href='${moreLink}'>更多</a>
+		<div class='more'>
+			<a href='${moreLink}'>+更多</a>
 		</div>
 	</div>
 	<div class='content'>
