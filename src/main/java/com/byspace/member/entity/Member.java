@@ -11,18 +11,23 @@ import java.util.Date;
  */
 @Entity
 @Table(name = "mem_member")
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 public class Member {
 
 	@Id
 	@GeneratedValue
-	private int id;
+	protected int id;
 	@Column(name = "username")
-	private String userName;
+	protected String userName;
 	@Column(name = "password")
-	private String password;
+	protected String password;
 	@Column(name = "email")
-	private String email;
-
+	protected String email;
+	@Column(name = "name")
+	protected String name;
+	@Column(name = "introduction")
+	@Lob
+	protected String introduction;
 	@Column(name = "regist_date")
 	private Date registDate;
 
@@ -64,5 +69,13 @@ public class Member {
 
 	public void setRegistDate(Date registDate) {
 		this.registDate = registDate;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 }
