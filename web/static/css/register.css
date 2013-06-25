@@ -23,7 +23,7 @@
 }
 
 .regsiter_lbzt {
-	height: 285px;
+	padding-bottom: 50px;
 	margin: 0 auto;
 	width: 570px;
 }
@@ -52,6 +52,20 @@
 	height: 30px;
 	line-height: 30px;
 	width: 260px;
+}
+
+
+.regsiter_lbzt .text {
+	border: 1px solid #DDDDDD;
+	height: 30px;
+	line-height: 30px;
+	width: 260px;
+}
+
+.regsiter_lbzt .label {
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
 }
 
 
@@ -131,4 +145,30 @@
 	height: 35px;
 	line-height: 35px;
 	width: 377px;
+}
+
+.complete {
+	text-align: center;
+	margin-top: 30px;
+	margin-bottom: 40px;
+	color: #444444;
+	font-size: 22px;
+}
+
+.complete_hy {
+	margin: 0 auto;
+	width: 194px;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+	background: #ef7e05;
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	border: 1px solid #e07400;
+}
+
+.complete_hy a {
+	color: #fff;
+	text-decoration: none;
 }

@@ -16,20 +16,31 @@ public class PersonalMember extends Member {
 
 	@Column(name = "sex")
 	private String sex;
+	@Column(name = "country")
+	private String country;
 	@Column(name = "province")
 	private String province;
 	@Column(name = "city")
 	private String city;
 	@Column(name = "address")
 	private String address;
-	@Column(name = "mobile")
+	@Column(name = "phone")
 	private String phone;
 	@Column(name = "mobile")
 	private String mobile;
-	@ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
-	private PersonalWorkType personalWorkType;
+	@ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+	private Set<PersonalWorkType> personalWorkTypeSet = new HashSet<PersonalWorkType>();
 	@ManyToMany(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
 	private Set<PersonalDesignType> personalDesignTypeSet = new HashSet<PersonalDesignType>();
+
+	public static PersonalMember buildFromMember(Member member) {
+		PersonalMember personalMember = new PersonalMember();
+		personalMember.setUserName(member.getUserName());
+		personalMember.setPassword(member.getPassword());
+		personalMember.setEmail(member.getEmail());
+
+		return personalMember;
+	}
 
 	public String getSex() {
 		return sex;
@@ -79,12 +90,12 @@ public class PersonalMember extends Member {
 		this.mobile = mobile;
 	}
 
-	public PersonalWorkType getPersonalWorkType() {
-		return personalWorkType;
+	public Set<PersonalWorkType> getPersonalWorkTypeSet() {
+		return personalWorkTypeSet;
 	}
 
-	public void setPersonalWorkType(PersonalWorkType personalWorkType) {
-		this.personalWorkType = personalWorkType;
+	public void setPersonalWorkTypeSet(Set<PersonalWorkType> personalWorkTypeSet) {
+		this.personalWorkTypeSet = personalWorkTypeSet;
 	}
 
 	public Set<PersonalDesignType> getPersonalDesignTypeSet() {
@@ -93,5 +104,13 @@ public class PersonalMember extends Member {
 
 	public void setPersonalDesignTypeSet(Set<PersonalDesignType> personalDesignTypeSet) {
 		this.personalDesignTypeSet = personalDesignTypeSet;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 }

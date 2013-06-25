@@ -25,6 +25,16 @@ public class EnterpriseMember extends Member {
 	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	private Set<EnterpriseContact> enterpriseContactSet = new TreeSet<EnterpriseContact>();
 
+	public static EnterpriseMember buildEnterpriseType(Member member) {
+		EnterpriseMember enterpriseMember = new EnterpriseMember();
+
+		enterpriseMember.setUserName(member.getUserName());
+		enterpriseMember.setPassword(member.getPassword());
+		enterpriseMember.setEmail(member.getEmail());
+
+		return enterpriseMember;
+	}
+
 	public String getLogo() {
 		return logo;
 	}

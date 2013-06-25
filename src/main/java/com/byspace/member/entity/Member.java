@@ -30,6 +30,8 @@ public class Member {
 	protected String introduction;
 	@Column(name = "regist_date")
 	private Date registDate;
+	@Column(name = "active")
+	private boolean active;
 
 	public int getId() {
 		return id;
@@ -77,5 +79,21 @@ public class Member {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public String getIntroduction() {
+		return introduction;
+	}
+
+	public void setIntroduction(String introduction) {
+		this.introduction = introduction;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 }
