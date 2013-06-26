@@ -71,4 +71,11 @@ public interface MemberService {
 	 * @return
 	 */
 	public EnterpriseType getEnterPriseTypeById(int id);
+
+	/**
+	 * 判断用户名是否存在
+	 * @param username
+	 * @return
+	 */
+	public boolean userNameExist(String username);
 }

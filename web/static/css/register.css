@@ -60,12 +60,20 @@
 	height: 30px;
 	line-height: 30px;
 	width: 260px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.regsiter_lbzt .error {
+	border: 1px solid #ff0000;
 }
 
 .regsiter_lbzt .label {
 	height: 30px;
 	line-height: 30px;
-	font-size: 15px;
+	font-size: 14px;
+	text-align: right;
+	padding-right: 15px;
 }
 
 
@@ -171,4 +179,18 @@
 .complete_hy a {
 	color: #fff;
 	text-decoration: none;
+}
+
+.registTable {
+	padding-top: 30px;
+}
+
+.registTable td {
+	padding: 5px 20px;
+	vertical-align: middle;
+}
+
+.contentTable td {
+	padding: 5px 20px;
+	font-size: 13px;
 }

@@ -14,6 +14,13 @@ public class SecurityCode {
 	private Date createDate;
 	private double timeoutSeconds;
 
+	public boolean isTimeOut() {
+		long create = createDate.getTime();
+		long now = new Date().getTime();
+
+		return (now - create) > timeoutSeconds * 1000;
+	}
+
 	public String getCode() {
 		return code;
 	}

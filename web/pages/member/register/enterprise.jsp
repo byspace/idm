@@ -1,10 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ include file="../../common/portal_head.jsp" %>
+
+<script type="text/javascript" charset="utf-8">
+	window.UEDITOR_HOME_URL = getUrl("/static/script/ueditor/");
+</script>
+
+<script type="text/javascript" src="<spring:url value="/static/script/ueditor/ueditor.config.js" />"></script>
+<script type="text/javascript" src="<spring:url value="/static/script/ueditor/ueditor.all.min.js" />"></script>
+<script type="text/javascript" src="<spring:url value="/static/script/uploadify/jquery.uploadify.min.js" />"></script>
+
 <script type="text/javascript" src="<spring:url value="/static/script/country.js"/>"></script>
 <script type="text/javascript" src="<spring:url value="/static/script/member/register/enterprise.js"/>"></script>
 
 <link rel="stylesheet" href="<spring:url value="/static/css/portal.css"/>" type="text/css" />
 <link rel="stylesheet" href="<spring:url value="/static/css/register.css"/>" type="text/css" />
+<link rel="stylesheet" href="<spring:url value="/static/script/uploadify/uploadify.css"/>" type="text/css" />
 
 <body>
 
@@ -23,17 +33,20 @@
 
 <form id="registerForm" name="registerForm" action="<spring:url value="/member/register/enterpriseCommit"/>">
 
-<div class="regsiter_lbzt">
-	<div class="regsiter_lbzt" style="width: 750px;">
+	<div class="regsiter_lbzt" style="width: 750px; padding-top: 30px;">
 
-		<table width="100%">
+		<table class="contentTable" width="100%">
 			<tr>
 				<td width="20%" class="label">公司名称:</td>
 				<td><input class="text" type="text" name="name" id="name" size="100" maxlength="100"></td>
 			</tr>
 			<tr>
 				<td class="label">公司Logo:</td>
-				<td></td>
+				<td>
+					<div id="logoDiv"><img id="logoImage" width="100" height="50" style="display: none"/></div>
+					<input type="hidden" id="logo" name="logo" />
+					<input type="file" name="uploadify" id="file_upload" />
+				</td>
 			</tr>
 
 			<tr>
@@ -104,7 +117,7 @@
 			<tr>
 				<td class="label">公司详细介绍:</td>
 				<td>
-					<textarea style="border: 1px solid #DDDDDD;" name="introduction" id="introduction" cols="65" rows="15"></textarea>
+					<textarea style="border: 1px solid #DDDDDD;" name="detail" id="detail" cols="65" rows="15"></textarea>
 				</td>
 			</tr>
 		</table>
@@ -115,7 +128,6 @@
 
 	</div>
 
-</div>
 
 </form>
 </div>

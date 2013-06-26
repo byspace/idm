@@ -24,12 +24,15 @@
 
 <form id="registerForm" name="registerForm" action="<spring:url value="/member/register/personalCommit"/>">
 
-	<div class="regsiter_lbzt" style="width: 750px;">
+	<div class="regsiter_lbzt" style="width: 750px; padding-top: 30px;">
 
-		<table width="100%">
+		<table class="contentTable" width="100%">
 			<tr>
-				<td width="20%" class="label">姓名:</td>
-				<td><input class="text" type="text" name="name" id="name" size="21" maxlength="20"></td>
+				<td width="20%" class="label"><span style="color: red">*</span>姓名:</td>
+				<td>
+					<input class="text" type="text" name="name" id="name" size="21" maxlength="20">
+					<span class="checkResult"></span>
+				</td>
 			</tr>
 			<tr>
 				<td class="label">性别:</td>
@@ -48,8 +51,11 @@
 				<td><input class="text" type="text" style="width:400px;" name="address" id="address" size="255" maxlength="255"></td>
 			</tr>
 			<tr>
-				<td class="label">手机:</td>
-				<td><input class="text" type="text" name="mobile" id="mobile" size="21" maxlength="20"></td>
+				<td class="label"><span style="color: red">*</span>手机:</td>
+				<td>
+					<input class="text" type="text" name="mobile" id="mobile" size="21" maxlength="20">
+					<span class="checkResult"></span>
+				</td>
 			</tr>
 			<tr>
 				<td class="label">固定电话:</td>
@@ -70,7 +76,7 @@
 				<td>
 					<input type="hidden" id="personalDesignType" name="personalDesignType"/>
 					<c:forEach items="${personalDesignTypeList}" var="personalDesignType" varStatus="status">
-						<input type="checkbox" class="designTypeBox" onchange="setDesignType()" value="${personalDesignType.id}" />${personalDesignType.name}&nbsp;
+						<input style="margin-bottom: 10px;" type="checkbox" class="designTypeBox" onchange="setDesignType()" value="${personalDesignType.id}" />${personalDesignType.name}&nbsp;
 						<c:if test="${status.index % 3 == 2}"><br /></c:if>
 					</c:forEach>
 				</td>
@@ -84,7 +90,7 @@
 		</table>
 
 		<p class="regsiter_ansj">
-			<input type="button" value="下一步" class="regsiter_bot" onclick="submit()" style="background: url('<spring:url value="/static/img/member/zcyjbot.gif"/>') no-repeat scroll left center transparent;">
+			<input type="button" value="下一步" class="regsiter_bot" onclick="submitForm()" style="background: url('<spring:url value="/static/img/member/zcyjbot.gif"/>') no-repeat scroll left center transparent;">
 		</p>
 
 	</div>

@@ -24,40 +24,71 @@
 	<form id="registerForm" name="registerForm" action="<spring:url value="/member/register/step1Commit"/>">
 
 	<div class="regsiter_lbzt">
-		<div class="regsiter_list">
-			<p class="list_zh"><span>登陆账号:</span><input type="text" name="username" size="21" maxlength="20" v_name="登陆账号" v_type="string" v_maxlength="20" v_minlength="4" v_must="1"></p>
-			<p class="list_ts"><img src="<spring:url value="/static/img/member/zcts.gif"/>" width="16" height="16"><span>允许4-20个中文字符、英文字符或数字组成的字符串</span></p>
 
-		</div>
-		<div class="regsiter_list">
-			<p class="list_zh"><span>设置密码:</span><input type="password" name="password" maxlength="16" v_name="设置密码" v_type="0_9" v_maxlength="15" v_minlength="6" v_must="1"></p>
-			<p class="list_ts"><img src="<spring:url value="/static/img/member/zcts.gif"/>" width="16" height="16"><span>请设置长度为6-15位的密码</span></p>
+		<table class="registTable">
+			<tr>
+				<td>登陆账号:</td>
+				<td>
+					<input class="text" type="text" name="username" id="username" size="21" maxlength="20"/>
+					<span class="checkResult"></span>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>允许4-20个英文字符、数字或下划线组成的字符串</td>
+			</tr>
+			<tr>
+				<td>设置密码:</td>
+				<td>
+					<input class="text" type="password" name="password" id="password" maxlength="16" />
+					<span class="checkResult"></span>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>请设置长度为6-15位的密码</td>
+			</tr>
+			<tr>
+				<td>确认密码:</td>
+				<td>
+					<input class="text" type="password" name="pwd_retry" id="pwd_retry" maxlength="16" />
+					<span class="checkResult"></span>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>重复输入密码</td>
+			</tr>
+			<tr>
+				<td>电子邮箱:</td>
+				<td>
+					<input class="text" type="text" name="email" id="email" />
+					<span class="checkResult"></span>
+				</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>请填写有效的电子邮箱</td>
+			</tr>
+			<tr>
+				<td>验证码:</td>
+				<td>
+					<input class="text" type="text" name="securityCode" id="securityCodeInput" style="width: 70px;" />
+					<span class="checkResult"></span>
+					<img style="padding-top: 10px;" id="securityCode" src="<spring:url value="/member/register/getSecurityCode/0"/>" width="70" height="25">
+					<span>看不清?<a href="javascript:changeSecurityCode()">换一张</a></span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<p class="regsiter_ansj">
+						<input type="button" value="同意协议并注册" class="regsiter_bot" onclick="submitRegister()" style="background: url('<spring:url value="/static/img/member/zcyjbot.gif"/>') no-repeat scroll left center transparent;">
+						<span>已注册立即<a href="#">登陆</a></span>
+					</p>
+				</td>
+			</tr>
 
-		</div>
-		<div class="regsiter_list">
-			<p class="list_zh"><span>确认密码:</span><input type="password" name="pwd_retry" maxlength="16" v_name="确认密码" v_type="0_9" v_maxlength="15" v_minlength="6" v_must="1"></p>
-			<p class="list_ts"><img src="<spring:url value="/static/img/member/zcts.gif"/>" width="16" height="16"><span>重复输入密码</span></p>
-
-		</div>
-		<div class="regsiter_list">
-			<p class="list_zh"><span>电子邮箱:</span><input type="text" name="email" v_name="电子邮箱" v_type="email" v_maxlength="60" v_minlength="0" v_must="1/"></p>
-			<p class="list_ts"><img src="<spring:url value="/static/img/member/zcts.gif"/>" width="16" height="16"><span>请填写有效的电子邮箱</span></p>
-
-		</div>
-		<div class="regsiter_list">
-			<p class="list_zh">
-				<span style="padding-left:12px;">验证码:</span>
-				<input type="text" name="securityCode" v_name="验证码" v_type="string" v_maxlength="4" v_minlength="4" v_must="1" class="regiter_yzm" />
-			</p>
-			<p class="list_yamxs">
-				<img id="securityCode" src="<spring:url value="/member/register/getSecurityCode/0"/>" width="70" height="25">
-				<span>看不清?<a href="javascript:changeSecurityCode()">换一张</a></span>
-			</p>
-		</div>
-		<p class="regsiter_ansj">
-			<input type="button" value="同意协议并注册" class="regsiter_bot" onclick="submit()" style="background: url('<spring:url value="/static/img/member/zcyjbot.gif"/>') no-repeat scroll left center transparent;">
-			<span>已注册立即<a href="#">登陆</a></span>
-		</p>
+		</table>
 
 	</div>
 

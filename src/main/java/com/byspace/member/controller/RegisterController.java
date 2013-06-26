@@ -1,12 +1,10 @@
 package com.byspace.member.controller;
 
+import com.byspace.common.po.JsonResult;
 import com.byspace.member.entity.*;
 import com.byspace.member.po.SecurityCode;
 import com.byspace.member.service.MemberService;
-import com.byspace.util.CustomLogger;
-import com.byspace.util.Md5Utils;
-import com.byspace.util.PropertyLoader;
-import com.byspace.util.SecurityCodeCreator;
+import com.byspace.util.*;
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 import org.apache.commons.beanutils.PropertyUtils;
@@ -17,16 +15,17 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.awt.image.BufferedImage;
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 /**
@@ -42,6 +41,7 @@ public class RegisterController {
 	private static final String REGISTER_STEP_SESSION_KEY = "regist_step";
 	private static final String REGISTER_MEMBER_TYPE_SESSION_KEY = "regist_member_type";
 	private static final String REGISTER_MEMBER_KEY = "regist_member";
+	private static final String REGISTER_SECURITY_CODE_KEY = "register_secutiry_code";
 
 	@Autowired
 	private MemberService memberService;
@@ -58,7 +58,7 @@ public class RegisterController {
 	}
 
 	@RequestMapping("step1")
-	public String step1() {
+	public String step1(HttpServletRequest request) {
 		return "/member/register/step1";
 	}
 
@@ -77,7 +77,7 @@ public class RegisterController {
 	}
 
 	@RequestMapping("step2")
-	public String step2() {
+	public String step2(HttpServletRequest request) {
 		return "/member/register/step2";
 	}
 
@@ -175,6 +175,7 @@ public class RegisterController {
 		enterpriseMember.setMainPage(request.getParameter("mainPage"));
 		enterpriseMember.setDetail(request.getParameter("detail"));
 		enterpriseMember.setIntroduction(request.getParameter("introduction"));
+		enterpriseMember.setLogo(request.getParameter("logo"));
 		enterpriseMember.setRegistDate(new Date());
 		enterpriseMember.setActive(true);
 
@@ -207,6 +208,7 @@ public class RegisterController {
 
 	@RequestMapping("step4")
 	public String step4(HttpServletRequest request) {
+
 		request.getSession().removeAttribute(REGISTER_STEP_SESSION_KEY);
 		return "/member/register/step4";
 	}
@@ -239,6 +241,8 @@ public class RegisterController {
 		securityCode.setCreateDate(new Date());
 		securityCode.setTimeoutSeconds(Double.parseDouble(PropertyLoader.readConfigProperty("security.code.timeout")));
 
+		request.getSession().setAttribute(REGISTER_SECURITY_CODE_KEY, securityCode);
+
 		try {
 			request.getSession().setAttribute("security_code", securityCode);
 			response.setContentType("image/jpeg");
@@ -250,5 +254,76 @@ public class RegisterController {
 		} catch (IOException e) {
 			CustomLogger.error(e, this);
 		}
+	}
+
+	@RequestMapping("checkUsername/{username}")
+	@ResponseBody
+	public String checkUsername(@PathVariable("username")String username) {
+		if (memberService.userNameExist(username)) {
+			return "exist";
+		} else {
+			return "notExist";
+		}
+	}
+
+	@RequestMapping("checkSecurityCode/{code}")
+	@ResponseBody
+	public JsonResult checkSecurityCode(@PathVariable("code")String code, HttpServletRequest request) {
+
+		JsonResult jsonResult = new JsonResult();
+
+		code = Md5Utils.encode(code);
+		SecurityCode securityCode = (SecurityCode) request.getSession().getAttribute(REGISTER_SECURITY_CODE_KEY);
+
+		if (securityCode.isTimeOut()) {
+			jsonResult.setResult(false);
+			jsonResult.setMessage("验证码超时");
+		} else if (!securityCode.getCode().equals(code)) {
+			jsonResult.setResult(false);
+			jsonResult.setMessage("验证码错误");
+		} else {
+			jsonResult.setResult(true);
+		}
+
+		return jsonResult;
+	}
+
+	@RequestMapping("uploadLogo")
+	@ResponseBody
+	public String uploadLogo(HttpServletRequest request, HttpServletResponse response) {
+		try {
+			MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
+			Map<String, MultipartFile> fileMap = multipartHttpServletRequest.getFileMap();
+
+			String dir = DirectoryUtil.getStaticDir() + "/upload/logo/";
+			File directory = new File(dir);
+			if (!directory.exists()) {
+				directory.mkdirs();
+			}
+
+			for (String key : fileMap.keySet()) {
+				MultipartFile multipartFile = fileMap.get(key);
+
+				String source = request.getRemoteAddr() + DateUtils.getCurrentTime();
+
+				String oriName = multipartFile.getOriginalFilename();
+				String suffix = oriName.substring(oriName.lastIndexOf("."), oriName.length());
+				String name = Md5Utils.encode(source) + suffix;
+				String fileName = dir + "/" + name;
+
+				FileOutputStream stream = new FileOutputStream(new File(fileName));
+				stream.write(multipartFile.getBytes());
+				stream.flush();
+				stream.close();
+
+				return name;
+			}
+		} catch (Exception e) {
+			CustomLogger.error(e, this);
+
+			return "fail";
+		}
+
+		return "fail";
 	}
 }

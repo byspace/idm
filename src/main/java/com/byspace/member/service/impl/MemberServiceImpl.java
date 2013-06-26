@@ -7,6 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.persistence.Query;
 import java.util.List;
 
 /**
@@ -77,5 +78,16 @@ public class MemberServiceImpl implements MemberService {
 	@Transactional(readOnly = true)
 	public EnterpriseType getEnterPriseTypeById(int id) {
 		return em.find(EnterpriseType.class, id);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public boolean userNameExist(String username) {
+		String hql = "from Member m where m.userName = :username";
+		Query query = em.createQuery(hql);
+		query.setParameter("username", username);
+		List<Member> memberList = query.getResultList();
+
+		return memberList.size() > 0;
 	}
 }
