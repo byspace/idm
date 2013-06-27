@@ -2,6 +2,7 @@ package com.byspace.member.service;
 
 import com.byspace.member.entity.*;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -78,4 +79,31 @@ public interface MemberService {
 	 * @return
 	 */
 	public boolean userNameExist(String username);
+
+	/**
+	 * 根据用户名获取用户
+	 * @param username
+	 * @return
+	 */
+	public Member readMemberByUsername(String username);
+
+	/**
+	 * 获取当前用户
+	 * @param request
+	 * @return
+	 */
+	public Member getCurrentMember(HttpServletRequest request);
+
+	/**
+	 * 设置当前用户
+	 * @param request
+	 * @param member
+	 */
+	public void setCurrentMember(HttpServletRequest request, Member member);
+
+	/**
+	 * 移除当前用户
+	 * @param request
+	 */
+	public void removeCurrentUser(HttpServletRequest request);
 }

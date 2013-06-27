@@ -53,16 +53,16 @@
         </property>
     </bean>-->
 
-	<!--<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" >
+	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" >
 		<property name="interceptors">
 			<list>
-				<ref bean="authorityCommonInterceptor"/>
+				<ref bean="autoLoginInterceptor"/>
 			</list>
 		</property>
-	</bean>-->
+	</bean>
 
-	<!--<bean id="authorityCommonInterceptor" class="com.wanmei.flow.security.service.impl.AuthorityCommonInterceptor">
-	</bean>-->
+	<bean id="autoLoginInterceptor" class="com.byspace.member.interceptor.AutoLoginInterceptor">
+	</bean>
 
 	<tx:annotation-driven transaction-manager="transactionManager" proxy-target-class="true"/>
 

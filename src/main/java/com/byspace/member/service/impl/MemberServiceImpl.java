@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.servlet.http.HttpServletRequest;
 import java.util.List;
 
 /**
@@ -22,6 +23,8 @@ public class MemberServiceImpl implements MemberService {
 
 	@PersistenceContext
 	private EntityManager em;
+
+	public static final String MEMBER_CURRENT_MEMBER_KEY = "member_current_member";
 
 	@Override
 	public void saveMember(Member member) {
@@ -89,5 +92,42 @@ public class MemberServiceImpl implements MemberService {
 		List<Member> memberList = query.getResultList();
 
 		return memberList.size() > 0;
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Member readMemberByUsername(String username) {
+		String hql = "from Member m where m.userName = :username";
+		Query query = em.createQuery(hql);
+		query.setParameter("username", username);
+		List<Member> memberList = query.getResultList();
+
+		if (memberList.size() > 0) {
+			return memberList.get(0);
+		} else {
+			return null;
+		}
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public Member getCurrentMember(HttpServletRequest request) {
+		if (request.getSession().getAttribute(MEMBER_CURRENT_MEMBER_KEY) == null) {
+			return null;
+		}
+
+		return (Member)request.getSession().getAttribute(MEMBER_CURRENT_MEMBER_KEY);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public void setCurrentMember(HttpServletRequest request, Member member) {
+		request.getSession().setAttribute(MEMBER_CURRENT_MEMBER_KEY, member);
+	}
+
+	@Override
+	@Transactional(readOnly = true)
+	public void removeCurrentUser(HttpServletRequest request) {
+		request.getSession().removeAttribute(MEMBER_CURRENT_MEMBER_KEY);
 	}
 }

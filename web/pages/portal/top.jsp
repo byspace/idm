@@ -22,15 +22,30 @@
 		$("li.nav_right").attr("style", "background:url('" + getUrl("/static/img/btn_bg01.png") + "') no-repeat;");
 		$("li.title_left").attr("style", "background:url('" + getUrl("/static/img/icon01.png") + "') no-repeat top left;;");
 		$("li.title_right").attr("style", "background:url('" + getUrl("/static/img/btn_bg01.png") + "') no-repeat;");
+
+		$("span.unlogin").show();
+		$("span.login").hide();
+		ajaxSubmit(getUrl("/member/login/getCurrentMember"), {}, function(data){
+			$("#currentUsername").html(data.userName);
+			$("span.unlogin").hide();
+			$("span.login").show();
+		});
 	});
+
+	function logout() {
+		ajaxSubmit(getUrl("/member/login/logout"), {}, function(data){
+			window.location.reload();
+		});
+	}
 </script>
 
 <div class="bottom_headbg" style="background: url(<spring:url value="/static/img/topbg.png" />)">
 	<div class="bottom_header" style="background: url(<spring:url value="/static/img/logobg.png" />)">
 		<p class="bottom_header_top">
-			<span><img src="<spring:url value="/static/img/iconee.gif" />" /></span>
-			<span><a href="/member/login.jsp">登陆</a></span>
-			<span><a href="<spring:url value="/member/register/index" />">注册</a></span>
+			<span class="unlogin"><img src="<spring:url value="/static/img/iconee.gif" />" /></span>
+			<span class="unlogin"><a href="<spring:url value="/member/login/index" />">登陆</a></span>
+			<span class="unlogin"><a href="<spring:url value="/member/register/index" />">注册</a></span>
+			<span class="login" style="display: none">欢迎您，<span id="currentUsername"></span>&nbsp;&nbsp;<a href="#" onclick="logout()">登出</a></span>
 		</p>
 		<h1 class="bottom_logo" style="background: url(<spring:url value="/static/img/logo.png" />)"><a href="#" name="top"><span class="bottom_fn_hide"></span></a></h1>
 		<div class="bottom_nav"  style="background: url(<spring:url value="/static/img/nav.png" />)">

@@ -41,7 +41,7 @@ public class RegisterController {
 	private static final String REGISTER_STEP_SESSION_KEY = "regist_step";
 	private static final String REGISTER_MEMBER_TYPE_SESSION_KEY = "regist_member_type";
 	private static final String REGISTER_MEMBER_KEY = "regist_member";
-	private static final String REGISTER_SECURITY_CODE_KEY = "register_secutiry_code";
+	protected static final String REGISTER_SECURITY_CODE_KEY = "register_secutiry_code";
 
 	@Autowired
 	private MemberService memberService;
@@ -209,6 +209,10 @@ public class RegisterController {
 	@RequestMapping("step4")
 	public String step4(HttpServletRequest request) {
 
+		Member member = (Member) request.getSession().getAttribute(REGISTER_MEMBER_KEY);
+		memberService.setCurrentMember(request, member);
+
+		request.getSession().removeAttribute(REGISTER_MEMBER_KEY);
 		request.getSession().removeAttribute(REGISTER_STEP_SESSION_KEY);
 		return "/member/register/step4";
 	}
@@ -326,4 +330,6 @@ public class RegisterController {
 
 		return "fail";
 	}
+
+
 }

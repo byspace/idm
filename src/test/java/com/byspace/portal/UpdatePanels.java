@@ -15,6 +15,6 @@ public class UpdatePanels {
 	@Test
 	public void updatePanels() {
 		PanelService panelService = (PanelService) ContextHelper.getBean("panelService");
-		panelService.updateAllPanelArticles();
+		//panelService.updateAllPanelArticles();
 	}
 }

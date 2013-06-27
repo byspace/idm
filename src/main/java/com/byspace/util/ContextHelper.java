@@ -11,7 +11,7 @@ public class ContextHelper implements ApplicationContextAware {
 	
 	public static ApplicationContext getContext() {
 		if (context == null) {
-			context = new ClassPathXmlApplicationContext("applicationContext.xml");
+			context = new ClassPathXmlApplicationContext("context.xml");
 		}
 		
 		return context;
