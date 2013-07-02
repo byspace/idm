@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%><!doctype html>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
 
 <link rel="stylesheet" href="<spring:url value="/static/css/portal/top.css"/>" type="text/css" />
 
@@ -38,6 +38,8 @@
 		});
 	}
 </script>
+
+<%@include file="nav.jsp"%>
 
 <div class="bottom_headbg" style="background: url(<spring:url value="/static/img/topbg.png" />)">
 	<div class="bottom_header" style="background: url(<spring:url value="/static/img/logobg.png" />)">

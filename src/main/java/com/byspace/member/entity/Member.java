@@ -25,6 +25,8 @@ public class Member {
 	protected String email;
 	@Column(name = "name")
 	protected String name;
+	@Column(name = "type")
+	protected String type;
 	@Column(name = "introduction")
 	@Lob
 	protected String introduction;
@@ -95,5 +97,13 @@ public class Member {
 
 	public void setActive(boolean active) {
 		this.active = active;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 }

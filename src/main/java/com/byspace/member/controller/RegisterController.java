@@ -110,6 +110,8 @@ public class RegisterController {
 	@RequestMapping("personalCommit")
 	public String personalCommit(HttpServletRequest request) {
 
+		CustomLogger.info(request.getParameter("name"), this);
+
 		PersonalMember personalMember = PersonalMember.buildFromMember((Member) request.getSession().getAttribute(REGISTER_MEMBER_KEY));
 
 		personalMember.setName(request.getParameter("name"));
@@ -121,6 +123,7 @@ public class RegisterController {
 		personalMember.setMobile(request.getParameter("mobile"));
 		personalMember.setPhone(request.getParameter("phone"));
 		personalMember.setIntroduction(request.getParameter("introduction"));
+		personalMember.setType("personal");
 		personalMember.setRegistDate(new Date());
 		personalMember.setActive(true);
 
@@ -176,6 +179,7 @@ public class RegisterController {
 		enterpriseMember.setDetail(request.getParameter("detail"));
 		enterpriseMember.setIntroduction(request.getParameter("introduction"));
 		enterpriseMember.setLogo(request.getParameter("logo"));
+		enterpriseMember.setType("enterprise");
 		enterpriseMember.setRegistDate(new Date());
 		enterpriseMember.setActive(true);
 

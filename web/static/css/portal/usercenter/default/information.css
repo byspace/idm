@@ -1,0 +1,67 @@
+body{ margin:0; padding:0; font-size:12px;}
+li{ list-style:none;  margin:0px; padding:0px;}
+ul{margin:0px; padding:0px; list-style:none;}
+a{ text-decoration:none; color:#000;}
+a:hover{ text-decoration:underline;}
+.clear{ clear:both; _display:block; _zoom:1;  _height:0px;}
+img{ border:none;}
+.container{ background:#f0f0f0;; /*overflow:hidden; zoom:1;*/  }
+.main{ margin:auto; height:auto; width:960px; position:relative;  padding-top:35px;}
+
+.top_nav{ width:100%; height:30px; line-height:30px; margin:0 auto; background:#f8f8f8; border-bottom:1px solid #ccc;}
+.top_navbg{ width:953px; margin:0 auto; line-height:30px;}
+.top_navbg ul li{padding-left:10px; float:left;}
+.top_navbg ul .member a:link,.top_navbg ul .member a:visited{ color:#faa208;}
+.top{ padding-top:20px; width:100%; margin:0 auto;}
+.top .logo span{ color:#0ba6b8; font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+.top .nav{ width:100%; height:35px; background:#000; line-height:35px; margin-top:30px;}
+.nav ul{ margin:0 auto; width:953px;}
+.nav ul .grzy{ font-size:18px; background:#0ba6b8; text-align:center;}
+.nav ul li{ float:left; color:#FFFFFF; margin-right:45px; font-size:14px;font-family:" Microsoft YaHei"; font-weight:bold; display:block; text-align:center; padding-left:3px; padding-right:3px;}
+.nav ul li a:link,.nav ul li a:visited{ color:#FFFFFF;}
+.nav ul .home{ background:#0ba6b8;}
+
+.left{ width:315px; _width:315px; float:left; }
+.right{ width:625px; float:left;  border:#e6e6e6 solid 1px; margin-left:12px; _margin-left:1px;}
+.left_top{height:160px; background:url(../images/grbg.png) repeat; border:#d4d4d4 solid 1px;}
+.left_top .img , .left_top .produce{ float:left; margin:10px 0 0 10px; _margin:10px 0 0 4px;}
+.left span, .right span{ font-family:"新宋体"; font-size:14px; font-weight:bold; color:#757575}
+.left_top .produce li{ margin-top:8px;}
+.left_bottom{ border:#e6e6e6 solid 1px; margin-top:12px; padding-bottom:10px; background:#FFFFFF;}
+.left_bottom_top{ background:url(../images/bg_01.png) repeat-x; height:35px; line-height:35px; padding-left:10px;}
+.left_bottom .work{ margin-left:12px; _margin-left:5px; float:left}
+.left_bottom .work  li{float:left; width:126px; margin:15px 21px 0 0;}
+.left_bottom .work a{ text-align:center; display:block; margin-top:5px;}
+
+.msg{ width:550px;}
+.msg li{ float:left; height:40px; line-height:40px; margin-right:10px;}
+#name{ color:#0191a2; font-weight:normal; font-size:12px;}
+#date{ color:#bebebe; font-weight:normal; font-size:12px;}
+.message a{ margin-left:500px; color:#0191a2; width:100px;}
+.btn{ margin:10px 0 0 480px; background:url(../images/btn.png); height:26px; width:70px;}
+.btn a{ height:26px; line-height:26px; color:#FFFFFF; margin-left:10px;}
+.line{ border-bottom:#bfbfbf solid 1px; height:3px; _margin-top:-10px;}
+#design{ margin:10px 0 0 50px; _margin:0px 0 0 50px;}
+
+.right_top{ background:url(../images/bg_01.png) repeat-x; height:35px; line-height:35px; padding-left:10px;}
+.right_bottom{
+	padding:10px;
+	line-height:20px;
+	background:#FFFFFF;
+}
+.right_bottom_left, .right_bottom_right{ float:left; margin-bottom:20px;}
+.right_bottom_right{ margin-left:15px; width:470px;}
+#icon{ font-size:12px; font-weight:normal; color:#FF0000}
+img, input, select, button, label { vertical-align: middle;}
+input, label, select, option { cursor: pointer;}
+#ptypeli ul li{ float:left; margin:5px 8px; *margin:5px 4px;}
+
+.footer{ background:#000; width:953px; height:250px; margin-top:25px;}
+.contact{ padding-top:25px; float:left; width:300px; padding-left:15px; color:#FFFFFF;}
+.contact ul li{ line-height:30px; height:30px;}
+.contact ul .contact_one{ border-bottom: 1px dotted #fff; padding-bottom:8px; line-height:30px; height:30px;}
+.contact .link{ line-height:20px; clear:both;}
+.contact .link span{ padding-left:5px;}
+.contact .link a:link, .contact .link a:visited{ color:#FFFFFF;}
+
+.copy{ line-height:40px;}

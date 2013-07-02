@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%><!doctype html>
+<%@ page language="java" contentType="text/html; charset=utf-8"	pageEncoding="utf-8"%>
 
 <div class="bottom_db_nav" style="background: url(<spring:url value="/static/img/dibu.jpg" />) repeat-x;">
 	<div class="bottom_db_nav_nr">

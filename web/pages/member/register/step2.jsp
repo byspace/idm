@@ -10,7 +10,7 @@
 
 <%@ include file="../../portal/top.jsp" %>
 
-<form id="registerFrom" name="registerFrom" action="<spring:url value="/member/register/step2Commit"/>">
+<form id="registerFrom" name="registerFrom" method="post" action="<spring:url value="/member/register/step2Commit"/>">
 	<input type="hidden" id="memberType" name="memberType" />
 </form>
 

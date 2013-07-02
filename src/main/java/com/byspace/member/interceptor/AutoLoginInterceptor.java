@@ -3,6 +3,7 @@ package com.byspace.member.interceptor;
 import com.byspace.member.controller.PortalLoginController;
 import com.byspace.member.entity.Member;
 import com.byspace.member.service.MemberService;
+import com.byspace.util.CustomLogger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
@@ -24,21 +25,17 @@ public class AutoLoginInterceptor implements HandlerInterceptor {
 
 	@Override
 	public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object o) throws Exception {
-		String uri = request.getRequestURI();
-		String[] array = uri.split("/");
+		String username = getCookieValue(request, PortalLoginController.COOKIE_USERNAME);
+		String password = getCookieValue(request, PortalLoginController.COOKIE_PASSWORD);
 
-		if (memberService.getCurrentMember(request) != null) {
-			return true;
-		}
+		CustomLogger.info(username, this);
+		CustomLogger.info(password, this);
 
-		if (array.length > 1 && "portal".equals(array[2])) {
-			String username = getCookieValue(request, PortalLoginController.COOKIE_USERNAME);
-			String password = getCookieValue(request, PortalLoginController.COOKIE_PASSWORD);
+		Member member = memberService.readMemberByUsername(username);
+		if (member != null && member.getPassword().equals(password)) {
+			memberService.setCurrentMember(request, member);
 
-			Member member = memberService.readMemberByUsername(username);
-			if (member != null && member.getPassword().equals(password)) {
-				memberService.setCurrentMember(request, member);
-			}
+			CustomLogger.info(member.getUserName(), this);
 		}
 
 		return true;

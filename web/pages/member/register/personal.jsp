@@ -22,7 +22,7 @@
 		</p>
 	</div>
 
-<form id="registerForm" name="registerForm" action="<spring:url value="/member/register/personalCommit"/>">
+<form id="registerForm" name="registerForm" method="post" action="<spring:url value="/member/register/personalCommit"/>">
 
 	<div class="regsiter_lbzt" style="width: 750px; padding-top: 30px;">
 

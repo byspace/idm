@@ -1,11 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
-<%@ include file="../common/portal_head.jsp" %>
+<%@ include file="../../common/portal_head.jsp" %>
 
 <link rel="stylesheet" href="<spring:url value="/static/css/portal.css"/>" type="text/css" />
 
 <body>
 
-<%@ include file="top.jsp" %>
+<%@ include file="../top.jsp" %>
 <input type="hidden" id="currentTopic" value="开发商"/>
 
 <div class="container">
@@ -75,6 +75,6 @@
 </div>
 
 
-<%@ include file="bottom.jsp"%>
+<%@ include file="../bottom.jsp"%>
 </body>
 </html>

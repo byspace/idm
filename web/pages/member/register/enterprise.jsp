@@ -31,7 +31,7 @@
 		</p>
 	</div>
 
-<form id="registerForm" name="registerForm" action="<spring:url value="/member/register/enterpriseCommit"/>">
+<form id="registerForm" name="registerForm" method="post" action="<spring:url value="/member/register/enterpriseCommit"/>">
 
 	<div class="regsiter_lbzt" style="width: 750px; padding-top: 30px;">
 

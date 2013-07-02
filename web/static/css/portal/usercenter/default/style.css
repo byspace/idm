@@ -1,0 +1,135 @@
+body {
+	background-color: #f0f0f0;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.top {
+	padding-top: 20px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.top .logo {
+	font-family: "Microsoft YaHei";
+	font-size: 30px;
+	font-weight: bold;
+	color: #000000;
+	width: 953px;
+	margin: 0 auto;
+}
+
+.top .logo span {
+	color: #0ba6b8;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+.top .nav {
+	width: 100%;
+	height: 35px;
+	background: #000;
+	line-height: 35px;
+	margin-top: 30px;
+}
+
+.top .nav ul {
+	margin: 0 auto;
+	width: 953px;
+}
+
+.top .nav ul li {
+	float: left;
+	color: #FFFFFF;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+	width: 100px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.nav a {
+	color: #ffffff;
+}
+
+.top .nav ul .home {
+	background: #0ba6b8;
+}
+
+/* CSS Document */
+
+ul li{ list-style-type:none;}
+img{ border:none;}
+.clear{ clear:both}
+
+.container{ width:953px; height:auto; margin:0 auto; padding-top:35px;}
+.left{ width:620px; height:auto; background:#fff; border:1px solid #c8c8c8; float:left;}
+.left .title{ height:47px; border-bottom:1px solid #c8c8c8; background:url(../images/navbg.png) repeat-x; font-size:16px; color:#000; line-height:47px; padding-left:10px; font-weight:bold;}
+.listimg{ width:585px; height:170px; border-bottom:1px solid #ccc; margin:0 auto; padding-top:20px;}
+.listimg_one{width:585px; height:170px; margin:0 auto; padding-top:20px;}
+.listimg_one img{width:205px; height:154px;}
+.works{ float:left;}
+.listimg img{ width:205px; height:154px; }
+.text{ float:left; padding-left:10px; color:#333333; width:370px; line-height:18px;}
+.text_title{ font-size:14px; font-weight:bold; color:#000000; float:left; padding-left:10px; width:370px; padding-bottom:15px; padding-top:3px;}
+.text a:link, .text a:visited{ color:#333333;}
+.text_title a:link, .text_title a:visited{color:#000000;}
+
+.page{ padding-top:20px; _padding-top:0;float:left;}
+.page img{ vertical-align:middle;}
+.up{ background:#fff; border:1px solid #ccc; height:25px; width:100px; text-align:center; float:left; padding-top:5px;}
+.down{ background:#fff; border:1px solid #ccc; height:25px; width:100px; text-align:center; float:left; padding-top:5px; margin-left:10px;}
+
+.right{ float:left; margin-left:20px;width:300px; height:auto;}
+.grjj{ width:300px; height:auto; background:url(../images/grbg.png) repeat; padding-bottom:25px; border:1px solid #ccc; }
+.resume_title{height:47px; border-bottom:1px solid #c8c8c8; background:url(../images/navbg.png) repeat-x; font-size:14px; color:#666; line-height:47px; padding-left:10px; font-weight:bold;}
+.photo{ float:left; padding:20px 10px 15px 10px;}
+.photo img{ width:122px; height:147px; border:1px solid #fff;}
+.resume_list{ width:128px; height:147px; float:left; padding-top:20px;}
+.resume_list img{ vertical-align:middle;}
+.resume_list ul li{ line-height:24px;}
+.resume_list ul .name{ font-weight:bold; font-size:14px; padding-top:3px;}
+.resume_list ul li span img{ vertical-align:bottom;}
+
+.list{ background:url(../images/line.png) repeat-x left top; width:280px; margin:0 auto; pasdding-top:8px;}
+.list ul li{ line-height:24px;}
+.list ul li .color{ color:#038695;}
+.list ul li .colora a:link, .list ul li .colora a:visited{ color:#fda101;}
+
+.newszp{ margin-top:30px; border:1px solid #ccc; background:#fff; padding-bottom:20px;}
+.works_news{ text-align:center; padding:15px 0 3px 0;}
+.works_news img{ width:249px; height:166px; border:1px solid #f8f8f8;}
+.works_title{ font-size:14px; font-weight:bold; color:#000; padding-left:30px;}
+.works_list{color:#666; padding-left:30px; line-height:20px;}
+
+.advert{ padding-top:15px; width:953px;}
+.advert img{ width:300px; height:86px;}
+
+.footer{ background:#000; width:953px; height:250px; margin-top:25px;}
+.contact{ padding-top:25px; float:left; width:300px; padding-left:15px; color:#FFFFFF;}
+.contact ul li{ line-height:30px; height:30px;}
+.contact ul .contact_one{ border-bottom: 1px dotted #fff; padding-bottom:8px; line-height:30px; height:30px;}
+.contact .link{ line-height:20px; clear:both;}
+.contact .link span{ padding-left:5px;}
+.contact .link a:link, .contact .link a:visited{ color:#FFFFFF;}
+
+.copy{ line-height:40px;}
+/*设计博文css样式*/
+.bowen_grjj{ width:300px; height:auto; background:#fff; padding-bottom:25px; border:1px solid #ccc; }
+.bowen_right{ float:left; width:300px; height:auto;}
+.bowen_left{ width:620px; height:auto; float:left; margin-left:20px;}
+.bowen_left .title{ height:47px; background:url(../images/bowenline.png) repeat-x left bottom; font-size:16px; color:#000; line-height:47px; padding-left:10px; font-weight:bold;}
+.bowen_listone{ padding-top:35px; padding-left:10px; font-size:14px;}
+.bowen_listone ul li{ line-height:24px; padding-top:5px;}
+.bowen_list{ padding-top:55px; padding-left:10px; font-size:14px;}
+.bowen_list ul li{ line-height:24px; padding-top:5px;}
+.bowen_span{ padding-left:15px;}
+
+.bowen_xq a:link, .bowen_xq a:visited{ color:#ffa801;}

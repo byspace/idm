@@ -90,6 +90,7 @@ public class PortalLoginController {
 			response.addCookie(cookie);
 		} else {
 			Cookie cookie = new Cookie(COOKIE_USERNAME_KEY, request.getParameter("username"));
+			cookie.setMaxAge(Integer.MAX_VALUE);
 			response.addCookie(cookie);
 		}
 
@@ -97,9 +98,11 @@ public class PortalLoginController {
 			this.removeAutoLoginCookie(response);
 		} else {
 			Cookie usernameCookie = new Cookie(COOKIE_USERNAME, request.getParameter("username"));
+			usernameCookie.setMaxAge(Integer.MAX_VALUE);
 			response.addCookie(usernameCookie);
 
 			Cookie passwordCookie = new Cookie(COOKIE_PASSWORD, Md5Utils.encode(request.getParameter("password")));
+			passwordCookie.setMaxAge(Integer.MAX_VALUE);
 			response.addCookie(passwordCookie);
 		}
 	}
