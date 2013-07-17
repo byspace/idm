@@ -44,9 +44,9 @@
 				<ul>
 					<li class="name">${member.name}</li>
 					<%--<li><span>会员认证：</span>普通会员</li>--%>
-					<li><span>地区：</span>${member.province}${member.city}</li>
-					<li><span>电话：</span>${member.phone}</li>
-					<li><span>手机：</span>${member.mobile}</li>
+					<li><span>地区：</span>${member.personalInformation.province}${member.personalInformation.city}</li>
+					<li><span>电话：</span>${member.personalInformation.phone}</li>
+					<li><span>手机：</span>${member.personalInformation.mobile}</li>
 					<li><span>在线咨询：</span><img src="images/qqbg.png"></li>
 					<li><span><a href="#"><img src="images/liuyarn.png" width="60" height="20"></a></span><span style="padding-left:8px;"><a href="#"><img src="images/wtsj.png" width="60" height="20"></a></span></li>
 				</ul>
@@ -57,7 +57,7 @@
 				<ul>
 					<li>
 						<span class="color">擅长设计:</span>
-						<c:forEach items="${member.personalDesignTypeSet}" var="designType" varStatus="status">
+						<c:forEach items="${member.personalInformation.personalDesignTypeSet}" var="designType" varStatus="status">
 							${designType.name}
 							<c:if test="${!status.last}">,</c:if>
 						</c:forEach>

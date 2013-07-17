@@ -113,19 +113,22 @@ public class RegisterController {
 		CustomLogger.info(request.getParameter("name"), this);
 
 		PersonalMember personalMember = PersonalMember.buildFromMember((Member) request.getSession().getAttribute(REGISTER_MEMBER_KEY));
+		PersonalInformation personalInformation = new PersonalInformation();
 
 		personalMember.setName(request.getParameter("name"));
-		personalMember.setSex(request.getParameter("sex"));
-		personalMember.setCountry(request.getParameter("country"));
-		personalMember.setProvince(request.getParameter("province"));
-		personalMember.setCity(request.getParameter("city"));
-		personalMember.setAddress(request.getParameter("address"));
-		personalMember.setMobile(request.getParameter("mobile"));
-		personalMember.setPhone(request.getParameter("phone"));
+		personalInformation.setSex(Integer.parseInt(request.getParameter("sex")));
+		personalInformation.setCountry(request.getParameter("country"));
+		personalInformation.setProvince(request.getParameter("province"));
+		personalInformation.setCity(request.getParameter("city"));
+		personalInformation.setAddress(request.getParameter("address"));
+		personalInformation.setMobile(request.getParameter("mobile"));
+		personalInformation.setPhone(request.getParameter("phone"));
 		personalMember.setIntroduction(request.getParameter("introduction"));
 		personalMember.setType("personal");
 		personalMember.setRegistDate(new Date());
 		personalMember.setActive(true);
+
+		personalMember.setPersonalInformation(personalInformation);
 
 		this.setPersonalWorkTypes(request.getParameter("personalWorkType"), personalMember);
 		this.setPersonalDesignTypes(request.getParameter("personalDesignType"), personalMember);
@@ -147,7 +150,7 @@ public class RegisterController {
 				}
 			}
 
-			personalMember.setPersonalWorkTypeSet(personalWorkTypeList);
+			personalMember.getPersonalInformation().setPersonalWorkTypeSet(personalWorkTypeList);
 		}
 	}
 
@@ -162,7 +165,7 @@ public class RegisterController {
 				}
 			}
 
-			personalMember.setPersonalDesignTypeSet(personalDesignTypeList);
+			personalMember.getPersonalInformation().setPersonalDesignTypeSet(personalDesignTypeList);
 		}
 	}
 

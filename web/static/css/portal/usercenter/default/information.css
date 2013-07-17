@@ -13,7 +13,7 @@ img{ border:none;}
 .top_navbg ul li{padding-left:10px; float:left;}
 .top_navbg ul .member a:link,.top_navbg ul .member a:visited{ color:#faa208;}
 .top{ padding-top:20px; width:100%; margin:0 auto;}
-.top .logo span{ color:#0ba6b8; font-family:Arial, Helvetica, sans-serif; font-size:14px;}
+.top .logo span{ color:#0ba6b8; font-size:14px;}
 .top .nav{ width:100%; height:35px; background:#000; line-height:35px; margin-top:30px;}
 .nav ul{ margin:0 auto; width:953px;}
 .nav ul .grzy{ font-size:18px; background:#0ba6b8; text-align:center;}
@@ -23,7 +23,7 @@ img{ border:none;}
 
 .left{ width:315px; _width:315px; float:left; }
 .right{ width:625px; float:left;  border:#e6e6e6 solid 1px; margin-left:12px; _margin-left:1px;}
-.left_top{height:160px; background:url(../images/grbg.png) repeat; border:#d4d4d4 solid 1px;}
+.left_top{height:190px; background:url(../images/grbg.png) repeat; border:#d4d4d4 solid 1px;}
 .left_top .img , .left_top .produce{ float:left; margin:10px 0 0 10px; _margin:10px 0 0 4px;}
 .left span, .right span{ font-family:"新宋体"; font-size:14px; font-weight:bold; color:#757575}
 .left_top .produce li{ margin-top:8px;}
@@ -65,3 +65,13 @@ input, label, select, option { cursor: pointer;}
 .contact .link a:link, .contact .link a:visited{ color:#FFFFFF;}
 
 .copy{ line-height:40px;}
+
+.editLink {
+	color: #0ba6b8;
+	font-size: 14px;
+}
+
+.infomationTable td {
+	vertical-align: top;
+	padding: 5px;
+}

@@ -3,11 +3,9 @@
 	<div class="contact">
 		<ul>
 			<li class="contact_one">联系方式</li>
-			<li>电话：0755-85065862<span style="padding-left:8px;">0755-86956352</span></li>
-			<li>传真：0755-85065862</li>
-			<li>msn:design@163.com</li>
-			<li>邮箱：design@163.com</li>
-			<li>手机：1596623322</li>
+			<li>电话：${member.personalInformation.phone}</li>
+			<li>邮箱：${member.email}</li>
+			<li>手机：${member.personalInformation.mobile}</li>
 		</ul>
 
 
@@ -16,8 +14,7 @@
 	<div class="contact">
 		<ul>
 			<li class="contact_one">联系地址</li>
-			<li>地址1：深圳市罗湖区深南东路某某大厦2502室</li>
-			<li>地址2：深圳市罗湖区深南东路某某大厦2502室</li>
+			<li>地址：${member.personalInformation.province}${member.personalInformation.city}${member.personalInformation.address}</li>
 		</ul>
 
 
