@@ -4,6 +4,7 @@ import java.io.*;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+import com.byspace.util.CustomLogger;
 import com.byspace.util.DirectoryUtil;
 import org.apache.commons.fileupload.*;
 import org.apache.commons.fileupload.FileUploadBase.InvalidContentTypeException;
@@ -112,12 +113,16 @@ public class Uploader {
 			}
 		} catch (SizeLimitExceededException e) {
 			this.state = this.errorInfo.get("SIZE");
+			CustomLogger.error(e, this);
 		} catch (InvalidContentTypeException e) {
 			this.state = this.errorInfo.get("ENTYPE");
+			CustomLogger.error(e, this);
 		} catch (FileUploadException e) {
 			this.state = this.errorInfo.get("REQUEST");
+			CustomLogger.error(e, this);
 		} catch (Exception e) {
 			this.state = this.errorInfo.get("UNKNOWN");
+			CustomLogger.error(e, this);
 		}
 	}
 	

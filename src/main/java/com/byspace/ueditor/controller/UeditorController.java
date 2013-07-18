@@ -70,6 +70,7 @@ public class UeditorController {
 			response.getWriter().print("{'original':'"+up.getOriginalName()+"','url':'"+up.getUrl()+"','title':'"+up.getTitle()+"','state':'"+up.getState()+"'}");
 
 		} catch (Exception e) {
+			e.printStackTrace();
 			CustomLogger.error(e, this);
 		}
 	}

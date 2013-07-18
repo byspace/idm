@@ -6,6 +6,7 @@
 <div class="container">
 	<div class="left">
 		<h4 class="title" style="background: url('<spring:url value="/static/img/member/navbg.png"/>') repeat-x;">${member.name}的个人作品展示</h4>
+
 		<div class="listimg">
 			<span class="works"><img src="images/worka.png"></span>
 			<p class="text_title"><a href="#" target="_blank">国汉堡Poppenbuette交通枢纽</a></p>

@@ -33,4 +33,5 @@ public class PersonalMember extends Member {
 	public void setPersonalInformation(PersonalInformation personalInformation) {
 		this.personalInformation = personalInformation;
 	}
+
 }

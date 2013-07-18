@@ -15,7 +15,7 @@ $(function(){
 	$("#file_upload").uploadify({
 		'fileTypeDesc' : 'Image Files',
 		swf           : getUrl('/static/script/uploadify/uploadify.swf'),
-		uploader      : getUrl('/member/register/uploadLogo'),
+		uploader      : getUrl('/ueditor/imageUp'),
 		buttonText    : "上传Logo",
 		fileSizeLimit : '2MB',
 		'fileTypeExts' : '*.gif; *.jpg; *.png; *.ico',
@@ -25,9 +25,9 @@ $(function(){
 		'onUploadSuccess' : function(file, data, response) {
 
 			if (response) {
-				data = data.substring(1, data.length - 1);
-
-				var realPath = getUrl("/static/upload/logo/" + data);
+				data = data.replace(/'/g, "\"");
+				var json = $.parseJSON(data);
+				var realPath = getUrl("/static/" + json.url);
 
 				$("#logo").val(realPath);
 				$("#logoImage").attr("src", realPath).show();

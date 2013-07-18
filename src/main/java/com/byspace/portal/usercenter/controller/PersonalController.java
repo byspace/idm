@@ -1,10 +1,9 @@
 package com.byspace.portal.usercenter.controller;
 
-import com.byspace.member.entity.PersonalDesignType;
-import com.byspace.member.entity.PersonalInformation;
-import com.byspace.member.entity.PersonalMember;
-import com.byspace.member.entity.PersonalWorkType;
+import com.byspace.common.po.JsonResult;
+import com.byspace.member.entity.*;
 import com.byspace.member.service.MemberService;
+import com.byspace.member.service.PersonalDesignService;
 import com.byspace.portal.usercenter.service.UserCenterService;
 import com.byspace.util.CustomLogger;
 import com.byspace.util.DateUtils;
@@ -23,6 +22,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.File;
 import java.io.FileOutputStream;
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -41,6 +41,8 @@ public class PersonalController {
 	private MemberService memberService;
 	@Autowired
 	private UserCenterService userCenterService;
+	@Autowired
+	private PersonalDesignService personalDesignService;
 
 	@RequestMapping("index/{id}")
 	public String index(@PathVariable("id")int id, HttpServletRequest request, Model model) {
@@ -56,6 +58,7 @@ public class PersonalController {
 		PersonalMember personalMember = memberService.readPersonalMember(id);
 		model.addAttribute("member", personalMember);
 		model.addAttribute("isCurrentUser", userCenterService.isInSelfCenter(request, id));
+		model.addAttribute("bestWorkDesignTypeList", personalDesignService.getBestWorkPersonalDesignList(personalMember));
 		return "portal/usercenter/personal/information";
 	}
 
@@ -172,42 +175,81 @@ public class PersonalController {
 		}
 	}
 
-	@RequestMapping("uploadPortrait")
+	@RequestMapping("design/{memberId}")
+	public String design(@PathVariable("memberId") int memberId, HttpServletRequest request, Model model) {
+
+		PersonalMember personalMember = memberService.readPersonalMember(memberId);
+
+		model.addAttribute("isCurrentUser", userCenterService.isInSelfCenter(request, memberId));
+		model.addAttribute("member", personalMember);
+		model.addAttribute("designTypeList", personalDesignService.getPersonalDesignList(personalMember));
+		model.addAttribute("bestWorkDesignTypeList", personalDesignService.getBestWorkPersonalDesignList(personalMember));
+
+		return "portal/usercenter/personal/design";
+	}
+
+	@RequestMapping("design/view/{id}")
+	public String viewDesign(@PathVariable("id") int id, Model model) {
+
+		PersonalDesign personalDesign = personalDesignService.readPersonalDesign(id);
+		model.addAttribute("member", personalDesign.getAuthor());
+		model.addAttribute("personalDesign", personalDesignService.readPersonalDesign(id));
+		return "portal/usercenter/personal/viewDesign";
+	}
+
+	@RequestMapping("design/add")
+	public String addDesign(Model model, HttpServletRequest request) {
+
+
+		model.addAttribute("member", memberService.getCurrentMember(request));
+		model.addAttribute("designTypes", personalDesignService.getDesignTypeList());
+		return "portal/usercenter/personal/editDesign";
+	}
+
+	@RequestMapping("design/edit/{id}")
+	public String editDesign(@PathVariable("id") int id, Model model) {
+
+
+		PersonalDesign personalDesign = personalDesignService.readPersonalDesign(id);
+
+		model.addAttribute("designTypes", personalDesignService.getDesignTypeList());
+		model.addAttribute("personalDesign", personalDesign);
+		model.addAttribute("member", personalDesign.getAuthor());
+
+		return "portal/usercenter/personal/editDesign";
+	}
+
+	@RequestMapping("design/save")
 	@ResponseBody
-	public String uploadPortrait(HttpServletRequest request, HttpServletResponse response) {
+	public JsonResult saveDesign(HttpServletRequest request) {
+
 		try {
-			MultipartHttpServletRequest multipartHttpServletRequest = (MultipartHttpServletRequest) request;
-			Map<String, MultipartFile> fileMap = multipartHttpServletRequest.getFileMap();
+			PersonalDesign personalDesign = null;
 
-			String dir = DirectoryUtil.getStaticDir() + "/upload/portrait/";
-			File directory = new File(dir);
-			if (!directory.exists()) {
-				directory.mkdirs();
+			String idStr = request.getParameter("id");
+			if (idStr == null || idStr.equals("")) {
+				personalDesign = new PersonalDesign();
+				personalDesign.setCreateDate(new Date());
+				personalDesign.setAuthor(memberService.getCurrentMember(request));
+			} else {
+				personalDesign = personalDesignService.readPersonalDesign(Integer.parseInt(idStr));
 			}
 
-			for (String key : fileMap.keySet()) {
-				MultipartFile multipartFile = fileMap.get(key);
+			personalDesign.setTitle(request.getParameter("title"));
+			personalDesign.setSummary(request.getParameter("summary"));
+			personalDesign.setType(request.getParameter("type"));
+			personalDesign.setContent(request.getParameter("content"));
+			personalDesign.setTitleImage(request.getParameter("titleImage"));
+			personalDesign.setBestWork(request.getParameter("bestWork"));
 
-				String source = request.getRemoteAddr() + DateUtils.getCurrentTime();
+			personalDesignService.savePersonalDesign(personalDesign);
 
-				String oriName = multipartFile.getOriginalFilename();
-				String suffix = oriName.substring(oriName.lastIndexOf("."), oriName.length());
-				String name = Md5Utils.encode(source) + suffix;
-				String fileName = dir + "/" + name;
-
-				FileOutputStream stream = new FileOutputStream(new File(fileName));
-				stream.write(multipartFile.getBytes());
-				stream.flush();
-				stream.close();
-
-				return name;
-			}
+			return JsonResult.saveSuccess();
 		} catch (Exception e) {
 			CustomLogger.error(e, this);
-
-			return "fail";
+			return JsonResult.saveFail();
 		}
-
-		return "fail";
 	}
+
+
 }
