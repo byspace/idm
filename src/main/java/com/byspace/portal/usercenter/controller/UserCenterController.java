@@ -4,6 +4,8 @@ import com.byspace.member.entity.EnterpriseMember;
 import com.byspace.member.entity.Member;
 import com.byspace.member.entity.PersonalMember;
 import com.byspace.member.service.MemberService;
+import com.byspace.util.CustomLogger;
+import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -28,6 +30,7 @@ public class UserCenterController {
 	public String index(HttpServletRequest request, Model model) {
 
 		Member member = memberService.getCurrentMember(request);
+		CustomLogger.info(JSONObject.fromObject(member).toString(), this);
 		if ("personal".equals(member.getType())) {
 			PersonalMember personalMember = memberService.readPersonalMember(member.getId());
 			return "redirect:/portal/usercenter/personal/index/" + personalMember.getId();

@@ -25,7 +25,7 @@
 		<img src="<spring:url value="/static/img/member/zcOK.gif"/>" width="115" height="85">
 	</h4>
 
-	<p class="complete_hy"><a href="<spring:url value="/member/index"/>">立刻进入会员中心</a></p>
+	<p class="complete_hy"><a href="<spring:url value="/portal/usercenter/index"/>">立刻进入会员中心</a></p>
 </div>
 
 </body>
