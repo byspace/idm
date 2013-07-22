@@ -36,7 +36,7 @@
 			</tr>
 			<tr>
 				<td class="label">性别:</td>
-				<td>男<input checked="true" type="radio" name="sex" value="male">&nbsp;&nbsp;女<input type="radio" name="sex" value="female"></td>
+				<td>男<input checked="true" type="radio" name="sex" value="0">&nbsp;&nbsp;女<input type="radio" name="sex" value="1"></td>
 			</tr>
 			<tr>
 				<td class="label">所在地区:</td>
