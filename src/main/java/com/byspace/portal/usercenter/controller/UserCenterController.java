@@ -30,7 +30,7 @@ public class UserCenterController {
 	public String index(HttpServletRequest request, Model model) {
 
 		Member member = memberService.getCurrentMember(request);
-		CustomLogger.info(JSONObject.fromObject(member).toString(), this);
+		CustomLogger.info(member.getType(), this);
 		if ("personal".equals(member.getType())) {
 			PersonalMember personalMember = memberService.readPersonalMember(member.getId());
 			return "redirect:/portal/usercenter/personal/index/" + personalMember.getId();
