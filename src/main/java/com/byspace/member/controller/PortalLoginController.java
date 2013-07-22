@@ -126,6 +126,11 @@ public class PortalLoginController {
 	}
 
 	private void removeAutoLoginCookie(HttpServletResponse response) {
+		Cookie usernameKeyCookie = new Cookie(COOKIE_USERNAME_KEY, "");
+		usernameKeyCookie.setMaxAge(0);
+		usernameKeyCookie.setPath("/");
+		response.addCookie(usernameKeyCookie);
+
 		Cookie usernameCookie = new Cookie(COOKIE_USERNAME, "");
 		usernameCookie.setMaxAge(0);
 		usernameCookie.setPath("/");
