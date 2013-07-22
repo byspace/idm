@@ -9,6 +9,8 @@
 			<c:if test="${member.personalInformation.portrait != \"default\"}">
 				<img src="${member.personalInformation.portrait}" width="130" height="150"/>
 			</c:if>
+				<br/>
+			<c:if test="${isCurrentUser}">&nbsp;&nbsp;&nbsp;&nbsp;<a class="editLink" href="<spring:url value="/portal/usercenter/personal/information/edit/${member.id}"/>" target="_blank">编辑个人信息</a></c:if>
 		</div>
 		<div class="produce">
 			<ul>
@@ -18,7 +20,7 @@
 				<li><span>专业：</span>${member.personalInformation.major}</li>
 				<li><span>毕业院校：</span>${member.personalInformation.school}</li>
 				<li><span>工作单位：</span>${member.personalInformation.company}</li>
-				<c:if test="${isCurrentUser}"><li><a class="editLink" href="<spring:url value="/portal/usercenter/personal/information/edit/${member.id}"/>" target="_blank">编辑个人信息</a></li></c:if>
+
 			</ul>
 		</div>
 	</div>

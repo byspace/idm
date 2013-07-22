@@ -118,7 +118,11 @@ public class PortalLoginController {
 	@RequestMapping("getCurrentMember")
 	@ResponseBody
 	public Member getCurrentMember(HttpServletRequest request) {
-		return memberService.getCurrentMember(request);
+
+		Member member = memberService.getCurrentMember(request);
+		member.getCommentList().clear();
+
+		return member;
 	}
 
 	private void removeAutoLoginCookie(HttpServletResponse response) {

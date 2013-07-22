@@ -23,9 +23,9 @@
 			<li class="home" id="nav_home"><a href="<spring:url value="/portal/usercenter/personal/index/${member.id}"/>">首页</a></li>
 			<li id="nav_information"><a href="<spring:url value="/portal/usercenter/personal/information/${member.id}"/>">关于${member.name}</a></li>
 			<li id="nav_design"><a href="<spring:url value="/portal/usercenter/personal/design/${member.id}"/>">设计案例</a></li>
-			<li id="nav_"><a href="bowen.shtml">设计博文</a></li>
-			<li id="nav_"><a href="message.shtml">给我留言</a></li>
-			<li id="nav_"><a href="project.shtml">委托设计</a></li>
+			<li id="nav_post"><a href="<spring:url value="/portal/usercenter/personal/post/${member.id}"/>">设计博文</a></li>
+			<li id="nav_comment"><a href="<spring:url value="/portal/usercenter/personal/comment/${member.id}"/>">给我留言</a></li>
+			<%--<li id="nav_"><a href="project.shtml">委托设计</a></li>--%>
 		</ul>
 	</div>
 </div>

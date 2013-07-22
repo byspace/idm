@@ -1,7 +1,7 @@
 package com.byspace.member.entity;
 
 import javax.persistence.*;
-import java.util.Date;
+import java.util.*;
 
 /**
  * Created with IntelliJ IDEA.
@@ -34,6 +34,10 @@ public class Member {
 	private Date registDate;
 	@Column(name = "active")
 	private boolean active;
+
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	@OrderBy("date desc")
+	private Set<Comment> commentList = new HashSet<Comment>();
 
 	public int getId() {
 		return id;
@@ -105,5 +109,13 @@ public class Member {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	public Set<Comment> getCommentList() {
+		return commentList;
+	}
+
+	public void setCommentList(Set<Comment> commentList) {
+		this.commentList = commentList;
 	}
 }

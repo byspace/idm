@@ -2,8 +2,10 @@ package com.byspace.portal.usercenter.controller;
 
 import com.byspace.common.po.JsonResult;
 import com.byspace.member.entity.*;
+import com.byspace.member.service.CommentService;
 import com.byspace.member.service.MemberService;
 import com.byspace.member.service.PersonalDesignService;
+import com.byspace.member.service.PersonalPostService;
 import com.byspace.portal.usercenter.service.UserCenterService;
 import com.byspace.util.CustomLogger;
 import com.byspace.util.DateUtils;
@@ -43,6 +45,10 @@ public class PersonalController {
 	private UserCenterService userCenterService;
 	@Autowired
 	private PersonalDesignService personalDesignService;
+	@Autowired
+	private PersonalPostService personalPostService;
+	@Autowired
+	private CommentService commentService;
 
 	@RequestMapping("index/{id}")
 	public String index(@PathVariable("id")int id, HttpServletRequest request, Model model) {
@@ -50,6 +56,8 @@ public class PersonalController {
 		PersonalMember personalMember = memberService.readPersonalMember(id);
 		model.addAttribute("member", personalMember);
 		model.addAttribute("isCurrentUser", userCenterService.isInSelfCenter(request, id));
+		model.addAttribute("personalDesignList", personalDesignService.getPersonalDesignList(personalMember));
+
 		return "portal/usercenter/personal/index";
 	}
 
@@ -251,5 +259,106 @@ public class PersonalController {
 		}
 	}
 
+	@RequestMapping("post/{memberId}")
+	public String post(@PathVariable("memberId")int memberId, HttpServletRequest request, Model model) {
 
+		PersonalMember personalMember = memberService.readPersonalMember(memberId);
+
+		model.addAttribute("isCurrentUser", userCenterService.isInSelfCenter(request, memberId));
+		model.addAttribute("member", personalMember);
+		model.addAttribute("bestWorkDesignTypeList", personalDesignService.getBestWorkPersonalDesignList(personalMember));
+		model.addAttribute("personalPostList", personalPostService.getPersonalPostList(personalMember));
+
+		return "portal/usercenter/personal/post";
+	}
+
+	@RequestMapping("post/view/{postId}")
+	public String viewPost(@PathVariable("postId") int postId, HttpServletRequest request, Model model) {
+
+		PersonalPost personalPost = personalPostService.readPersonalPost(postId);
+		model.addAttribute("member", personalPost.getAuthor());
+		model.addAttribute("personalPost", personalPost);
+
+		return "portal/usercenter/personal/viewPost";
+	}
+
+	@RequestMapping("post/add")
+	public String addPost(HttpServletRequest request, Model model) {
+		model.addAttribute("member", memberService.getCurrentMember(request));
+
+		return "portal/usercenter/personal/editPost";
+	}
+
+	@RequestMapping("post/edit/{postId}")
+	public String editPost(@PathVariable("postId") int postId, HttpServletRequest request, Model model) {
+
+		PersonalPost personalPost = personalPostService.readPersonalPost(postId);
+		model.addAttribute("member", personalPost.getAuthor());
+		model.addAttribute("personalPost", personalPost);
+
+		return "portal/usercenter/personal/editPost";
+	}
+
+	@RequestMapping("post/save")
+	@ResponseBody
+	public JsonResult savePost(HttpServletRequest request) {
+		try {
+			PersonalPost personalPost = null;
+
+			String idStr = request.getParameter("id");
+			if (idStr == null || idStr.equals("")) {
+				personalPost = new PersonalPost();
+				personalPost.setCreateDate(new Date());
+				personalPost.setAuthor(memberService.getCurrentMember(request));
+			} else {
+				personalPost = personalPostService.readPersonalPost(Integer.parseInt(idStr));
+			}
+
+			personalPost.setTitle(request.getParameter("title"));
+			personalPost.setSummary(request.getParameter("summary"));
+			personalPost.setContent(request.getParameter("content"));
+
+			personalPostService.savePersonalPost(personalPost);
+
+			return JsonResult.saveSuccess();
+		} catch (Exception e) {
+			CustomLogger.error(e, this);
+			return JsonResult.saveFail();
+		}
+	}
+
+	@RequestMapping("comment/{memberId}")
+	public String comment(@PathVariable("memberId")int memberId, HttpServletRequest request, Model model) {
+		PersonalMember personalMember = memberService.readPersonalMember(memberId);
+
+		model.addAttribute("isCurrentUser", userCenterService.isInSelfCenter(request, memberId));
+		model.addAttribute("member", personalMember);
+		model.addAttribute("bestWorkDesignTypeList", personalDesignService.getBestWorkPersonalDesignList(personalMember));
+
+		return "portal/usercenter/personal/comment";
+	}
+
+	@RequestMapping("leaveMessage/{memberId}")
+	@ResponseBody
+	public JsonResult leaveMessage(@PathVariable("memberId")int memberId, HttpServletRequest request) {
+		try {
+			Member currentMember = memberService.getCurrentMember(request);
+			Member messageMember = memberService.readPersonalMember(memberId);
+
+			Comment comment = new Comment();
+			comment.setMessage(request.getParameter("message"));
+			comment.setAuthor(currentMember);
+			comment.setDate(new Date());
+
+			commentService.saveComment(comment);
+
+			messageMember.getCommentList().add(comment);
+			memberService.saveMember(messageMember);
+
+			return JsonResult.saveSuccess();
+		} catch (Exception e) {
+			CustomLogger.error(e, this);
+			return JsonResult.fail("留言失败");
+		}
+	}
 }

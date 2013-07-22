@@ -24,7 +24,7 @@
 				<td width="20%" class="label">头像</td>
 				<td>
 					<img src="${member.personalInformation.portrait}" width="130px" height="150px" id="portraitImage" />
-					<input type="hidden" id="portrait" name="portrait" />
+					<input type="hidden" id="portrait" name="portrait" value="${member.personalInformation.portrait}" />
 					<input type="file" name="uploadify" id="file_upload" />
 				</td>
 			</tr>

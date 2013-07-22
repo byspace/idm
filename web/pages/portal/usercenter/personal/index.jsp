@@ -7,40 +7,20 @@
 	<div class="left">
 		<h4 class="title" style="background: url('<spring:url value="/static/img/member/navbg.png"/>') repeat-x;">${member.name}的个人作品展示</h4>
 
-		<div class="listimg">
-			<span class="works"><img src="images/worka.png"></span>
-			<p class="text_title"><a href="#" target="_blank">国汉堡Poppenbuette交通枢纽</a></p>
-			<p class="text"><a href="#" target="_blank">德国汉堡Poppenbüttel（Poppenbuettel）区交通枢纽工程由Blunck + Morgen Architekten设计完成，工程连接了汽车站与火车站两个交通体系，P+R停车库穿越了一个中心步行桥。这也是与Poppenbüttel（Poppenbuettel）区交界的交通扩建重组设施的第一部分</a><span class="bowen_xq"><a href="#" target="_blank">[详情]</a></span></p>
-		</div>
+		<c:forEach items="${personalDesignList}" var="design">
+			<div class="listimg">
+				<span class="works"><img src="${design.titleImage}"></span>
+				<p class="text_title"><a href="<spring:url value="/portal/usercenter/personal/design/view/${design.id}"/>" target="_blank">${design.title}</a></p>
+				<p class="text" style="word-break: break-all"><a href="<spring:url value="/portal/usercenter/personal/design/view/${design.id}"/>" target="_blank">${design.summary}</a><span class="bowen_xq"><a href="<spring:url value="/portal/usercenter/personal/design/view/${design.id}"/>" target="_blank">[详情]</a></span></p>
+			</div>
+		</c:forEach>
 
-		<div class="listimg">
-			<span class="works"><img src="images/worka.png"></span>
-			<p class="text_title"><a href="#" target="_blank">国汉堡Poppenbuette交通枢纽</a></p>
-			<p class="text"><a href="#" target="_blank">德国汉堡Poppenbüttel（Poppenbuettel）区交通枢纽工程由Blunck + Morgen Architekten设计完成，工程连接了汽车站与火车站两个交通体系，P+R停车库穿越了一个中心步行桥。这也是与Poppenbüttel（Poppenbuettel）区交界的交通扩建重组设施的第一部分</a><span class="bowen_xq"><a href="#" target="_blank">[详情]</a></span></p>
-		</div>
-
-		<div class="listimg">
-			<span class="works"><img src="images/worka.png"></span>
-			<p class="text_title"><a href="#" target="_blank">国汉堡Poppenbuette交通枢纽</a></p>
-			<p class="text"><a href="#" target="_blank">德国汉堡Poppenbüttel（Poppenbuettel）区交通枢纽工程由Blunck + Morgen Architekten设计完成，工程连接了汽车站与火车站两个交通体系，P+R停车库穿越了一个中心步行桥。这也是与Poppenbüttel（Poppenbuettel）区交界的交通扩建重组设施的第一部分</a><span class="bowen_xq"><a href="#" target="_blank">[详情]</a></span></p>
-		</div>
-
-		<div class="listimg">
-			<span class="works"><img src="images/worka.png"></span>
-			<p class="text_title"><a href="#" target="_blank">国汉堡Poppenbuette交通枢纽</a></p>
-			<p class="text"><a href="#" target="_blank">德国汉堡Poppenbüttel（Poppenbuettel）区交通枢纽工程由Blunck + Morgen Architekten设计完成，工程连接了汽车站与火车站两个交通体系，P+R停车库穿越了一个中心步行桥。这也是与Poppenbüttel（Poppenbuettel）区交界的交通扩建重组设施的第一部分</a><span class="bowen_xq"><a href="#" target="_blank">[详情]</a></span></p>
-		</div>
-		<div class="listimg_one">
-			<span class="works"><img src="images/worka.png"></span>
-			<p class="text_title"><a href="#" target="_blank">国汉堡Poppenbuette交通枢纽</a></p>
-			<p class="text"><a href="#" target="_blank">德国汉堡Poppenbüttel（Poppenbuettel）区交通枢纽工程由Blunck + Morgen Architekten设计完成，工程连接了汽车站与火车站两个交通体系，P+R停车库穿越了一个中心步行桥。这也是与Poppenbüttel（Poppenbuettel）区交界的交通扩建重组设施的第一部分</a><span class="bowen_xq"><a href="#" target="_blank">[详情]</a></span></p>
-		</div>
 	</div>
 	<div class="right">
 		<div class="grjj">
 			<h4 class="resume_title" style="background: url('<spring:url value="/static/img/member/navbg.png"/>') repeat-x;">${member.name}个人简历</h4>
 
-			<div class="photo"><img src="images/photo.png"></div>
+			<div class="photo"><img src="${member.personalInformation.portrait}"></div>
 			<div class="resume_list">
 				<ul>
 					<li class="name">${member.name}</li>
@@ -48,8 +28,7 @@
 					<li><span>地区：</span>${member.personalInformation.province}${member.personalInformation.city}</li>
 					<li><span>电话：</span>${member.personalInformation.phone}</li>
 					<li><span>手机：</span>${member.personalInformation.mobile}</li>
-					<li><span>在线咨询：</span><img src="images/qqbg.png"></li>
-					<li><span><a href="#"><img src="images/liuyarn.png" width="60" height="20"></a></span><span style="padding-left:8px;"><a href="#"><img src="images/wtsj.png" width="60" height="20"></a></span></li>
+					<li><span>在线咨询：</span><a href="<spring:url value="/portal/usercenter/personal/comment/${member.id}"/>"><img src="<spring:url value="/static/images/portrait/liuyan.png"/>"></a></li>
 				</ul>
 
 			</div>
@@ -77,14 +56,15 @@
 		<div class="clear"></div>
 		<div class="newszp">
 			<h4 class="resume_title" style="background: url('<spring:url value="/static/img/member/navbg.png"/>') repeat-x;">最新作品公告</h4>
-			<div class="works_news"><img src="images/zxzpa.png"></div>
-			<p class="works_title"><a href="#" target="_blank">国汉堡Poppenbuette交通枢纽</a></p>
-			<p class="works_list"><a href="#" target="_blank">国汉堡Poppenbuette交通枢纽
-				德国汉堡Poppenbüttel（Poppenbuettel）区交通枢纽工程由Blunck + Morgen Architekten</a></p>
+
+			<c:forEach items="${personalDesignList}" var="design" begin="0" end="0">
+			<div class="works_news"><img src="${design.titleImage}"></div>
+				<p class="works_title"><a href="#" target="_blank">${design.title}</a></p>
+				<p class="works_list"><a href="#" target="_blank">${design.summary}</a></p>
+			</div>
+			</c:forEach>
 
 
-
-		</div>
 	</div>
 	<div class="clear"></div>
 	<div class="page">
@@ -95,10 +75,9 @@
 	</div>
 	<div class="clear"></div>
 	<div class="advert">
-		<span><img src="images/hrew2.jpg" width="300" height="86"></span>
-		<span style="padding-left:15px;"><img src="images/guangao.jpg" width="300" height="86"></span>
-		<span style="padding-left:15px;"><img src="images/hrew2.jpg" width="300" height="86"></span>
-
+		<span><img src="<spring:url value="/static/images/portrait/hrew2.jpg"/>" width="300" height="86"></span>
+		<span style="padding-left:15px;"><img src="<spring:url value="/static/images/portrait/guangao.jpg"/>" width="300" height="86"></span>
+		<span style="padding-left:15px;"><img src="<spring:url value="/static/images/portrait/hrew2.jpg"/>" width="300" height="86"></span>
 	</div>
 
 <%@include file="personal_bottom.jsp"%>
