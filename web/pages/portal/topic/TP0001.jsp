@@ -11,9 +11,9 @@
 <div class="container">
 	<table cellpading=0 cellspacing=0 style="padding: 0px; margin: 0px;" >
 		<tr>
-			<td><portal:panel panelCode="NC0001" width="300" height="323"></portal:panel></td>
-			<td><portal:panel panelCode="NC0002" width="325" height="323"></portal:panel></td>
-			<td><portal:panel panelCode="NC0003" width="240" height="323"></portal:panel></td>
+			<td><portal:panel panelCode="NC0001" width="300" height="380"></portal:panel></td>
+			<td><portal:panel panelCode="NC0002" width="325" height="380"></portal:panel></td>
+			<td><portal:panel panelCode="NC0003" width="240" height="380"></portal:panel></td>
 		</tr>
 
 		<tr>

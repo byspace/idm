@@ -12,6 +12,10 @@
 		width: ${width}px;
 	}
 
+	#panel${UNIQUE_TAG} .pika-stage{
+		height: ${height - 70}px;
+	}
+
 	#panel${UNIQUE_TAG} .pika-thumbs {
 		padding: 0px;
 	}

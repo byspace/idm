@@ -59,7 +59,7 @@
 				<li><a href="<spring:url value="/portal/topic/topicIndex/TP0004"/>" onclick="" id="nav_roomdesign">室内设计</a></li>
 				<li><a href="<spring:url value="/portal/topic/topicIndex/TP0005"/>" onclick="" id="nav_effectmodel">效果图模型</a></li>
 				<li><a href="<spring:url value="/portal/topic/topicIndex/TP0006"/>" onclick="" id="nav_developers">开发商</a></li>
-				<li><a href="/membercenter/jobindex.shtml" onclick="" id="nav_job" target="_blank">人才招聘</a></li>
+				<%--<li><a href="/membercenter/jobindex.shtml" onclick="" id="nav_job" target="_blank">人才招聘</a></li>--%>
 				<li><a href="<spring:url value="/forum/index"/>" onclick="" target="_blank" id="nav_forum">论坛</a></li>
 			</ul>
 			<div class="bottom_seach">
