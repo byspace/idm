@@ -5,28 +5,28 @@
 		<div class="bottom_top_an"><a href="#top"><img src="<spring:url value="/static/img/hhtip.png" />"></a></div>
 		<div class="bottom_neir">
 			<dl>
-				<dt><a href="http://www.93idm.com/column/job.shtml" target="_blank">人才招聘</a></dt>
+				<dt><a href="#" target="_blank">人才招聘</a></dt>
 			</dl>
 			<dl>
 				<dt><a href="#" target="_blank">平面广告</a></dt>
 			</dl>
 			<dl>
-				<dt><a href="http://www.93idm.com/member/user.shtml" target="_blank">会员中心</a></dt>
+				<dt><a href="#" target="_blank">会员中心</a></dt>
 			</dl>
 			<dl>
-				<dt><a href="http://www.93idm.com/column/infocenter.shtml" target="_blank">行业资讯</a></dt>
+				<dt><a href="#" target="_blank">行业资讯</a></dt>
 			</dl>
 			<dl>
-				<dt><a href="http://www.93idm.com/column/developers.shtml" target="_blank">地产开发商</a></dt>
+				<dt><a href="#" target="_blank">地产开发商</a></dt>
 			</dl>
 			<dl>
-				<dt><a href="http://www.93idm.com/about/gindex.shtml" target="_blank">广告招商</a></dt>
+				<dt><a href="#" target="_blank">广告招商</a></dt>
 			</dl>
 			<dl>
-				<dt><a href="http://www.93idm.com/about/contact.shtml">关于我们</a></dt>
+				<dt><a href="#">关于我们</a></dt>
 			</dl>
 			<dl>
-				<dt><a href="http://www.93idm.com/about/contacts.shtml" target="_blank">联系我们</a></dt>
+				<dt><a href="#" target="_blank">联系我们</a></dt>
 			</dl>
 		</div>
 	</div>

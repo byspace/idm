@@ -52,7 +52,7 @@
 		<ul>
 			<li><a href="<spring:url value="/portal/usercenter/index"/>" style="color: #0ba6b8">[进入会员中心]</a></li>
 			<li><a href="<spring:url value="/portal/index"/>" target="_blank">国际设计传媒网首页</a></li>
-			<li><a href="#" target="_blank">加入收藏</a></li>
+			<li><a href="javascript:void(0)" onclick="javascript:try{ window.external.AddFavorite(getUrl('/portal/index'),'93idm'); } catch(e){ (window.sidebar)?window.sidebar.addPanel('93idm',getUrl('/portal/index'),''):alert('请使用按键 Ctrl+d，收藏93idm'); }" target="_self">加入收藏</a></li>
 			<li><a href="<spring:url value="/portal/topic/topicIndex/TP0001"/>" >资讯中心</a></li>
 			<li><a href="<spring:url value="/portal/topic/topicIndex/TP0002"/>" >建筑设计</a></li>
 			<li><a href="<spring:url value="/portal/topic/topicIndex/TP0003"/>" >景观设计</a></li>
