@@ -59,7 +59,7 @@
 			<li><a href="<spring:url value="/portal/topic/topicIndex/TP0004"/>" >室内设计</a></li>
 			<li><a href="<spring:url value="/portal/topic/topicIndex/TP0005"/>" >效果图模型</a></li>
 			<li><a href="<spring:url value="/portal/topic/topicIndex/TP0006"/>" >开发商</a></li>
-
+			<li><a href="<spring:url value="/member/login/logout"/>" style="color: #0ba6b8">登出</a></li>
 		</ul>
 	</div>
 </div>

@@ -112,7 +112,8 @@ public class ArticleController {
 			article.setSummary(request.getParameter("summary"));
 			article.setContent(request.getParameter("content"));
 			article.setImages(request.getParameter("images"));
-
+			article.setCustomKey(request.getParameter("customKey"));
+			article.setTitleImage(request.getParameter("titleImage"));
 
 			articleService.saveArticle(article);
 

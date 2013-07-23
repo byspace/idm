@@ -136,6 +136,8 @@ public class RegisterController {
 		memberService.saveMember(personalMember);
 
 		request.getSession().setAttribute(REGISTER_STEP_SESSION_KEY, "step4");
+		request.getSession().setAttribute(REGISTER_MEMBER_KEY, personalMember);
+
 		return "redirect:/member/register/index";
 	}
 
@@ -191,6 +193,8 @@ public class RegisterController {
 		memberService.saveMember(enterpriseMember);
 
 		request.getSession().setAttribute(REGISTER_STEP_SESSION_KEY, "step4");
+		request.getSession().setAttribute(REGISTER_MEMBER_KEY, enterpriseMember);
+
 		return "redirect:/member/register/index";
 	}
 

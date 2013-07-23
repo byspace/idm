@@ -32,7 +32,9 @@
 			<td>
 				<portal:panel panelCode="MP0002" width="325" height="323"></portal:panel>
 			</td>
-			<td></td>
+			<td>
+				<portal:panel panelCode="MP0005" width="230" height="323"></portal:panel>
+			</td>
 		</tr>
 
 		<tr>
@@ -40,6 +42,7 @@
 				<portal:panel panelCode="MP0004" width="665" height="265"></portal:panel>
 			</td>
 			<td>
+				<portal:panel panelCode="MP0007" width="230" height="265"></portal:panel>
 			</td>
 		</tr>
 
@@ -48,6 +51,7 @@
 				<portal:panel panelCode="MP0006" width="665" height="265"></portal:panel>
 			</td>
 			<td>
+				<portal:panel panelCode="MP0009" width="230" height="265"></portal:panel>
 			</td>
 		</tr>
 
@@ -56,6 +60,7 @@
 				<portal:panel panelCode="MP0008" width="665" height="265"></portal:panel>
 			</td>
 			<td>
+				<portal:panel panelCode="MP0011" width="230" height="265"></portal:panel>
 			</td>
 		</tr>
 
@@ -64,6 +69,7 @@
 				<portal:panel panelCode="MP0010" width="665" height="265"></portal:panel>
 			</td>
 			<td>
+				<portal:panel panelCode="MP0013" width="230" height="265"></portal:panel>
 			</td>
 		</tr>
 
@@ -72,6 +78,7 @@
 				<portal:panel panelCode="MP0012" width="665" height="265"></portal:panel>
 			</td>
 			<td>
+				<portal:panel panelCode="MP0015" width="230" height="265"></portal:panel>
 			</td>
 		</tr>
 	</table>

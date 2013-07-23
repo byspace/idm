@@ -108,11 +108,10 @@ public class PortalLoginController {
 	}
 
 	@RequestMapping("logout")
-	@ResponseBody
 	public String logout(HttpServletRequest request, HttpServletResponse response) {
 		memberService.removeCurrentUser(request);
 		this.removeAutoLoginCookie(response);
-		return "success";
+		return "redirect:/portal/index";
 	}
 
 	@RequestMapping("getCurrentMember")
@@ -126,19 +125,17 @@ public class PortalLoginController {
 	}
 
 	private void removeAutoLoginCookie(HttpServletResponse response) {
+
 		Cookie usernameKeyCookie = new Cookie(COOKIE_USERNAME_KEY, "");
 		usernameKeyCookie.setMaxAge(0);
-		usernameKeyCookie.setPath("/");
 		response.addCookie(usernameKeyCookie);
 
 		Cookie usernameCookie = new Cookie(COOKIE_USERNAME, "");
 		usernameCookie.setMaxAge(0);
-		usernameCookie.setPath("/");
 		response.addCookie(usernameCookie);
 
 		Cookie passwordCookie = new Cookie(COOKIE_PASSWORD, "");
 		passwordCookie.setMaxAge(0);
-		passwordCookie.setPath("/");
 		response.addCookie(passwordCookie);
 	}
 }

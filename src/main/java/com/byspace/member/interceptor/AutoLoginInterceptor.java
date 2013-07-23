@@ -28,14 +28,9 @@ public class AutoLoginInterceptor implements HandlerInterceptor {
 		String username = getCookieValue(request, PortalLoginController.COOKIE_USERNAME);
 		String password = getCookieValue(request, PortalLoginController.COOKIE_PASSWORD);
 
-		CustomLogger.info(username, this);
-		CustomLogger.info(password, this);
-
 		Member member = memberService.readMemberByUsername(username);
 		if (member != null && member.getPassword().equals(password)) {
 			memberService.setCurrentMember(request, member);
-
-			CustomLogger.info(member.getUserName(), this);
 		}
 
 		return true;

@@ -7,6 +7,8 @@
 
 <script type="text/javascript" src="<spring:url value="/static/script/ueditor/ueditor.config.js" />"></script>
 <script type="text/javascript" src="<spring:url value="/static/script/ueditor/ueditor.all.min.js" />"></script>
+<script type="text/javascript" src="<spring:url value="/static/script/uploadify/jquery.uploadify.min.js" />"></script>
+<link rel="stylesheet" href="<spring:url value="/static/script/uploadify/uploadify.css"/>" type="text/css" />
 
 <script type="text/javascript" src="<spring:url value="/static/script/portal/article/edit.js" />"></script>
 
@@ -59,6 +61,18 @@
 		<tr>
 			<td>文章摘要:</td>
 			<td><textarea id="summary" name="summary"  style="width: 500px; height: 100px;">${article.summary}</textarea> </td>
+		</tr>
+		<tr>
+			<td>自定义标签:</td>
+			<td><input class="easyui-validatebox" name="customKey" id="customKey"  value="${article.customKey}" style="width:300px"></td>
+		</tr>
+		<tr>
+			<td>标题图片:</td>
+			<td>
+				<img src="${article.titleImage}" id="titleImageImage" />
+				<input type="hidden" id="titleImage" name="titleImage" value="${article.titleImage}" />
+				<input type="file" name="uploadify" id="file_upload" />
+			</td>
 		</tr>
 		<tr>
 			<td>内容:</td>
