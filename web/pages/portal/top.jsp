@@ -37,6 +37,11 @@
 			window.location.reload();
 		});
 	}
+
+	function searchArticle() {
+		var text = $("#searchText").val();
+		window.location.href = getUrl("/portal/search/index/" + text + "/1");
+	}
 </script>
 
 <%@include file="nav.jsp"%>
@@ -63,8 +68,8 @@
 				<li><a href="<spring:url value="/forum/index"/>" onclick="" target="_blank" id="nav_forum">论坛</a></li>
 			</ul>
 			<div class="bottom_seach">
-				<input type="text">
-				<a href="#" class="bottom_seach_btn"  style="background: url(<spring:url value="/static/img/ss.png" />)"><span class="bottom_fn_hide"></span></a>
+				<input type="text" id="searchText" />
+				<a href="#" class="bottom_seach_btn" onclick="searchArticle()"  style="background: url(<spring:url value="/static/img/ss.png" />)"><span class="bottom_fn_hide"></span></a>
 			</div>
 		</div>
 	</div>
